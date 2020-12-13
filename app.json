@@ -26,11 +26,11 @@
       "description": "Get this value by running [python3 string_session.py] in Termux or heroku[IMPORTANT]"    
     },
     "HEROKU_APIKEY": {
-      "description": "very important for !update command to make javes 2.0 up-to-date , get it from 'https://dashboard.heroku.com/account.",
+      "description": "very important for !update command to make javes 3.0 up-to-date , get it from 'https://dashboard.heroku.com/account.",
       "value": ""   
     },
     "HEROKU_APPNAME": {
-      "description": "enter this app name again here, very important for !update command to make javes 2.0 up-to-date ,",
+      "description": "enter this app name again here, very important for !update command to make javes 3.0 up-to-date ,",
       "value": ""
       
      },
@@ -129,7 +129,7 @@
       },
     "ALIVE_S_MESSAGE": {
       "description": "Edit if you want",
-      "value": "Javes 2.0 is Alive with Necessary Dynos",
+      "value": "Javes 3.0 is Alive with Necessary Dynos",
       "required": false
       
       },
@@ -147,7 +147,7 @@
       },
     "JAVES_NAME": {
       "description": "You can edit bot's name",
-      "value": "Javes 2.0 ",
+      "value": "Javes 3.0 ",
       "required": false
     
     },
