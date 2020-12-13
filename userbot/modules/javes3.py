@@ -112,7 +112,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         else:
             remote = repo.create_remote("heroku", heroku_git_url)
         try:
-            remote.push(refspec="HEAD:refs/heads/main", force=True)
+            remote.push(refspec="HEAD:refs/heads/master", force=True)
         except Exception as error:
             await event.edit(f"{txt}\n`Here is the error log:\n{error}`")
             return repo.__del__()
@@ -129,7 +129,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
     return
 
 
-@bot.on(admin_cmd(outgoing=True, pattern=r"javes2$"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"javes3$"))
 
 async def upstream(event):
     event = await event.edit("`Pulling the Marshmello repo wait a sec ....`")
