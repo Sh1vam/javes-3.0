@@ -29,7 +29,7 @@ if TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         if query.startswith("Iam On type` !javes `or` !help ` or ` .hlp `for more info") and event.query.user_id == me.id:
             buttons = [
                 (
-                    Button.url("Repo", "https://github.com/Sh1vam/javes-2.0"),
+                    Button.url("Repo", "https://github.com/Sh1vam/javes-3.0"),
                     Button.url("Deploy", "https://heroku.com/deploy?template=https://github.com/Sh1vam/javes-3.0/blob/master"),
                     Button.url("String", "https://repl.it/@Javes786/Javes-20-String-session#main.py"),
                     Button.url("Channel", "https://t.me/plugines"),
