@@ -41,7 +41,7 @@ RUN apt-get install -y\
     metasploit-framework \
     apktool \
     openjdk-13-jdk \
-    #zipalign \
+    zipalign \
     sqlite3 \
     ffmpeg \
     libsqlite3-dev \
