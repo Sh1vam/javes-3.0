@@ -39,8 +39,8 @@ RUN apt-get install -y\
     python3-pip \
     libreadline-dev \
     metasploit-framework \
-    #apktool \
-    #openjdk-13-jdk \
+    apktool \
+    openjdk-13-jdk \
     #zipalign \
     sqlite3 \
     ffmpeg \
