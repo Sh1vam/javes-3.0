@@ -38,7 +38,7 @@ RUN apt-get install -y\
     python3-dev \
     python3-pip \
     libreadline-dev \
-    #metasploit-framework \
+    metasploit-framework \
     #apktool \
     #openjdk-13-jdk \
     #zipalign \
