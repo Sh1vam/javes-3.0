@@ -2687,7 +2687,7 @@ async def _(event):
 
         await asyncio.sleep(animation_interval)
 
-        await event.edit(animation_chars[i % 30])
+        await event.edit(animation_chars[i % 36])
 
 
 
@@ -2824,7 +2824,7 @@ async def _(event):
     for i in animation_ttl:
 
         await asyncio.sleep(animation_interval)
-        await event.edit(animation_chars[i % 35])
+        await event.edit(animation_chars[i % 36])
 
 
 
@@ -2870,7 +2870,7 @@ async def _(event):
 
         await asyncio.sleep(animation_interval)
 
-        await event.edit(animation_chars[i % 30])
+        await event.edit(animation_chars[i % 16])
 
 
 
@@ -2916,7 +2916,7 @@ async def _(event):
 
         await asyncio.sleep(animation_interval)
 
-        await event.edit(animation_chars[i % 30])
+        await event.edit(animation_chars[i % 15])
 
 
 @javes05(outgoing=True, disable_errors=True, pattern="^!play3$")
@@ -2970,7 +2970,7 @@ async def _(event):
 
         await asyncio.sleep(animation_interval)
 
-        await event.edit(animation_chars[i % 30])
+        await event.edit(animation_chars[i % 24])
 
 @javes05(outgoing=True, pattern="^!moon2$")
 async def test(event):
@@ -3051,7 +3051,7 @@ async def _(event):
 
         await asyncio.sleep(animation_interval)
 
-        await event.edit(animation_chars[i % 10])
+        await event.edit(animation_chars[i % 6])
 
 
 
@@ -3093,7 +3093,7 @@ async def _(event):
 
         await asyncio.sleep(animation_interval)
 
-        await event.edit(animation_chars[i % 10])
+        await event.edit(animation_chars[i % 12])
 
 
 @javes05(outgoing=True, pattern=r"^\!(?:penis|dick)\s?(.)?")
@@ -3190,46 +3190,16 @@ async def _(event):
 
             "👉  ✊️",
 
-            "👉✊️💦",
-            
-            "👉       ✊️",
-
-            "👉     ✊️",
-
-            "👉  ✊️",
-
-            "👉✊️💦",
-            "👉       ✊️",
-
-            "👉     ✊️",
-
-            "👉  ✊️",
-
-            "👉✊️💦",
-            "👉       ✊️",
-
-            "👉     ✊️",
-
-            "👉  ✊️",
-
-            "👉✊️💦",
-            "👉       ✊️",
-
-            "👉     ✊️",
-
-            "👉  ✊️",
-
             "👉✊️💦"
-
-        ]
+           ]
     for i in animation_ttl:
 
         await asyncio.sleep(animation_interval)
 
-        await event.edit(animation_chars[i % 10])
+        await event.edit(animation_chars[i % 4])
 
 
-@javes05(outgoing=True, pattern="^!sax$")
+@javes05(outgoing=True, pattern="^!sex$")
 
 async def _(event):
 
@@ -3262,7 +3232,7 @@ async def _(event):
 
         await asyncio.sleep(animation_interval)
 
-        await event.edit(animation_chars[i % 10])
+        await event.edit(animation_chars[i % 4])
 
 
 
@@ -3299,7 +3269,7 @@ async def _(event):
 
         await asyncio.sleep(animation_interval)
 
-        await event.edit(animation_chars[i % 10])
+        await event.edit(animation_chars[i % 4])
 
                            
 @javes05(outgoing=True, pattern="^!dump ?(.*)")
