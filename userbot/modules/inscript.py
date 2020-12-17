@@ -114,7 +114,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
                             file = open("eval.txt", "w+")
                             file.write(evaluation)
                             file.close()
-                            resultm = builder.article("eval.txt",title="hehe text too long",description="Doc",text=f"`{JAVES_NNAME}:` **Output too large Snded as file, Can also use !eval**",buttons=[[Button.switch_inline("Search Again", query="eval ", same_peer=True)],], )
+                            resultm = builder.document("eval.txt",title="hehe text too long",description="Doc",text=f"`{JAVES_NNAME}:` **Output too large Snded as file, Can also use !eval**",buttons=[[Button.switch_inline("Search Again", query="eval ", same_peer=True)],], )
                             await event.answer([resultm])
                             remove("eval.txt")
                             return
