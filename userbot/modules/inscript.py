@@ -118,13 +118,14 @@ async def inline_id_handler(event: events.InlineQuery.Event):
                             await event.answer([resultm])
                             remove("eval.txt")
                             return
-                        resultm = builder.article(title="OwO",description="U got it",text="**Query: **\n`"
+                        else:
+                            resultm = builder.article(title="OwO",description="U got it",text="**Query: **\n`"
 								 f"{expression}"
 								 "`\n**Result: **\n`"
 								 f"{evaluation}"
 								 "`",buttons=[[Button.switch_inline("Search Again", query="eval ", same_peer=True)],], )
-                        await event.answer([resultm])
-                        return
+                            await event.answer([resultm])
+                            return
                 else:
                     resultm = builder.article(title="ohno lol",description="u made it  wrong",text="**Query: **\n`"
 								 f"{expression}"
