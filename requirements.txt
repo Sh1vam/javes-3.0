@@ -62,6 +62,7 @@ httplib2
 humanize
 lxml
 lyricsgenius
+python-telegram-bot
 oauth2client
 html_telegraph_poster
 psycopg2
