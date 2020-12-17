@@ -44,6 +44,6 @@ async def hmm(event):
     file_name = "cpic.png"
     ok = "./sh1vam/" + file_name
     await borg.send_file(event.chat_id, ok)
-    for files in (ok, img):
+    for files in (file_name, img):
         if files and os.path.exists(files):
             os.remove(files)
