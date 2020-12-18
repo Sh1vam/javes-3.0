@@ -151,12 +151,12 @@ async def inline_id_handler(event: events.InlineQuery.Event):
 @tgbot.on(events.InlineQuery(pattern=r"yt (.*)"))
 async def inline_id_handler(event: events.InlineQuery.Event):
     builder = event.builder
-    testinput = event.pattern_match.group(1)
+    testinput;shivam = event.pattern_match.group(1).split(";")
     urllib.parse.quote_plus(testinput)
     me = await client.get_me()
     if event.query.user_id == me.id:
         results = []
-        search = SearchVideos(f"{testinput}", offset=1, mode="dict", max_results=30)
+        search = SearchVideos(f"{testinput}", offset=1, mode="dict", max_results=int(shivam))
         mi = search.result()
         moi = mi["search_result"]
         if search == None:
