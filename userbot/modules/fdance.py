@@ -151,7 +151,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
 @tgbot.on(events.InlineQuery(pattern=r"yt (.*)"))
 async def inline_id_handler(event: events.InlineQuery.Event):
     builder = event.builder
-    testinput;shivam = event.pattern_match.group(1).split(";")
+    testinput,shivam = event.pattern_match.group(1).split(";")
     urllib.parse.quote_plus(testinput)
     me = await client.get_me()
     if event.query.user_id == me.id:
