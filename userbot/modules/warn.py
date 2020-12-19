@@ -49,20 +49,20 @@ async def _(event):
     	return await event.edit("`Sorry canot warn users here`")
     if not admin and not creator:
         return await event.edit("`I have to be admin to warn people.`")
-    if await is_admin(event.chat_id, reply_message.from_id):
+    if await is_admin(event.chat_id, reply_message.sender.id):
         return await event.edit("`I'm not going to warn an admin!`")
 
     limit, soft_warn = sql.get_warn_setting(event.chat_id)
-    num_warns, reasons = sql.warn_user(reply_message.from_id, event.chat_id, warn_reason)
+    num_warns, reasons = sql.warn_user(reply_message.sender.id, event.chat_id, warn_reason)
     if num_warns >= limit:        
         if soft_warn:
-            reply = "{} warnings, <u><a href='tg://user?id={}'>user</a></u> has been muted!".format(limit, reply_message.from_id)
-            await event.client.edit_permissions(chat, reply_message.from_id, until_date=None, send_messages=False)
+            reply = "{} warnings, <u><a href='tg://user?id={}'>user</a></u> has been muted!".format(limit, reply_message.sender.id)
+            await event.client.edit_permissions(chat, reply_message.sender.id, until_date=None, send_messages=False)
         else:        	
-            await event.client.edit_permissions(chat, reply_message.from_id, until_date=None, view_messages=False)
-            reply = "{} warnings, <u><a href='tg://user?id={}'>user</a></u> has been banned!".format(limit, reply_message.from_id)
+            await event.client.edit_permissions(chat, reply_message.sender.id, until_date=None, view_messages=False)
+            reply = "{} warnings, <u><a href='tg://user?id={}'>user</a></u> has been banned!".format(limit, reply_message.sender.id)
     else:
-        reply = "<u><a href='tg://user?id={}'>user</a></u> has {}/{} warnings... watch out!".format(reply_message.from_id, num_warns, limit)
+        reply = "<u><a href='tg://user?id={}'>user</a></u> has {}/{} warnings... watch out!".format(reply_message.sender.id, num_warns, limit)
         if warn_reason:
             reply += "\nReason for last warn:\n{}".format(html.escape(warn_reason))
     #
@@ -84,20 +84,20 @@ async def _(event):
     	return await event.reply("`Sorry canot warn users here`")
     if not admin and not creator:
         return await event.reply("`I have to be admin to warn people.`")
-    if await is_admin(event.chat_id, reply_message.from_id):
+    if await is_admin(event.chat_id, reply_message.sender.id):
         return await event.reply("`I'm not going to warn an admin!`")
 
     limit, soft_warn = sql.get_warn_setting(event.chat_id)
-    num_warns, reasons = sql.warn_user(reply_message.from_id, event.chat_id, warn_reason)
+    num_warns, reasons = sql.warn_user(reply_message.sender.id, event.chat_id, warn_reason)
     if num_warns >= limit:        
         if soft_warn:
-            reply = "{} warnings, <u><a href='tg://user?id={}'>user</a></u> has been muted!".format(limit, reply_message.from_id)
-            await event.client.edit_permissions(chat, reply_message.from_id, until_date=None, send_messages=False)
+            reply = "{} warnings, <u><a href='tg://user?id={}'>user</a></u> has been muted!".format(limit, reply_message.sender.id)
+            await event.client.edit_permissions(chat, reply_message.sender.id, until_date=None, send_messages=False)
         else:        	
-            await event.client.edit_permissions(chat, reply_message.from_id, until_date=None, view_messages=False)
-            reply = "{} warnings, <u><a href='tg://user?id={}'>user</a></u> has been banned!".format(limit, reply_message.from_id)
+            await event.client.edit_permissions(chat, reply_message.sender.id, until_date=None, view_messages=False)
+            reply = "{} warnings, <u><a href='tg://user?id={}'>user</a></u> has been banned!".format(limit, reply_message.sender.id)
     else:
-        reply = "<u><a href='tg://user?id={}'>user</a></u> has {}/{} warnings... watch out!".format(reply_message.from_id, num_warns, limit)
+        reply = "<u><a href='tg://user?id={}'>user</a></u> has {}/{} warnings... watch out!".format(reply_message.sender.id, num_warns, limit)
         if warn_reason:
             reply += "\nReason for last warn:\n{}".format(html.escape(warn_reason))
     #
@@ -113,7 +113,7 @@ async def _(event):
     if event.fwd_from:
         return
     reply_message = await event.get_reply_message()
-    result = sql.get_warns(reply_message.from_id, event.chat_id)
+    result = sql.get_warns(reply_message.sender.id, event.chat_id)
     if result and result[0] != 0:
         num_warns, reasons = result
         limit, soft_warn = sql.get_warn_setting(event.chat_id)
@@ -133,7 +133,7 @@ async def _(event):
     if event.fwd_from:
         return
     reply_message = await event.get_reply_message()
-    result = sql.get_warns(reply_message.from_id, event.chat_id)
+    result = sql.get_warns(reply_message.sender.id, event.chat_id)
     if result and result[0] != 0:
         num_warns, reasons = result
         limit, soft_warn = sql.get_warn_setting(event.chat_id)
@@ -267,7 +267,7 @@ async def _(event):
     if event.fwd_from:
         return
     reply_message = await event.get_reply_message()
-    sql.reset_warns(reply_message.from_id, event.chat_id)
+    sql.reset_warns(reply_message.sender.id, event.chat_id)
     await event.edit("Warnings have been reset!") 
 
 @javes.on(rekcah05(pattern=f"resetwarns(?: |$)(.*)", allow_sudo=True))
@@ -275,7 +275,7 @@ async def _(event):
     if event.fwd_from:
         return
     reply_message = await event.get_reply_message()
-    sql.reset_warns(reply_message.from_id, event.chat_id)
+    sql.reset_warns(reply_message.sender.id, event.chat_id)
     await event.reply("Warnings have been reset!") 
 
 
