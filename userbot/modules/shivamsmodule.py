@@ -5,7 +5,7 @@ import requests
 from userbot import CMD_HELP, BOTLOG, BOTLOG_CHATID,client
 from telethon import Button, custom, events, functions
 #by Shivam don't kang
-@tgbot.on(events.InlineQuery(pattern=r"help"))
+@tgbot.on(events.InlineQuery(pattern=r"ihelp"))
 async def inline_id_handler(event: events.InlineQuery.Event):
     builder = event.builder
     me = await client.get_me()
@@ -14,6 +14,6 @@ async def inline_id_handler(event: events.InlineQuery.Event):
             await event.answer([s])
             return
     if not event.query.user_id == me.id:
-        s = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="help", same_peer=True)],], )
+        s = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="ihelp", same_peer=True)],], )
         await event.answer([s])
         return
