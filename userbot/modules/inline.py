@@ -127,8 +127,8 @@ if tebot:
         return await event.answer("Sorry, You dont have permission to  Access me!", alert=True)
     et = event.data.decode("UTF-8")
     if et == "ihelp":
-            resultm = builder.article(title="Inline Help",description="Inline commands",text="for cmd like yt and pic u need to specify Querry;number and for base64 :- base64 (en|de) querry;for whisper u need @username Querry and for button see .chkbutton",buttons=[[Button.switch_inline("Base64", query="base64 ", same_peer=True),Button.switch_inline("Help", query="helpme", same_peer=True),Button.switch_inline("Torrent", query="tor ", same_peer=True),Button.switch_inline("You Tube", query="yt ", same_peer=True)],[Button.switch_inline("Pic", query="pic ", same_peer=True),Button.switch_inline("Exec", query="exec ", same_peer=True),Button.switch_inline("Eval", query="eval ", same_peer=True)],[Button.switch_inline("Hash", query="hash ", same_peer=True),Button.switch_inline("Whisper", query="secret ", same_peer=True),Button.switch_inline("Url Button", query="secrete ", same_peer=True)],[Button.inline('Go back', 'back'),Button.inline('❌ Close menu', b'close')],] )
-            await event.edit([resultm])
+            resultm = [[Button.switch_inline("Base64", query="base64 ", same_peer=True),Button.switch_inline("Help", query="helpme", same_peer=True),Button.switch_inline("Torrent", query="tor ", same_peer=True),Button.switch_inline("You Tube", query="yt ", same_peer=True)],[Button.switch_inline("Pic", query="pic ", same_peer=True),Button.switch_inline("Exec", query="exec ", same_peer=True),Button.switch_inline("Eval", query="eval ", same_peer=True)],[Button.switch_inline("Hash", query="hash ", same_peer=True),Button.switch_inline("Whisper", query="secret ", same_peer=True),Button.switch_inline("Url Button", query="secrete ", same_peer=True)],[Button.inline('Go back', 'back'),Button.inline('❌ Close menu', b'close')],]
+            await event.edit("for cmd like yt and pic u need to specify Querry;number and for base64 :- base64 (en|de) querry;for whisper u need @username Querry and for button see .chkbutton",buttons=resultm, link_preview=False)
     if et == "back":
         sad = sad2 = sad3 = sad4 = None
         lol = 0
@@ -303,7 +303,7 @@ if tebot:
   if query.startswith("helpme"):
       sad = sad2 = sad3 = sad4 = None
       lol = 0
-      tbu = [[ Button.inline('❌ Close menu', b'close'),Button.inline('Inlines', b'ihelp')]] 
+      tbu = [[Button.inline('❌ Close menu', b'close'),Button.inline('Inlines', b'ihelp')]]
       for i in CMD_HELP:
             if lol == 0:
                sad = str(i)
