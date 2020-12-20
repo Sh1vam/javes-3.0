@@ -126,16 +126,10 @@ if tebot:
     if not event.query.user_id == me.id:
         return await event.answer("Sorry, You dont have permission to  Access me!", alert=True)
     et = event.data.decode("UTF-8")
-    if et == "ihelp":
-       mt = await tebot.get_me()
-       await event.edit("wait...")
-       await event.delete()
-       results = await event.client.inline_query(mt.username,None)
-       return await results[0].click( event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True )
     if et == "back":
         sad = sad2 = sad3 = sad4 = None
         lol = 0
-        tbu = [[Button.inline('❌ Close menu', b'close'),Button.inline('Inlines', b'ihelp')]] 
+        tbu = [[Button.inline('❌ Close menu', b'close')]] 
         for i in CMD_HELP:
             if lol == 0:
                sad = str(i)
@@ -306,7 +300,7 @@ if tebot:
   if query.startswith("helpme"):
       sad = sad2 = sad3 = sad4 = None
       lol = 0
-      tbu = [[Button.inline('❌ Close menu', b'close'),Button.inline('Inlines', b'ihelp')]]
+      tbu = [[Button.inline('❌ Close menu', b'close')]]
       for i in CMD_HELP:
             if lol == 0:
                sad = str(i)
