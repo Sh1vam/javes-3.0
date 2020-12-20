@@ -132,7 +132,7 @@ if tebot:
     if et == "back":
         sad = sad2 = sad3 = sad4 = None
         lol = 0
-        tbu = [[ Button.inline('❌ Close menu', b'close'), ]] 
+        tbu = [[Button.inline('❌ Close menu', b'close'),Button.inline('Inlines', b'ihelp')]] 
         for i in CMD_HELP:
             if lol == 0:
                sad = str(i)
