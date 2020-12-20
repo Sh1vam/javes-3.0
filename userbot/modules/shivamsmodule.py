@@ -4,6 +4,7 @@ from userbot import bot as borg
 import requests
 from userbot import CMD_HELP, BOTLOG, BOTLOG_CHATID,client
 from telethon import Button, custom, events, functions
+#by Shivam don't kang
 @tgbot.on(events.InlineQuery(pattern=None))
 async def inline_id_handler(event: events.InlineQuery.Event):
     builder = event.builder
