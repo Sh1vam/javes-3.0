@@ -152,7 +152,7 @@ if tebot:
 	        tbu += [[ Button.inline(f"{sad2}"  , f"{sad2}")]]   
         if sad3:
            tbu += [[ Button.inline(f"{sad3}"  , f"{sad3}")]]   
-        return await event.edit ("For Support, Report bugs & help @errorsender_bot", buttons=tbu, link_preview=False)   
+        return await event.edit ("For Support, Report bugs & help @errorsender_bot and for inline help try @botusername ihelp", buttons=tbu, link_preview=False)   
     if et == "close":
         await event.edit("Help Menu Closed")
     if et == "helpme_next\((.+?)\)":
@@ -323,7 +323,7 @@ if tebot:
 	        tbu += [[ Button.inline(f"{sad2}"  , f"{sad2}")]]   
       if sad3:
 	       tbu += [[ Button.inline(f"{sad3}"  , f"{sad3}")]]   
-      result = builder.article("Help menu", text = "For Support, Report bugs & help @errorsender_bot", buttons=tbu, link_preview=False)      
+      result = builder.article("Help menu", text = "For Support, Report bugs & help @errorsender_bot and for inline help try @botusername ihelp", buttons=tbu, link_preview=False)      
       return await event.answer([result])
   return
 
