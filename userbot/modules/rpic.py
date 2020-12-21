@@ -21,8 +21,7 @@ async def scan(event):
     link=linc[6:]
     pic=linc[30:]
     import cv2
-
-    os.system('wget https://datreon.000webhostapp.com/haarcascade_frontalface_default.xml')    
+ 
     
     os.system(f'wget {link}')
 
