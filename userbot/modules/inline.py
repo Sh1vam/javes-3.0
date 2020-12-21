@@ -208,7 +208,7 @@ if tebot:
   result = None 
   hmm = re.compile("secret (.*) (.*)") 
   match = re.findall(hmm, query)
-  if event.query.user_id == me.id and query.startswith("secrete"):
+  if event.query.user_id == me.id and query.startswith("buttons"):
             markdown_note = query[7:]
             prev = 0
             note_data = ""
