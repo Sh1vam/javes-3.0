@@ -92,7 +92,7 @@ async def send(event):
         await asyncio.sleep(DELETE_TIMEOUT)
         await event.delete()
     except:
-        await event("No Module Named {}").format(input_str)
+        await event.edit("No Module Named {}").format(input_str)
 
 @zzaacckkyy(pattern="^!unload (?P<shortname>\w+)$", outgoing=True)
 async def unload(event):
