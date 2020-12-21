@@ -238,7 +238,7 @@ if tebot:
             message_text = note_data.strip()
             tl_ib_buttons = ibuild_keyboard(buttons)
             result = builder.article(
-                title="secrete",
+                title="Url Button",
                 text=message_text,
                 buttons=tl_ib_buttons,
                 link_preview=False,
@@ -282,11 +282,11 @@ if tebot:
             newsecret = {str(timestamp): {"userid": u, "text": txct}}
 
             buttons = [
-                custom.Button.inline("show message 🔐", data=f"secret_{timestamp}")
+                custom.Button.inline("Show Message 🔐", data=f"secret_{timestamp}")
             ]
             result = builder.article(
-                title="secret",
-                text=f"🔒 A whisper message to {sandy}, Only he/she can open it.",
+                title="Whisper Message to {sandy}",
+                text=f"🔒 A Whisper Message To {sandy}, Only He/She Can Open It.",
                 buttons=buttons,
             )
             await event.answer([result] if result else None)
