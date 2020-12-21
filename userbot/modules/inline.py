@@ -285,7 +285,7 @@ if tebot:
                 custom.Button.inline("Show Message 🔐", data=f"secret_{timestamp}")
             ]
             result = builder.article(
-                title="Whisper Message to {sandy}",
+                title=f"Whisper Message to {sandy}",
                 text=f"🔒 A Whisper Message To {sandy}, Only He/She Can Open It.",
                 buttons=buttons,
             )
