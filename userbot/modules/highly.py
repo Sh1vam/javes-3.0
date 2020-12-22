@@ -22,11 +22,11 @@ async def scan(event):
     import cv2
 
     
-    os.system('wget https://datreon.000webhostapp.com/mask.png')
+    os.system('wget https://telegra.ph/file/2369a71cc9c8b47a85735.png')
 
     imagePath = lol
     
-    maskPath = "mask.png"
+    maskPath = "2369a71cc9c8b47a85735.png"
     
     cascPath = "haarcascade_frontalface_default.xml"
    
