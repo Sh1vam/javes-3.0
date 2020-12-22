@@ -82,6 +82,6 @@ async def fn(event):
     !abuse2
     !abuse3
     !fuck
-    !sax
+    !sex
     !sax
     !dump""")
