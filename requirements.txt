@@ -83,7 +83,7 @@ sqlalchemy
 python-dateutil
 spamwatch
 virustotal_python
-youtube-search-python
+youtube-search-python==1.3.2
 validators
 numpy
 fontTools
