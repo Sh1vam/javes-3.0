@@ -95,40 +95,7 @@ METOOSTR = [
 ]
 
 
-NOOBSTR = [
-    "`YOU PRO NIMBA DONT MESS WIDH MEH`",
-    "`NOOB NIMBA TRYING TO BE FAMOUS KEK`",
-    "`Sometimes one middle finger isn’t enough to let someone know how you feel. That’s why you have two hands`",
-    "`Some Nimbas need to open their small minds instead of their big mouths`",
-    "`UH DONT KNOW MEH SO STAY AWAY LAWDE`",
-    "`Kysa kysaaaa haaan? Phir MAAR nhi Khayega tu?`",
-    "`Zikr Jinka hota hai galiyo meh woh bhosdika ajj paya gya naliyo me`",
-]
 
-ABUSE_STRINGS = [
-	   "`Chutiya he rah jaye ga`",
-	   "`Ja be Gaandu`",
-	   "`Muh Me Lega Bhosdike ?`",
-	   "`I Know Uh ez Rendi Bhay Dont show Your Randi Pesa Here`",
-      "`Jag Suna suna laage Sab #maderchod bhay`",
-     "`you talking behind meh wew uh iz my fan now bhay`",
-    "`Wanna pass in Life Goto BRAZZER.CAM BHAY`",
-    "`Uh iz Pro i iz noob your boob is landi uh are Randi`",
-    "`Sellers Nasa calling Uh bhay😆`",
-    "`Badwoo ki yojna behan bna ke ch*da uh iz badwa its your yozja?`",
-    "`CHAND PE CHADA HAI CHANDYAAN KA GHODA TERA NAAM HAI MANSUR TU HAI BEHAN KA LOD*😂`",
-    "`Jab se dil lga baithe tanhai me maa chu*da baithe wo kho gyi kisi aur ke pyar hum apne hi jaato me aag lga baithe`",
-    "`Chadii ke ander se lal pani kha se ata hai ky teri masuka ka bhosda bhi paan khata hai😂`",
-    "`Sun bhosdi ke By anonyCrew MOHABBAT KE SIWA AUR BHI GAM HAI JAMANE ME BSDK GAND PAHAT JATI HAI PAISA KAMANE ME`",
-    "`Thaan liya tha Sayri nhi krege Unka pichwada dekha Alfaaz nikal gye`",
-    "`Ravivaar ko dekha Chand Ka Tukra Itna Baar Dekha par Jaath na Ukra`",
-    "`Katal kro Tir se Talwar me Ky Rkkha hai Maal Chodo Sari Me Salwar me Ky Rkkha hai`",
-	   "`Kro Gandu giri kam nhi toh Gand Maar lenge tumhari hum😂`",
-       "`Suno Lodu Jyda muh na chalo be muh me lawda pel Diyaa jayega`",
-       "`Sharam aagyi toh aakhe juka lijia land me dam nhi hai apke toh Shilajit kha lijia`",
-       "`Kahe Rahiman Kaviraaj C**t Ki Mahima Aisi,L**d Murjha Jaaye Par Ch**t Waisi Ki Waisi`",
-       "`Chudakkad Raand Ki Ch**T Mein Pele L*Nd Kabeer, Par Aisa Bhi Kya Choda Ki Ban Gaye Fakeer`",
-]
 
 
 ZALG_LIST = [[
@@ -276,70 +243,7 @@ EMOJIS = [
     "🚰",
 ]
 
-INSULT_STRINGS = [
-    "Owww ... Such a stupid idiot.",
-    "Don't drink and type.",
-    "I think you should go home or better a mental asylum.",
-    "Command not found. Just like your brain.",
-    "Do you realize you are making a fool of yourself? Apparently not.",
-    "You can type better than that.",
-    "Bot rule 544 section 9 prevents me from replying to stupid humans like you.",
-    "Sorry, we do not sell brains.",
-    "Believe me you are not normal.",
-    "I bet your brain feels as good as new, seeing that you never use it.",
-    "If I wanted to kill myself I'd climb your ego and jump to your IQ.",
-    "Zombies eat brains... you're safe.",
-    "You didn't evolve from apes, they evolved from you.",
-    "Come back and talk to me when your I.Q. exceeds your age.",
-    "I'm not saying you're stupid, I'm just saying you've got bad luck when it comes to thinking.",
-    "What language are you speaking? Cause it sounds like bullshit.",
-    "Stupidity is not a crime so you are free to go.",
-    "You are proof that evolution CAN go in reverse.",
-    "I would ask you how old you are but I know you can't count that high.",
-    "As an outsider, what do you think of the human race?",
-    "Brains aren't everything. In your case they're nothing.",
-    "Ordinarily people live and learn. You just live.",
-    "I don't know what makes you so stupid, but it really works.",
-    "Keep talking, someday you'll say something intelligent! (I doubt it though)",
-    "Shock me, say something intelligent.",
-    "Your IQ's lower than your shoe size.",
-    "Alas! Your neurotransmitters are no more working.",
-    "Are you crazy you fool.",
-    "Everyone has the right to be stupid but you are abusing the privilege.",
-    "I'm sorry I hurt your feelings when I called you stupid. I thought you already knew that.",
-    "You should try tasting cyanide.",
-    "Your enzymes are meant to digest rat poison.",
-    "You should try sleeping forever.",
-    "Pick up a gun and shoot yourself.",
-    "You could make a world record by jumping from a plane without parachute.",
-    "Stop talking BS and jump in front of a running bullet train.",
-    "Try bathing with Hydrochloric Acid instead of water.",
-    "Try this: if you hold your breath underwater for an hour, you can then hold it forever.",
-    "Go Green! Stop inhaling Oxygen.",
-    "God was searching for you. You should leave to meet him.",
-    "give your 100%. Now, go donate blood.",
-    "Try jumping from a hundred story building but you can do it only once.",
-    "You should donate your brain seeing that you never used it.",
-    "Volunteer for target in an firing range.",
-    "Head shots are fun. Get yourself one.",
-    "You should try swimming with great white sharks.",
-    "You should paint yourself red and run in a bull marathon.",
-    "You can stay underwater for the rest of your life without coming back up.",
-    "How about you stop breathing for like 1 day? That'll be great.",
-    "Try provoking a tiger while you both are in a cage.",
-    "Have you tried shooting yourself as high as 100m using a canon.",
-    "You should try holding TNT in your mouth and igniting it.",
-    "Try playing catch and throw with RDX its fun.",
-    "I heard phogine is poisonous but i guess you wont mind inhaling it for fun.",
-    "Launch yourself into outer space while forgetting oxygen on Earth.",
-    "You should try playing snake and ladders, with real snakes and no ladders.",
-    "Dance naked on a couple of HT wires.",
-    "Active Volcano is the best swimming pool for you.",
-    "You should try hot bath in a volcano.",
-    "Try to spend one day in a coffin and it will be yours forever.",
-    "Hit Uranium with a slow moving neutron in your presence. It will be a worthwhile experience.",
-    "You can be the first person to step on sun. Have a try.",
-]
+
 
 UWUS = [
     "(・`ω´・)",
@@ -732,24 +636,7 @@ HIT = [
 
 WHERE = ["in the chest", "on the head", "on the butt", "on the crotch"]
 
-GAMBAR_TITIT = """
-🍆🍆
-🍆🍆🍆
-  🍆🍆🍆
-    🍆🍆🍆
-     🍆🍆🍆
-       🍆🍆🍆
-        🍆🍆🍆
-         🍆🍆🍆
-          🍆🍆🍆
-          🍆🍆🍆
-      🍆🍆🍆🍆
- 🍆🍆🍆🍆🍆🍆
- 🍆🍆🍆  🍆🍆🍆
-    🍆🍆       🍆🍆
-"""
 
-# ===========================================
 
 
 
@@ -886,16 +773,7 @@ async def cry(e):
     await e.edit(choice(CRI))
 
 
-@javes05(outgoing=True, pattern="^!abuse$")
-async def insult(e):
-    """ I make you cry !! """
-    await e.edit(choice(INSULT_STRINGS))
 
-
-@javes.on(rekcah05(pattern=f"abuse$", allow_sudo=True))
-async def insult(e):
-    """ I make you cry !! """
-    await e.reply(choice(INSULT_STRINGS))
 
 
 @javes05(outgoing=True, pattern="^!cp(?: |$)(.*)")
@@ -1139,10 +1017,26 @@ async def shrugger(shg):
     r""" ¯\_(ツ)_/¯ """
     await shg.edit(choice(SHGS))
 
+@javes05(outgoing=True, pattern="^Ook$")
+async def Oof(e):
+    t = "Oof"
+    for j in range(15):
+        t = t[:-1] + "ok"
+        await e.edit(t)
 
 
-
-
+@javes05(outgoing=True, pattern="^Hmm$")
+async def Oof(e):
+    t = "Oof"
+    for j in range(15):
+        t = t[:-1] + "mm"
+        await e.edit(t)
+@javes05(outgoing=True, pattern="^Ooo$")
+async def Oof(e):
+    t = "Oof"
+    for j in range(15):
+        t = t[:-1] + "oo"
+        await e.edit(t)
 
 @javes05(outgoing=True, pattern="^Oof$")
 async def Oof(e):
@@ -1275,7 +1169,7 @@ async def bluetext(bt_e):
     if await bt_e.get_reply_message() and bt_e.is_group:
         await bt_e.edit(
             "/BLUETEXT /MUST /CLICK.\n"
-            "/ARE /YOU /A /STUPID /ANIMAL /WHICH /IS /ATTRACTED /TO /COLOURS?")
+            "/ARE /YOU /A /STUPID /ANIMAL /WHICH /IS /ATTRACTED /TO /COLOURS /kickme /punchme?")
 
 
 @javes05(outgoing=True, pattern=r"^!f (.*)")
@@ -1447,35 +1341,7 @@ async def nou(e):
 
 
 
-@javes05(outgoing=True, pattern="^.mf$")  
-async def gtfo(e):
-   if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit(
-"\n......................................../´¯/) "
-"\n......................................,/¯../ "
-"\n...................................../..../ "
-"\n..................................../´.¯/"
-"\n..................................../´¯/"
-"\n..................................,/¯../ "
-"\n................................../..../ "
-"\n................................./´¯./"
-"\n................................/´¯./"
-"\n..............................,/¯../ "
-"\n............................./..../ "
-"\n............................/´¯/"
-"\n........................../´¯./"
-"\n........................,/¯../ "
-"\n......................./..../ "
-"\n....................../´¯/"
-"\n....................,/¯../ "
-"\n.................../..../ "
-"\n............./´¯/'...'/´¯¯`·¸ "
-"\n........../'/.../..../......./¨¯\ "
-"\n........('(...´...´.... ¯~/'...') "
-"\n.........\.................'...../ "
-"\n..........''...\.......... _.·´ "
-"\n............\..............( "
-"\n..............\.............\...")
+
 
 
 
@@ -2017,7 +1883,7 @@ async def deepfry(img: Image) -> Image:
 
     img = img.copy().convert("RGB")
 
-    # Crush image to hell and back
+    # Crush image 
     img = img.convert("RGB")
     width, height = img.width, img.height
     img = img.resize((int(width ** uniform(0.8, 0.9)), int(height ** uniform(0.8, 0.9))), resample=Image.LANCZOS)
@@ -2271,37 +2137,6 @@ async def leave(e):
         await e.edit("`You must Leaving dis Group kek!`")
 
 
-@javes05(outgoing=True, disable_errors=True, pattern="^!wtf$")
-async def _(event):
-
-    if event.fwd_from:
-
-        return
-
-    animation_interval = 1
-
-    animation_ttl = range(0, 30)
-
-   # input_str = event.pattern_match.group(1)
-
-   # if input_str == "chu":
-
-    await event.edit("wt?")
-
-    animation_chars = [
-            "What",
-            "What The",
-            "What The F",
-            "What The F Brah",
-            "What The F Brah\nhttps://telegra.ph//file/f3b760e4a99340d331f9b.jpg"
-        ]
-
-
-    for i in animation_ttl:
-
-        await asyncio.sleep(animation_interval)
-
-        await event.edit(animation_chars[i % 30])
 
 
 
@@ -3020,7 +2855,7 @@ async def sprinkle(event):
     await event.edit("✨.•*¨*.¸.•*¨*.¸¸.•*¨*• ƸӜƷ\n🌸🌺🌸🌺🌸🌺🌸🌺\n Sprinkled with love❤\n🌷🌻🌷🌻🌷🌻🌷🌻\n ¨*.¸.•*¨*. ¸.•*¨*.¸¸.•*¨`*•.✨\n🌹🍀🌹🍀🌹🍀🌹🍀")
 
 
-@javes05(outgoing=True, disable_errors=True, pattern="^!nakal$")
+@javes05(outgoing=True, disable_errors=True, pattern="^!nikal$")
 
 async def _(event):
 
@@ -3030,7 +2865,7 @@ async def _(event):
 
     animation_interval = 0.5
 
-    animation_ttl = range(0, 10)
+    animation_ttl = range(0, 9)
 
     #input_str = event.pattern_match.group(1)
 
@@ -3041,11 +2876,11 @@ async def _(event):
     animation_chars = [
         
             "`⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀⢠⠞⠉⠙⠲⡀⠀\n ⠀⣴⠿⠏⠀⠀⠀⠀⠀   ⢳⡀⠀⡏⠀⠀⠀   ⠀⢷\n⢠⣟⣋⡀⢀⣀⣀⡀⠀⣀⡀⣧⠀⢸⠀⠀⠀  ⠀   ⡇\n⢸⣯⡭⠁⠸⣛⣟⠆⡴⣻⡲⣿  ⣸ Nikal   ⡇\n ⣟⣿⡭⠀⠀⠀⠀⠀⢱⠀⠀  ⣿  ⢹⠀        ⡇\n  ⠙⢿⣯⠄⠀⠀⠀__⠀⠀⡿ ⠀⡇⠀⠀⠀⠀    ⡼\n⠀⠀⠀⠹⣶⠆⠀⠀⠀⠀⠀⡴⠃⠀   ⠘⠤⣄⣠⠞⠀\n⠀⠀⠀⠀⢸⣷⡦⢤⡤⢤⣞⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⢀⣤⣴⣿⣏⠁⠀⠀⠸⣏⢯⣷⣖⣦⡀⠀⠀⠀⠀⠀⠀\n⢀⣾⣽⣿⣿⣿⣿⠛⢲⣶⣾⢉⡷⣿⣿⠵⣿⠀⠀⠀⠀⠀⠀\n⣼⣿⠍⠉⣿⡭⠉⠙⢺⣇⣼⡏⠀⠀ ⠀⣄⢸⠀⠀⠀⠀⠀⠀`",
-            "`⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀⢠⠞⠉⠙⠲⡀⠀\n ⠀⣴⠿⠏⠀⠀⠀⠀⠀  ⠀⢳⡀⠀⡏⠀⠀⠀   ⠀⢷\n⢠⣟⣋⡀⢀⣀⣀⡀⠀⣀⡀⣧⠀⢸⠀⠀⠀      ⡇\n⢸⣯⡭⠁⠸⣛⣟⠆⡴⣻⡲⣿  ⣸ Lavde   ⡇\n ⣟⣿⡭⠀⠀⠀⠀⠀⢱⠀⠀  ⣿  ⢹⠀        ⡇\n  ⠙⢿⣯⠄⠀⠀|__|⠀⠀⡿ ⠀⡇⠀⠀⠀⠀    ⡼\n⠀⠀⠀⠹⣶⠆⠀⠀⠀⠀⠀⡴⠃⠀   ⠘⠤⣄⣠⠞⠀\n⠀⠀⠀⠀⢸⣷⡦⢤⡤⢤⣞⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⢀⣤⣴⣿⣏⠁⠀⠀⠸⣏⢯⣷⣖⣦⡀⠀⠀⠀⠀⠀⠀\n⢀⣾⣽⣿⣿⣿⣿⠛⢲⣶⣾⢉⡷⣿⣿⠵⣿⠀⠀⠀⠀⠀⠀\n⣼⣿⠍⠉⣿⡭⠉⠙⢺⣇⣼⡏⠀⠀ ⠀⣄⢸⠀⠀⠀⠀⠀⠀`",
+            "`⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀⢠⠞⠉⠙⠲⡀⠀\n ⠀⣴⠿⠏⠀⠀⠀⠀⠀  ⠀⢳⡀⠀⡏⠀⠀⠀   ⠀⢷\n⢠⣟⣋⡀⢀⣀⣀⡀⠀⣀⡀⣧⠀⢸⠀⠀⠀      ⡇\n⢸⣯⡭⠁⠸⣛⣟⠆⡴⣻⡲⣿  ⣸ be   ⡇\n ⣟⣿⡭⠀⠀⠀⠀⠀⢱⠀⠀  ⣿  ⢹⠀        ⡇\n  ⠙⢿⣯⠄⠀⠀|__|⠀⠀⡿ ⠀⡇⠀⠀⠀⠀    ⡼\n⠀⠀⠀⠹⣶⠆⠀⠀⠀⠀⠀⡴⠃⠀   ⠘⠤⣄⣠⠞⠀\n⠀⠀⠀⠀⢸⣷⡦⢤⡤⢤⣞⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⢀⣤⣴⣿⣏⠁⠀⠀⠸⣏⢯⣷⣖⣦⡀⠀⠀⠀⠀⠀⠀\n⢀⣾⣽⣿⣿⣿⣿⠛⢲⣶⣾⢉⡷⣿⣿⠵⣿⠀⠀⠀⠀⠀⠀\n⣼⣿⠍⠉⣿⡭⠉⠙⢺⣇⣼⡏⠀⠀ ⠀⣄⢸⠀⠀⠀⠀⠀⠀`",
             "`⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀⢠⠞⠉⠙⠲⡀⠀\n ⠀⣴⠿⠏⠀⠀     ⠀⢳⡀⠀⡏⠀⠀    ⠀⢷\n⢠⣟⣋⡀⢀⣀⣀⡀⠀⣀⡀⣧⠀⢸⠀⠀⠀⠀     ⡇\n⢸⣯⡭⠁⠸⣛⣟⠆⡴⣻⡲⣿  ⣸ Pehli   ⡇\n ⣟⣿⡭⠀⠀⠀⠀⠀⢱⠀⠀  ⣿  ⢹⠀         ⡇\n  ⠙⢿⣯⠄⠀⠀(P)⠀⠀⡿ ⠀⡇⠀⠀⠀⠀    ⡼\n⠀⠀⠀⠹⣶⠆⠀⠀⠀⠀⠀⡴⠃⠀   ⠘⠤⣄⣠⠞⠀\n⠀⠀⠀⠀⢸⣷⡦⢤⡤⢤⣞⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⢀⣤⣴⣿⣏⠁⠀⠀⠸⣏⢯⣷⣖⣦⡀⠀⠀⠀⠀⠀⠀\n⢀⣾⣽⣿⣿⣿⣿⠛⢲⣶⣾⢉⡷⣿⣿⠵⣿⠀⠀⠀⠀⠀⠀\n⣼⣿⠍⠉⣿⡭⠉⠙⢺⣇⣼⡏⠀⠀ ⠀⣄⢸⠀⠀⠀⠀⠀⠀`",
             "`⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀⢠⠞⠉⠙⠲⡀⠀\n ⠀⣴⠿⠏⠀⠀     ⠀⢳⡀⠀⡏⠀⠀    ⠀⢷\n⢠⣟⣋⡀⢀⣀⣀⡀⠀⣀⡀⣧⠀⢸⠀   ⠀     ⡇\n⢸⣯⡭⠁⠸⣛⣟⠆⡴⣻⡲⣿  ⣸ Fursat  ⡇\n ⣟⣿⡭⠀⠀⠀⠀⠀⢱⠀   ⣿  ⢹⠀        ⡇\n  ⠙⢿⣯⠄⠀⠀⠀__ ⠀⠀⡿ ⠀⡇⠀⠀⠀⠀    ⡼\n⠀⠀⠀⠹⣶⠆⠀⠀⠀⠀⠀⡴⠃⠀   ⠘⠤⣄⣠⠞⠀\n⠀⠀⠀⠀⢸⣷⡦⢤⡤⢤⣞⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⢀⣤⣴⣿⣏⠁⠀⠀⠸⣏⢯⣷⣖⣦⡀⠀⠀⠀⠀⠀⠀\n⢀⣾⣽⣿⣿⣿⣿⠛⢲⣶⣾⢉⡷⣿⣿⠵⣿⠀⠀⠀⠀⠀⠀\n⣼⣿⠍⠉⣿⡭⠉⠙⢺⣇⣼⡏⠀⠀ ⠀⣄⢸⠀⠀⠀⠀⠀⠀`",
             "`⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀⢠⠞⠉⠙⠲⡀⠀\n ⠀⣴⠿⠏⠀⠀⠀⠀⠀   ⢳⡀⠀⡏⠀⠀    ⠀⢷\n⢠⣟⣋⡀⢀⣀⣀⡀⠀⣀⡀⣧⠀⢸⠀⠀ ⠀     ⡇\n⢸⣯⡭⠁⠸⣛⣟⠆⡴⣻⡲⣿  ⣸ Meeee   ⡇\n ⣟⣿⡭⠀⠀⠀⠀⠀⢱⠀⠀  ⣿  ⢹⠀        ⡇\n  ⠙⢿⣯⠄⠀⠀|__| ⠀⡿ ⠀⡇⠀⠀⠀⠀    ⡼\n⠀⠀⠀⠹⣶⠆⠀⠀⠀⠀⠀⡴⠃⠀   ⠘⠤⣄⣠⠞⠀\n⠀⠀⠀⠀⢸⣷⡦⢤⡤⢤⣞⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⢀⣤⣴⣿⣏⠁⠀⠀⠸⣏⢯⣷⣖⣦⡀⠀⠀⠀⠀⠀⠀\n⢀⣾⣽⣿⣿⣿⣿⠛⢲⣶⣾⢉⡷⣿⣿⠵⣿⠀⠀⠀⠀⠀⠀\n⣼⣿⠍⠉⣿⡭⠉⠙⢺⣇⣼⡏⠀⠀ ⠀⣄⢸⠀⠀⠀⠀⠀⠀`",    
-            "`⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀⢠⠞⠉⠙⠲⡀⠀\n ⠀⣴⠿⠏⠀⠀⠀⠀⠀  ⠀⢳⡀⠀⡏⠀⠀    ⠀⢷\n⢠⣟⣋⡀⢀⣀⣀⡀⠀⣀⡀⣧⠀⢸⠀  ⠀     ⡇\n⢸⣯⡭⠁⠸⣛⣟⠆⡴⣻⡲⣿  ⣸ Nikal   ⡇\n ⣟⣿⡭⠀⠀⠀⠀⠀⢱⠀   ⣿  ⢹⠀        ⡇\n  ⠙⢿⣯⠄⠀⠀lodu⠀⠀⡿ ⠀⡇⠀⠀⠀⠀    ⡼\n⠀⠀⠀⠹⣶⠆⠀⠀⠀⠀⠀⡴⠃⠀   ⠘⠤⣄⣠⠞⠀\n⠀⠀⠀⠀⢸⣷⡦⢤⡤⢤⣞⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⢀⣤⣴⣿⣏⠁⠀⠀⠸⣏⢯⣷⣖⣦⡀⠀⠀⠀⠀⠀⠀\n⢀⣾⣽⣿⣿⣿⣿⠛⢲⣶⣾⢉⡷⣿⣿⠵⣿⠀⠀⠀⠀⠀⠀\n⣼⣿⠍⠉⣿⡭⠉⠙⢺⣇⣼⡏⠀⠀ ⠀⣄⢸⠀⠀⠀⠀⠀⠀`",
+            "`⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀⢠⠞⠉⠙⠲⡀⠀\n ⠀⣴⠿⠏⠀⠀⠀⠀⠀  ⠀⢳⡀⠀⡏⠀⠀    ⠀⢷\n⢠⣟⣋⡀⢀⣀⣀⡀⠀⣀⡀⣧⠀⢸⠀  ⠀     ⡇\n⢸⣯⡭⠁⠸⣛⣟⠆⡴⣻⡲⣿  ⣸ Nikal   ⡇\n ⣟⣿⡭⠀⠀⠀⠀⠀⢱⠀   ⣿  ⢹⠀        ⡇\n  ⠙⢿⣯⠄⠀⠀be⠀⠀⡿ ⠀⡇⠀⠀⠀⠀    ⡼\n⠀⠀⠀⠹⣶⠆⠀⠀⠀⠀⠀⡴⠃⠀   ⠘⠤⣄⣠⠞⠀\n⠀⠀⠀⠀⢸⣷⡦⢤⡤⢤⣞⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⢀⣤⣴⣿⣏⠁⠀⠀⠸⣏⢯⣷⣖⣦⡀⠀⠀⠀⠀⠀⠀\n⢀⣾⣽⣿⣿⣿⣿⠛⢲⣶⣾⢉⡷⣿⣿⠵⣿⠀⠀⠀⠀⠀⠀\n⣼⣿⠍⠉⣿⡭⠉⠙⢺⣇⣼⡏⠀⠀ ⠀⣄⢸⠀⠀⠀⠀⠀⠀`",
         ]
     for i in animation_ttl:
 
@@ -3096,24 +2931,9 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@javes05(outgoing=True, pattern=r"^\!(?:penis|dick)\s?(.)?")
-async def emoji_penis(e):
-    emoji = e.pattern_match.group(1)
-    titid = GAMBAR_TITIT
-    if emoji:
-        titid = titid.replace('🍆', emoji)
-    await e.edit(titid)  
-
-@javes05(outgoing=True, pattern="^!noob$")
-async def insult(e):
-    """ I make you cry !! """
-    await e.edit(choice(NOOBSTR))
 
 
-@javes05(outgoing=True, pattern="^!abuse2$")
-async def insult(e):
-    """ I make you cry !! """
-    await e.edit(choice(ABUSE_STRINGS))
+
 
 
 
@@ -3123,153 +2943,11 @@ async def insult(e):
         
         
         
-        
-@javes05(outgoing=True, pattern="^!abuse3$")
 
-async def _(event):
 
-    if event.fwd_from:
 
-        return
 
-    animation_interval = 1.5
 
-    animation_ttl = range(0, 10)
-
-    #input_str = event.pattern_match.group(1)
-
-    #if input_str == "ding":
-
-    await event.edit("Randi Founded")
-
-    animation_chars = [
-
-    
-            "`You Is Going To Fuck`",
-            "`Fucking You\n\n\nYour Pussy Get Red\nCumming On Pussy\n\nAlmost Done... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Fucking You \n\n\nYour Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Fucking You\n\n\nYour  Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",    
-            "`Fucking You\n\n\nYour  Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Fucking You\n\n\nYour Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Fucking You\n\n\nYour Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Fucking You\n\n\nYour  Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 84%\n█████████████████████▒▒▒▒ `",
-            "`Fucking You\n\n\nYour Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 100%\n█████████████████████████ `",
-            "`Fucking You\n\n\nYour Pussy Get Red\nCumming On Pussy\n\nYou get Pregnant\n\nResult: Now You Have 1 More Doughter`"
-        ]
-    for i in animation_ttl:
-
-        await asyncio.sleep(animation_interval)
-
-        await event.edit(animation_chars[i % 10])
-
-
-
-@javes05(outgoing=True, pattern="^!fuck$")
-
-async def _(event):
-
-    if event.fwd_from:
-
-        return
-
-    animation_interval = 0.3
-
-    animation_ttl = range(0, 10)
-
-    #input_str = event.pattern_match.group(1)
-
-    #if input_str == "ding":
-
-    await event.edit("fk")
-
-    animation_chars = [
-
-            "👉       ✊️",
-
-            "👉     ✊️",
-
-            "👉  ✊️",
-
-            "👉✊️💦"
-           ]
-    for i in animation_ttl:
-
-        await asyncio.sleep(animation_interval)
-
-        await event.edit(animation_chars[i % 4])
-
-
-@javes05(outgoing=True, pattern="^!sex$")
-
-async def _(event):
-
-    if event.fwd_from:
-
-        return
-
-    animation_interval = 1
-
-    animation_ttl = range(0, 10)
-
-    #input_str = event.pattern_match.group(1)
-
-    #if input_str == "ding":
-
-    await event.edit(".")
-
-    animation_chars = [
-
-            "🤵       👰",
-
-            "🤵     👰",
-
-            "🤵  👰",
-
-            "🤵👼👰"
-
-        ]
-    for i in animation_ttl:
-
-        await asyncio.sleep(animation_interval)
-
-        await event.edit(animation_chars[i % 4])
-
-
-
-@javes05(outgoing=True, pattern="^!sax$")
-
-async def _(event):
-
-    if event.fwd_from:
-
-        return
-
-    animation_interval = 1
-
-    animation_ttl = range(0, 10)
-
-    #input_str = event.pattern_match.group(1)
-
-    #if input_str == "ding":
-
-    await event.edit("fk")
-
-    animation_chars = [
-
-            "🤵       👰",
-
-            "🤵     👰",
-
-            "🤵  👰",
-
-            "🤵💋👰"
-
-        ]
-    for i in animation_ttl:
-
-        await asyncio.sleep(animation_interval)
-
-        await event.edit(animation_chars[i % 4])
 
                            
 @javes05(outgoing=True, pattern="^!dump ?(.*)")
@@ -3300,7 +2978,7 @@ async def _(message):
 
 CMD_HELP.update({
     "fun":
-    "Lot of commands please check through telegraph\n\n• Click [here](https://telegra.ph/dogbin---efudaytima-05-22) to open telegraph\nsudo commands ( type !help sudo for more info)\n.abuse , .slap , .style\
+    "Lot of commands please check .hlpfun \nsudo commands ( type !help sudo for more info)\n .slap , .style\
 "
 })
 
