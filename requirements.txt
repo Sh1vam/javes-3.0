@@ -3,6 +3,7 @@ virtualenv
 setuptools
 wheel
 Pillow
+moviepy
 glitch_this
 PyGithub
 aiofiles
