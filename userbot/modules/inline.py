@@ -179,7 +179,7 @@ if tebot:
           fci = [[Button.inline('Go back', 'back'),Button.inline('❌ Close menu', b'close')]]            
           await event.edit(str(CMD_HELP[et]), buttons=fci)
 
-    else:
+    if et not in CMD_HELP:
         try:
             await event.answer("Please Wait Sir,Or Try Other Btn", alert=True)
         except:
@@ -265,7 +265,7 @@ if tebot:
                     u = await event.client.get_entity(u)
                     if u.username:
                         sandy = f"@{u.username}"
-                    else:
+                    if not u.username:
                         sandy = f"[{u.first_name}](tg://user?id={u.id})"
                 except ValueError:
                     # ValueError: Could not find the input entity
@@ -278,7 +278,7 @@ if tebot:
                     return
                 if u.username:
                     sandy = f"@{u.username}"
-                else:
+                if not u.username:
                     sandy = f"[{u.first_name}](tg://user?id={u.id})"
                 u = int(u.id)
             except:
