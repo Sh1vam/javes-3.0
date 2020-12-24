@@ -1018,16 +1018,16 @@ async def shrugger(shg):
     await shg.edit(choice(SHGS))
 
 @javes05(outgoing=True, pattern="^Ook$")
-async def Oof(e):
-    t = "Oof"
+async def Ook(e):
+    t = "OoK"
     for j in range(15):
         t = t[:-1] + "ok"
         await e.edit(t)
 
 
 @javes05(outgoing=True, pattern="^Hmm$")
-async def Oof(e):
-    t = "Oof"
+async def Hmmmmmm(e):
+    t = "Hmm"
     for j in range(15):
         t = t[:-1] + "mm"
         await e.edit(t)
@@ -1039,12 +1039,17 @@ async def Oof(e):
         await e.edit(t)
 
 @javes05(outgoing=True, pattern="^Oof$")
-async def Oof(e):
-    t = "Oof"
+async def Oo0(e):
+    t = "Ooo"
     for j in range(15):
         t = t[:-1] + "of"
         await e.edit(t)
-
+@javes05(outgoing=True, pattern="^Okk$")
+async def Oo0(e):
+    t = "OkK"
+    for j in range(15):
+        t = t[:-1] + "kK"
+        await e.edit(t)
 
 @javes05(outgoing=True, pattern="^!kill$")
 async def iqless(e):
