@@ -3,6 +3,7 @@ import sys
 import os
 from userbot.utils import admin_cmd
 from userbot import bot 
+from userbot import bot as borg
 import moviepy.editor as m
 if not os.path.isdir("./dco/"):
     os.makedirs("./dco/")
