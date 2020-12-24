@@ -119,6 +119,26 @@ if tebot:
         else:
             reply_pop_up_alert = "This message no longer exists "
         await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+ '''@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"mywspr_(.*)")))
+ async def on_plug_in_callback_query_handler(event):
+        me = await client.get_me()
+        timestamps = int(event.pattern_match.group(1).decode("UTF-8"))
+        if os.path.exists("./userbot/mysecretes.txt"):
+            jsondatas = json.load(open("./userbot/mysecretes.txt"))
+            try:
+                messages = jsondatas[f"{timestamps}"]
+                userids = messages["userid"]
+                ides = [userids, me.id]
+                if event.query.user_id in ides:
+                    encrypted_tcxts = messages["text"]
+                    reply_pop_up_alert = encrypted_tcxts
+                else:
+                    reply_pop_up_alert = "why were you looking at this  go away and do your own work"
+            except KeyError:
+                reply_pop_up_alert = "This message no longer exists in bot server"
+        else:
+            reply_pop_up_alert = "This message no longer exists "
+        await event.answer(reply_pop_up_alert, cache_time=0, alert=True)'''
  @tebot.on(events.CallbackQuery)
  async def handler(event):
   try:
@@ -155,35 +175,6 @@ if tebot:
         return await event.edit ("For Support, Report bugs & help @errorsender_bot and for inline help try @botusername ihelp", buttons=tbu, link_preview=False)   
     if et == "close":
         await event.edit("Help Menu Closed")
-    if et == "helpme_next\((.+?)\)":
-            me = await client.get_me()  # pylint:disable=E0602
-            if event.query.user_id == me.id:  # pylint:disable=E0602
-                current_page_number = int(
-                    event.data_match.group(1).decode("UTF-8"))
-                
-                dc = paginate_help(
-                    current_page_number + 1, CMD_HELP, "helpr")
-              
-                await event.edit(buttons=dc)
-            else:
-                Cobra = "Please get your own Userbot"
-                await event.answer(Cobra)
-    if et == "helpme_prev\((.+?)\)":
-            me = await client.get_me()  # pylint:disable=E0602
-            if event.query.user_id == me.id:  # pylint:disable=E0602
-                current_page_number = int(
-                    event.data_match.group(1).decode("UTF-8"))
-                
-                dc = paginate_help(
-                    current_page_number - 1,
-                    CMD_HELP,  # pylint:disable=E0602
-                    "helpr"
-                )
-                
-                await event.edit(buttons=dc)
-            else:
-                  TheDark = "Please get your own Userbot😁😁"
-                  await event.answer(TheDark)
     if et in CMD_HELP: 
           fci = [[Button.inline('Go back', 'back'),Button.inline('❌ Close menu', b'close')]]            
           await event.edit(str(CMD_HELP[et]), buttons=fci)
@@ -201,13 +192,25 @@ if tebot:
 if tebot:
  @tebot.on(events.InlineQuery)  
  async def inline_handler(event):
+  if event.reply_to_msg_id:
+	   global match
+	   r_msg = await event.get_reply_message()
+	   me = await client.get_me()
+	   builder = event.builder
+           result = None
+           rmatch = r_msg.sender.id
+	   query = event.text
+	   match = re.findall(rmatch, query)
   me = await client.get_me()  
   builder = event.builder
   query = event.text
+  
   split = query.split(' ', 1) 
-  result = None 
+  result = None
+  #results = None
   hmm = re.compile("secret (.*) (.*)") 
   match = re.findall(hmm, query)
+
   if event.query.user_id == me.id and query.startswith("buttons"):
             markdown_note = query[7:]
             prev = 0
@@ -245,10 +248,12 @@ if tebot:
             )
             await event.answer([result] if result else None)
   if event.query.user_id == me.id and match:
+	    r_msg = await event.get_reply_message()
             query = query[7:]
             user, txct = query.split(" ", 1)
             builder = event.builder
             secret = os.path.join("./userbot", "secrets.txt")
+
             try:
                 jsondata = json.load(open(secret))
             except:
@@ -294,7 +299,36 @@ if tebot:
                 jsondata.update(newsecret)
                 json.dump(jsondata, open(secret, "w"))
             else:
-                json.dump(newsecret, open(secret, "w"))  
+                json.dump(newsecret, open(secret, "w"))
+  '''if event.query.user_id == me.id and rmatch:
+	    r_msg = await event.get_reply_message()
+            querys = querys[7:]
+            txcts = querys
+            builder = event.builder
+            mysecrets = os.path.join("./userbot", "mysecretes.txt")
+
+            try:
+                jsondatas = json.load(open(mysecrets))
+            except:
+                jsondatas = False
+	    shivam = f"[{rmatch.first_name}](tg://user?id={rmatch})"
+            timestamps = int(time.time() * 2)
+            newsecrets = {str(timestamps): {"userid": rmatch, "text": txcts}}
+
+            buttons = [
+                custom.Button.inline("Show Message 🔐", data=f"secret_{timestamps}")
+            ]
+            resultse = builder.article(
+                title=f"Whisper Message to {shivam}",
+                text=f"🔒 A Whisper Message To {shivam}, Only He/She Can Open It.",
+                buttons=buttons,
+            )
+            await event.answer([resultse] if resultse else None)
+            if jsondatas:
+                jsondatas.update(newsecrets)
+                json.dump(jsondatas, open(mysecrets, "w"))
+            else:
+                json.dump(newsecrets, open(mysecrets, "w"))'''
   if not event.query.user_id == me.id:      
       return
   if query.startswith("helpme"):
