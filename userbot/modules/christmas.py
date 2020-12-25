@@ -8,7 +8,7 @@ from userbot import bot as javes
 from telethon import events
 
 from userbot import CMD_HELP
-@javes.on(admin_cmd("𝓒𝓗𝓡𝓘𝓢𝓣𝓜𝓐𝓢"))
+@javes.on(admin_cmd("christmas"))
 async def _(event):
     if event.fwd_from:
         return
