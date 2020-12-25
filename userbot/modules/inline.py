@@ -192,15 +192,7 @@ if tebot:
 if tebot:
  @tebot.on(events.InlineQuery)  
  async def inline_handler(event):
-  if event.reply_to_msg_id:
-	   global match
-	   r_msg = await event.get_reply_message()
-	   me = await client.get_me()
-	   builder = event.builder
-	   result = None
-	   rmatch = r_msg.sender.id
-	   query = event.text
-	   match = re.findall(rmatch, query)
+
   me = await client.get_me()  
   builder = event.builder
   query = event.text
