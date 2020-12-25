@@ -798,7 +798,7 @@ async def fastpurger(purg):
     done = await purg.client.send_message(
         purg.chat_id, f"`Fast purge complete!`\
         \nPurged {str(count)} messages")
-    done.delete()
+    await done.delete()
     return
 
 @javes05(outgoing=True, pattern="^\!purgeme")
@@ -817,7 +817,7 @@ async def purgeme(delme):
         delme.chat_id,
         "`Purge complete!` Purged " + str(count) + " messages.",
     )
-    smsg.delete()
+    await smsg.delete()
     return
 
 
