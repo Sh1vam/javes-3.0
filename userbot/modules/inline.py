@@ -28,7 +28,17 @@ try:
 except:
    tebot = None
    pass
-
+# Darkcobra Original 🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍
+# kangers Keep Credits 😒😒😒😒😒😒😒😒😒😒😒😒😒😒😒😒😒
+# Made by Dc-Team
+# Don't remove these lines u fool ,,, 
+#
+#
+#hehehhe
+#Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
+#A stark bhai chori karna aaya ho kya friday me ek bar back btn kang kar k man nahi bhara 
+#Agar stark nahi ho to kon hai be tu jo bhi hai kang karna he aaya hai mera back , open btn so get lost
+# aur  unload load back close open kang kara ya idea bhi le to credit dena pehli 6 line nahi to bhut bura hoga tumara sath
 from math import ceil
 import asyncio
 from userbot import CMD_HELP, BOTLOG, BOTLOG_CHATID,client
@@ -187,8 +197,8 @@ if tebot:
 	   r_msg = await event.get_reply_message()
 	   me = await client.get_me()
 	   builder = event.builder
-           result = None
-           rmatch = r_msg.sender.id
+	   result = None
+	   rmatch = r_msg.sender.id
 	   query = event.text
 	   match = re.findall(rmatch, query)
   me = await client.get_me()  
@@ -238,7 +248,7 @@ if tebot:
             )
             await event.answer([result] if result else None)
   if event.query.user_id == me.id and match:
-	    r_msg = await event.get_reply_message()
+            r_msg = await event.get_reply_message()
             query = query[7:]
             user, txct = query.split(" ", 1)
             builder = event.builder
@@ -296,7 +306,6 @@ if tebot:
             txcts = querys
             builder = event.builder
             mysecrets = os.path.join("./userbot", "mysecretes.txt")
-
             try:
                 jsondatas = json.load(open(mysecrets))
             except:
@@ -304,7 +313,6 @@ if tebot:
 	    shivam = f"[{rmatch.first_name}](tg://user?id={rmatch})"
             timestamps = int(time.time() * 2)
             newsecrets = {str(timestamps): {"userid": rmatch, "text": txcts}}
-
             buttons = [
                 custom.Button.inline("Show Message 🔐", data=f"secret_{timestamps}")
             ]
@@ -364,8 +372,3 @@ def ibuild_keyboard(buttons):
 
 #some codes taken form Cat bot Fixing them to javes was a task
 
-
-
-
- 
-      
