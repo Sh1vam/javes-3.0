@@ -33,7 +33,10 @@ async def _(event):
     reply_message = None
     if event.reply_to_msg_id:
         reply_message = await event.get_reply_message()
-        await reply_message.edit(mentions)
+        try:
+            await reply_message.edit(mentions)
+        except:
+            await event.edit(mentions)
     else:
         await event.edit(mentions)
     
