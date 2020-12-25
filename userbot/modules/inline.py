@@ -240,7 +240,7 @@ if tebot:
             )
             await event.answer([result] if result else None)
   if event.query.user_id == me.id and match:
-            r_msg = await event.get_reply_message()
+            #r_msg = await event.get_reply_message()
             query = query[7:]
             user, txct = query.split(" ", 1)
             builder = event.builder
