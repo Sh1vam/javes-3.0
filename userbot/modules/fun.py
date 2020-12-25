@@ -2981,11 +2981,6 @@ async def _(message):
 
 
 
-CMD_HELP.update({
-    "fun":
-    "Lot of commands please check .hlpfun \nsudo commands ( type !help sudo for more info)\n .slap , .style\
-"
-})
 
 
 
