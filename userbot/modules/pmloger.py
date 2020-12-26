@@ -27,21 +27,21 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 NO_PM_LOG_USERS = []
 NC_LOG_P_M_S=sb(os.environ.get("NC_LOG_P_M_S", "True"))
-BOTLOG = sb(os.environ.get("BOTLOG", "False"))
-BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID",None))
+PMLOG = sb(os.environ.get("PMLOG", "True"))
+PMLOG_CHATID = int(os.environ.get("PMLOG_CHATID",-1001230114424))
 
 
 @register(outgoing=True, pattern=r"^.save(?: |$)([\s\S]*)")
 async def log(log_text):
     """ For .log command, forwards a message or the command argument to the bot logs group """
-    if BOTLOG:
+    if PMLOG:
         if log_text.reply_to_msg_id:
             reply_msg = await log_text.get_reply_message()
-            await reply_msg.forward_to(BOTLOG_CHATID)
+            await reply_msg.forward_to(PMLOG_CHATID)
         elif log_text.pattern_match.group(1):
             user = f"#LOG / Chat ID: {log_text.chat_id}\n\n"
             textx = user + log_text.pattern_match.group(1)
-            await bot.send_message(BOTLOG_CHATID, textx)
+            await bot.send_message(PMLOG_CHATID, textx)
         else:
             await log_text.edit("`What am I supposed to log?`")
             return
@@ -60,7 +60,7 @@ async def monito_p_m_s(event):
         me = await client.get_me()
         if chat.id not in NO_PM_LOG_USERS and chat.id != me.id:
             try:
-                e = await borg.get_entity(int(Config.BOTLOG_CHATID))             
+                e = await borg.get_entity(int(PMLOG_CHATID))             
                 fwd_message = await borg.forward_messages(
                     e,
                     event.message,
@@ -75,7 +75,7 @@ async def monito_p_m_s(event):
 
 @borg.on(admin_cmd(pattern="elog ?(.*)"))
 async def set_no_log_p_m(event):
-    if Config.BOTLOG_CHATID is not None:
+    if PMLOG_CHATID is not None:
         reason = event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
@@ -88,7 +88,7 @@ async def set_no_log_p_m(event):
 
 @borg.on(admin_cmd(pattern="nlog ?(.*)"))
 async def set_no_log_p_m(event):
-    if Config.BOTLOG_CHATID is not None:
+    if PMLOG_CHATID is not None:
         reason = event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
