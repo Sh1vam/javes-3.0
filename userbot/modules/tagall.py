@@ -12,30 +12,32 @@ async def _(event):
     if event.fwd_from:
         return
     shiv= event.text
-    reply = await event.get_reply_message()
     shivam=shiv[8:]
     mentions = f"{shivam}"
     chat = await event.get_input_chat()
     async for x in javes.iter_participants(chat, 100):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
     #await event.edit(mentions)
+    #await event.delete()
+    if event.reply_to_msg_id:
+        await javes.send_message(event.chat_id,mentions,reply_to=event.reply_to_msg_id)
+    else:
+        await javes.send_message(event.chat_id,mentions)
     await event.delete()
-    await javes.send_message(mentions,reply_to=event.reply_to_msg_id)
-
-
 @javes.on(admin_cmd(pattern=r"admin", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
     shiv= event.text
-    reply = await event.get_reply_message()
     shivam=shiv[7:]
     mentions = f"{shivam}"
     chat = await event.get_input_chat()
     async for x in javes.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
     #await event.edit(mentions)
+    #await event.delete()
+    if event.reply_to_msg_id:
+        await javes.send_message(event.chat_id,mentions,reply_to=event.reply_to_msg_id)
+    else:
+        await javes.send_message(event.chat_id,mentions)
     await event.delete()
-    await javes.send_message(mentions,reply_to=event.reply_to_msg_id)
-
-    
