@@ -19,7 +19,8 @@ async def _(event):
     async for x in javes.iter_participants(chat, 100):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
     #await event.edit(mentions)
-    await borg.send_message(mentions,reply_to=event.reply_to_msg_id)
+    await event.delete()
+    await javes.send_message(mentions,reply_to=event.reply_to_msg_id)
 
 
 @javes.on(admin_cmd(pattern=r"admin", outgoing=True))
@@ -34,6 +35,7 @@ async def _(event):
     async for x in javes.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
     #await event.edit(mentions)
-    await borg.send_message(mentions,reply_to=event.reply_to_msg_id)
+    await event.delete()
+    await javes.send_message(mentions,reply_to=event.reply_to_msg_id)
 
     
