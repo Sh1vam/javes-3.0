@@ -1024,7 +1024,12 @@ async def Ook(e):
         t = t[:-1] + "ok"
         await e.edit(t)
 
-
+@javes05(outgoing=True, pattern="^Ooh$")
+async def Ooh(e):
+    t = "Ooh"
+    for j in range(15):
+        t = t[:-1] + "oh"
+        await e.edit(t)
 @javes05(outgoing=True, pattern="^Hmm$")
 async def Hmmmmmm(e):
     t = "Hmm"
@@ -1217,7 +1222,7 @@ async def typewriter(typew):
         await sleep(sleep_time)
 
 
-@javes05(outgoing=True, pattern="^.fail$")
+@javes05(outgoing=True, pattern="^!fail$")
 async def fail(e):
    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`\n▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ `" 
