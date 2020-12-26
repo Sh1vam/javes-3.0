@@ -81,11 +81,11 @@ async def _(event):
       file=result)
 
 
-CMD_HELP.update(
+'''CMD_HELP.update(
     {
         "imgenc": 
     ".enc <reply to any anime media> "
     "\nIt enhancerize any anime pic (Note :-if its not working then go to deepai.org then get api and set var DEEP_AI nd key.)"
-    })
+    })'''
 
 #hehe
