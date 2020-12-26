@@ -80,6 +80,11 @@
       "value": "-1001422622196",
       "required": true
     },
+    "PMLOG_CHATID": {
+      "description": "Important for work some plugins,like pm loging , make super group with @missrose_bot then type /id to get this value",
+      "value": "-1001422622196",
+      "required": true
+    },
     "CONSOLE_LOGGER_VERBOSE": {
       "description": "BOTLOG_CHATID must be filled correct if you set it true",
       "value": "True",
