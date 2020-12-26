@@ -49,9 +49,9 @@ async def hmm(event):
     await event.delete()
     linc = event.text
     links=linc[6:]
-    text1,colors1,text2,colors1=links.split("|")
+    text1,colors1,text2,colors2=links.split("|")
     a,b,c=colors1.split(";")
-    a,b,c=colors2.split(";")
+    d,e,f=colors2.split(";")
     window_name = 'Made By Shivam'
     image = cv2.imread("google.jpg") 
     font = cv2.FONT_HERSHEY_SIMPLEX
@@ -62,11 +62,11 @@ async def hmm(event):
     thickness=2
     fontScale=1
     image = cv2.putText(image, text1, org1, font, fontScale,  
-                 color, thickness, cv2.LINE_AA)
+                 color1, thickness, cv2.LINE_AA)
     cv2.imwrite("s_h_1_v_a_m_s.jpg", image)
     image = cv2.imread("s_h_1_v_a_m_s.jpg")
     image = cv2.putText(image, text2, org2, font, fontScale,  
-                 color, thickness, cv2.LINE_AA)
+                 color2, thickness, cv2.LINE_AA)
     #image=cv2.imshow(window_name, image)
     cv2.imwrite("s_h_1_v_a_m.jpg", image)
     #await borg.send_file(event.chat_id,"s_h_i_v_a_m.png")
