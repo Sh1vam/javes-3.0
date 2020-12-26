@@ -290,7 +290,7 @@ async def blockpm(block):
     """ For .block command, block people from PMing you! """
     if block.reply_to_msg_id:
         reply = await block.get_reply_message()
-        ruser = await block.client.get_entity(reply.from_id)
+        ruser = await block.client.get_entity(reply.sender.id)
         aname = ruser.id
         name0 = str(ruser.first_name)
         await block.client(BlockRequest(ruser.id))
@@ -320,7 +320,7 @@ async def unblockpm(unblock):
     """ For .unblock command, let people PMing you again! """
     if unblock.reply_to_msg_id:
         reply = await unblock.get_reply_message()
-        ruser = await unblock.client.get_entity(reply.from_id)
+        ruser = await unblock.client.get_entity(reply.sender.id)
         name0 = str(ruser.first_name)
         await unblock.client(UnblockRequest(ruser.id))
         await unblock.edit(f"`{JAVES_NNAME}: You have been unblocked.`")
