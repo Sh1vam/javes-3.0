@@ -242,10 +242,10 @@ if tebot:
             try:
                 jsondata = json.load(open(secret))
             except:
-                #secret=os.path.join("./userbot", "secrets.txt")
-                jsondata = json.load(open(os.path.join("./userbot", "secrets.txt")))
-            else:
-                jsondata = False
+                try:
+                            jsondata = True
+                except:
+                    jsondata =False
             try:
                 # if u is user id
                 u = int(user)
