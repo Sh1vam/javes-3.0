@@ -252,7 +252,10 @@ if tebot:
             try:
                 jsondata = json.load(open(secret))
             except:
-                jsondata = False
+		secret=open("./userbot/secrets.txt","a+")
+                jsondata = json.load(open(secret))
+	    else:
+		jsondata = False
             try:
                 # if u is user id
                 u = int(user)
