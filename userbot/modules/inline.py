@@ -242,9 +242,7 @@ if tebot:
             try:
                 jsondata = json.load(open(secret))
             except:
-                try:
-                            jsondata = True
-                except:
+
                     jsondata =False
             try:
                 # if u is user id
