@@ -265,7 +265,7 @@ if tebot:
                 if u.username:
                     sandy = f"@{u.username}"
                 else:
-                    sandy = f"[{u.first_name}](tg://user?id={int(u)})"
+                    sandy = f"[{u.first_name}](tg://user?id={int(user)})"
                 u = int(u.id)
             except:
                 return
