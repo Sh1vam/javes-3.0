@@ -243,7 +243,7 @@ if tebot:
                 jsondata = json.load(open(secret))
             except:
                 secret=open("./userbot/secrets.txt","a+")
-                jsondata = json.load(open("./userbot/secrets.txt"))
+                jsondata = json.load(open("./userbot/secrets.txt","r"))
             else:
                 jsondata = False
             try:
