@@ -252,10 +252,10 @@ if tebot:
                     if u.username:
                         sandy = f"@{u.username}"
                     else:
-                        sandy = f"[{u.first_name}](tg://user?id={int(u)})"
+                        sandy = f"[{u.first_name}](tg://user?id=int({int(user))})"
                 except ValueError:
                     # ValueError: Could not find the input entity
-                    sandy = f"[user](tg://user?id={u})"
+                    sandy = f"[nousername](tg://user?id=int({int(user)))"
             except ValueError:
                 # if u is username
                 try:
@@ -265,7 +265,7 @@ if tebot:
                 if u.username:
                     sandy = f"@{u.username}"
                 else:
-                    sandy = f"[{u.first_name}](tg://user?id={int(user)})"
+                    sandy = f"[{u.first_name}](tg://user?id=int({int(user)))"
                 u = int(u.id)
             except:
                 return
