@@ -32,7 +32,7 @@ if TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 (
                     Button.url("Repo", "https://github.com/Sh1vam/javes-3.0"),
                     Button.url("Deploy", "https://heroku.com/deploy?template=https://github.com/Sh1vam/javes-3.0/blob/master"),
-                    Button.url("String", "https://repl.it/@Javes786/Javes-20-String-session#main.py"),
+                    Button.url("String", "https://repl.it/@Danish00/DarkCobra#main.py"),
                     Button.url("Channel", "https://t.me/plugines"),
                 )
             ]
