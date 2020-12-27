@@ -8,7 +8,7 @@ glitch_this
 PyGithub
 aiofiles
 aiohttp
-#aria2p 
+aria2p 
 cloudmersive_virus_api_client 
 psutil
 cryptg
