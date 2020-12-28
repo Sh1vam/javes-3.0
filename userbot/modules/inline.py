@@ -249,7 +249,7 @@ if tebot:
                 u = int(user)
                 try:
                     #u = await event.client.get_entity(u)
-		    u = await borg.get_entity(u)
+                    u = await borg.get_entity(u)
                     if u.username:
                         sandy = f"@{u.username}"
                     else:
