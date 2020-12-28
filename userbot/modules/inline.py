@@ -256,7 +256,7 @@ if tebot:
                         sandy = f"[{u.first_name}](tg://user?id={int(user)})"
                 except ValueError:
                     # ValueError: Could not find the input entity
-                    sandy = f"[Tagged](tg://user?id=int({user}))"
+                    sandy = f"[Tagged](tg://user?id={user})"
             except ValueError:
                 # if u is username
                 try:
