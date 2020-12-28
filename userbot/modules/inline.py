@@ -246,17 +246,17 @@ if tebot:
                     jsondata =False
             try:
                 # if u is user id
-                u = int(user)
+                us = int(user)
                 try:
-                    u = await event.client.get_entity(int(user))
+                    u = await event.client.get_entity(int(us))
                     #u = await borg.get_entity(u)
                     if u.username:
                         sandy = f"@{u.username}"
                     else:
-                        sandy = f"[{u.first_name}](tg://user?id={int(user)})"
+                        sandy = f"[{u.first_name}](tg://user?id={us})"
                 except ValueError:
                     # ValueError: Could not find the input entity
-                    sandy = f"[Tagged](tg://user?id={int(user)})"
+                    sandy = f"[Tagged](tg://user?id={us})"
             except ValueError:
                 # if u is username
                 try:
