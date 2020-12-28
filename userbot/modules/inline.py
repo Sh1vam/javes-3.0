@@ -22,7 +22,7 @@ from telethon import sync
 import io, os
 from userbot import CMD_HELP,  client
 from userbot.events import javes05
-
+from userbot import bot as borg
 try:
   from userbot import tebot
 except:
@@ -248,7 +248,8 @@ if tebot:
                 # if u is user id
                 u = int(user)
                 try:
-                    u = await event.client.get_entity(u)
+                    #u = await event.client.get_entity(u)
+		    u = await borg.get_entity(u)
                     if u.username:
                         sandy = f"@{u.username}"
                     else:
