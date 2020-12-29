@@ -84,7 +84,7 @@ async def _(event):
     if not catinput:
         catinput = (await event.get_reply_message()).text
     if not catinput:
-        await edit_or_reply(event, "`Give me something to write in bot inline`")
+        await event.edit("`Give me something to write in bot inline`")
         return
     catinput = "buttons" + catinput
     tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
