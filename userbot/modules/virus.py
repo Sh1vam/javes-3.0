@@ -153,7 +153,7 @@ async def vt(event):
     if a ==2:
 		      return await event.edit("`You need to Update Javes to use this command.......`")
     if not vscan:
-		     return await event.edit("`Unknown command type !help virus_scan for more info`")            
+		     return await event.edit("`downloaded_file missing`")            
     try:
          vtotal = Virustotal(Vapi)
     except:
@@ -244,7 +244,7 @@ async def vt(event):
     if a ==2:
 		      return await rkp.edit("`You need to Update Javes to use this command.......`")
     if not vscan:
-		     return await rkp.edit("`Unknown command type !help virus_scan for more info`")            
+		     return await rkp.edit("`Unknown command type !help virus_scan for more info......`")            
     try:
          vtotal = Virustotal(Vapi)
     except:
