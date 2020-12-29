@@ -3,6 +3,7 @@ imported from nicegrill
 modified by @mrconfused
 QuotLy: Avaible commands: .qbot
 """
+#ported by sh1vam
 import os
 from PIL import Image, ImageDraw, ImageFont
 from telethon import events
@@ -36,7 +37,7 @@ async def stickerchat(catquotes):
         return
     catevent = await catquotes.edit( "`Making quote...`")
     user = (
-        await event.client.get_entity(reply.forward.sender)
+        await catquotes.client.get_entity(reply.forward.sender)
         if reply.fwd_from
         else reply.sender
     )
@@ -68,7 +69,7 @@ async def stickerchat(catquotes):
         return
     catevent = await catquotes.edit(  "`Making quote...`")
     user = (
-        await event.client.get_entity(reply.forward.sender)
+        await catquotes.client.get_entity(reply.forward.sender)
         if reply.fwd_from
         else reply.sender
     )
