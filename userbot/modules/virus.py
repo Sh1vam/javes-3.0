@@ -1,6 +1,11 @@
 
 #telegram javes05
+import asyncio
+import math
+import os
+import time
 
+import requests
 import datetime
 import asyncio
 from telethon import events
@@ -80,7 +85,8 @@ def time_formatter(milliseconds: int) -> str:
 
 
 
-@javes05(pattern=r"^\!scan(?: |$)(.*)", outgoing=True)
+@javes05(pattern=r"^\!vscan(?: |$)(.*)", outgoing=True)
+@javes.on(rekcah05(pattern=f"vscan(?: |$)(.*)", allow_sudo=True))
 async def vt(event):
     await event.edit(f"Analyzing Datas......")
     input_str = event.pattern_match.group(1)
@@ -150,8 +156,7 @@ async def vt(event):
         return await event.edit(f"Error\n`Reply to a file to scan.`")
     await event.edit(" `Scanning......`")
     vscan = downloaded_file_name
-    if a ==2:
-		      return await event.edit("`You need to Update Javes to use this command.......`")
+
     if not vscan:
 		     return await event.edit("`downloaded_file missing`")            
     try:
@@ -160,103 +165,38 @@ async def vt(event):
           return await event.edit("Failed to connect virus total , is api key added? type `!help virus_scan` for more info")
     try:
       vr = vtotal.file_scan(vscan)
-    except:
-      return await event.edit("`Unknown command type !help virus_scan for more info")            
-    test = vr['json_resp'] ; link = test['permalink'] ; scan_id = test['scan_id'] ; response_code = test['response_code']
-    return await event.edit(""                 
+      test = vr['json_resp'] ; link = test['permalink'] ; scan_id = test['scan_id'] ; response_code = test['response_code']
+      return await event.edit(""                 
                     f"• **Virus Total Response Code:** `{response_code}`\n"                                 
                     f"• **Scan Results:** [ClickHere]({link}) ")
-                    
-                    
-                    
-                    
+    except:
+            url = "https://www.virustotal.com/vtapi/v2/file/scan"
 
-@javes.on(rekcah05(pattern=f"scan(?: |$)(.*)", allow_sudo=True))
-async def vt(event):
-    rkp = await event.reply(f"Analyzing Datas......")
-    input_str = event.pattern_match.group(1)
-    if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
-    if "|" in input_str:
-        url, file_name = input_str.split("|")
-        url = url.strip()      
-        file_name = file_name.strip()
-        head, tail = os.path.split(file_name)
-        if head:
-            if not os.path.isdir(os.path.join(TEMP_DOWNLOAD_DIRECTORY, head)):
-                os.makedirs(os.path.join(TEMP_DOWNLOAD_DIRECTORY, head))
-                file_name = os.path.join(head, tail)
-        downloaded_file_name = TEMP_DOWNLOAD_DIRECTORY + "" + file_name
-        downloader = SmartDL(url, downloaded_file_name, progress_bar=False)
-        downloader.start(blocking=False)
-        c_time = time.time()
-        display_message = None
-        while not downloader.isFinished():
-            status = downloader.get_status().capitalize()
-            total_length = downloader.filesize if downloader.filesize else None
-            downloaded = downloader.get_dl_size()
-            now = time.time()
-            diff = now - c_time
-            percentage = downloader.get_progress() * 100
-            speed = downloader.get_speed()
-            elapsed_time = round(diff) * 1000
-            progress_str = "[{0}{1}] {2}%".format(
-                ''.join(["█" for i in range(math.floor(percentage / 10))]),
-                ''.join(["░"
-                         for i in range(10 - math.floor(percentage / 10))]),
-                round(percentage, 2))
-            estimated_total_time = downloader.get_eta(human=True)
+            params = {"apikey": Vapi}
+            files = {"file": (downloaded_file_name, open(downloaded_file_name, "rb"))}
+            response = requests.post(url, files=files, params=params)
             try:
-                current_message = f"{status}..\
-                \nURL: {url}\
-                \nFile Name: {file_name}\
-                \n{progress_str}\
-                \n{humanbytes(downloaded)} of {humanbytes(total_length)}\
-                \nETA: {estimated_total_time}"
-
-                if round(diff %
-                         10.00) == 0 and current_message != display_message:
-                    await rkp.edit(current_message)
-                    display_message = current_message
+                a = response.json()
+                b = a["permalink"]
             except Exception as e:
-                LOGS.info(str(e))
-        if downloader.isSuccessful():
-            await rkp.edit(f"{text} \n\nDownloaded  successfully !!")
-        else:
-            await rkp.edit("Incorrect URL\n{}".format(url))
-    elif event.reply_to_msg_id:
-        try:
-            c_time = time.time()
-            downloaded_file_name = await event.client.download_media(
-                await event.get_reply_message(),
-                TEMP_DOWNLOAD_DIRECTORY,
-                progress_callback=lambda d, t: asyncio.get_event_loop(
-                ).create_task(
-                    progress(d, t, event, c_time, f"{text} \n\nDownloading...")))
-        except Exception as e:  # pylint:disable=C0103,W0703
-            await rkp.edit(str(e))
-        else:
-            await rkp.edit(f"{text} \n\nDownloaded successfully !!")
+                await event.edit(str(e))
+            try:
+                await event.edit(
+                    f"<b><u> File Scan Request Complete</u></b>\n\n<b>Link of the report:-</b>\n{b}\n\nNote:- Please open the link after 5-10 minutes.",
+                    parse_mode="HTML",
+                )
+            except Exception as e:
+                await event.edit(str(e))
     else:
-        return await rkp.edit(f"Error\n`Reply to a file to scan.`")
-    await rkp.edit(" `Scanning......`")
-    vscan = downloaded_file_name
-    if a ==2:
-		      return await rkp.edit("`You need to Update Javes to use this command.......`")
-    if not vscan:
-		     return await rkp.edit("`Unknown command type !help virus_scan for more info......`")            
-    try:
-         vtotal = Virustotal(Vapi)
-    except:
-          return await rkp.edit("Failed to connect virus total , is api key added? type `!help virus_scan` for more info")
-    try:
-      vr = vtotal.file_scan(vscan)
-    except:
-      return await rkp.edit("`Unknown command type !help virus_scan for more info")            
-    test = vr['json_resp'] ; link = test['permalink'] ; scan_id = test['scan_id'] ; response_code = test['response_code']
-    return await rkp.edit(""                 
-                    f"• **Virus Total Response Code:** `{response_code}`\n"                                 
-                    f"• **Scan Results:** [ClickHere]({link}) ")
+        await event.edit("Some Internal Issus")
+
+                    
+                    
+                    
+                    
+
+
+
                     
                     
                     
