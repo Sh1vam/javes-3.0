@@ -48,6 +48,7 @@ async def _(event):
     reply_to_id = None
     chat = event.chat_id
     reply_message = await event.get_reply_message()
+    await event.delete()
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
         global img
@@ -58,14 +59,11 @@ async def _(event):
     # soon will try to add media support
     if not catinput:
         catinput = (await event.get_reply_message()).text
-    if not catinput:
-        await event.edit("`Give me something to write in bot inline`")
-        return
     catinput = "url"+ catinput
     tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
     results = await bot.inline_query(tgbotusername, catinput)
     await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
-    await event.delete()
+    
 
 if tebot:
  @tebot.on(events.InlineQuery)  
