@@ -80,7 +80,7 @@ async def _(event):
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
     await event.get_reply_message()
-    # soon will try to add media support
+    await event.delete()
     if not catinput:
         catinput = (await event.get_reply_message()).text
     if not catinput:
@@ -90,7 +90,7 @@ async def _(event):
     tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
     results = await bot.inline_query(tgbotusername, catinput)
     await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
-    await event.delete()
+    #await event.delete()
 
 
 def build_keyboard(buttons):
