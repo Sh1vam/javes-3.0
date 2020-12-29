@@ -86,7 +86,7 @@ async def _(event):
     if not catinput:
         await edit_or_reply(event, "`Give me something to write in bot inline`")
         return
-    catinput = "secrete" + catinput
+    catinput = "buttons" + catinput
     tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
     results = await bot.inline_query(tgbotusername, catinput)
     await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
@@ -112,7 +112,7 @@ CMD_HELP.update(
     \n\n**SYNTAX : **`.ibutton`\
     \n**USAGE :** Buttons must be in the format as [Name on button]<buttonurl:link you want to open>\
     \n**EXAMPLE :** `.ibutton Sh1vam [google]<buttonurl:https://www.google.com> [Javes2.0]<buttonurl:https://github.com/Sh1vam/javes-2.0:same> [Channel]<buttonurl:https://t.me/plugines>`\
-	\n**EXAMPLE :** `@yourbotusername secrete Shivam [google]<buttonurl:https://www.google.com> [Javes2.0]<buttonurl:https://github.com/Sh1vam/javes-2.0:same> [Channel]<buttonurl:https://t.me/plugines>`\
+	\n**EXAMPLE :** `@yourbotusername buttons Shivam [google]<buttonurl:https://www.google.com> [Javes2.0]<buttonurl:https://github.com/Sh1vam/javes-2.0:same> [Channel]<buttonurl:https://t.me/plugines>`\
     "
     }
 )
