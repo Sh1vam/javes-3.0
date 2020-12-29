@@ -48,11 +48,12 @@ async def _(event):
     reply_to_id = None
     chat = event.chat_id
     reply_message = await event.get_reply_message()
-    global img
-    img = await borg.download_media(reply_message.media, sedpath)
-    catinput = "".join(event.text.split(maxsplit=1)[1:])
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
+        global img
+        img = await borg.download_media(reply_message.media, sedpath)
+    catinput = "".join(event.text.split(maxsplit=1)[1:])
+
 
     # soon will try to add media support
     if not catinput:
@@ -60,7 +61,7 @@ async def _(event):
     if not catinput:
         await event.edit("`Give me something to write in bot inline`")
         return
-    catinput = "buton"+ catinput
+    catinput = "url"+ catinput
     tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
     results = await bot.inline_query(tgbotusername, catinput)
     await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
@@ -76,8 +77,8 @@ if tebot:
   result = None 
   hmm = re.compile("secret (.*) (.*)") 
   match = re.findall(hmm, query)
-  if event.query.user_id == me.id and query.startswith("buton"):
-            markdown_note = query[5:]
+  if event.query.user_id == me.id and query.startswith("url"):
+            markdown_note = query[3:]
             prev = 0
             note_data = ""
             buttons = []
@@ -138,6 +139,10 @@ if tebot:
                     link_preview=False,
                 )
                 await event.answer([result] if result else None)
+  if not event.query.user_id == me.id:
+        s = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="url", same_peer=True)],], )
+        await event.answer([s])
+        return
 def ibuild_keyboard(buttons):
     keyb = []
     for btn in buttons:
