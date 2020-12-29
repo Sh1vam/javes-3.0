@@ -1,6 +1,7 @@
 """
 designed By @Krishna_Singhal in userge
 ported to telethon by @mrconfused and @sandy1709
+Modified By Shivam
 """
 
 import os
@@ -16,7 +17,7 @@ from userbot import bot, CMD_HELP, LOGS
 from userbot.events import register
 
 
-@register(pattern="^.(glitch|glitchs)(?: |$)(.*)", outgoing=True)
+@register(pattern="^!(glitch|glitchs)(?: |$)(.*)", outgoing=True)
 async def glitch(event):
     await event.edit("```Glitching Wait...```")
     cmd = event.pattern_match.group(1)
@@ -39,7 +40,7 @@ async def glitch(event):
             await event.edit("`You input is invalid, check help`")
             return
         input = int(input)
-        if not 0 < input < 9:
+        if not 0 < input < 11:
             await event.edit("`Invalid Range...`")
             return
     else:
@@ -105,10 +106,10 @@ async def glitch(event):
 
 CMD_HELP.update({
     "glitch":
-    ".glitch` reply to media file\
+    "!glitch` reply to media file\
 \nUsage:glitches the given mediafile(gif , stickers , image, videos) to a gif and glitch range is from 1 to 8.\
 If nothing is mentioned then by default it is 2\
-\n\n.glitchs reply to media file\
+\n\n!glitchs reply to media file\
 \nUsage:glitches the given mediafile(gif , stickers , image, videos) to a sticker and glitch range is from 1 to 8.\
 If nothing is mentioned then by default it is 2."
 })
