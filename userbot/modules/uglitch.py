@@ -2,7 +2,7 @@
 designed By @Krishna_Singhal in userge
 ported to telethon by @mrconfused and @sandy1709
 """
-
+#modified by Sh1vam
 import os
 from PIL import Image 
 from .. import LOGS , CMD_HELP
@@ -34,10 +34,8 @@ async def uglitch(event):
         return
     file = os.path.join("./temp/", "uglitch.png")
     if input:
-        if not input.isdigit():
-            await event.edit("`You input is invalid, check help`")
-            return
-        input = int(input)
+
+        input = float(input)
 
     else:
         input = 2
