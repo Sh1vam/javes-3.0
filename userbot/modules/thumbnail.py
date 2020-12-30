@@ -6,7 +6,7 @@ import os
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from PIL import Image
-
+rom userbot.javes_main.heroku_var import Config
 from userbot.helpers.memeifyhelpers import take_screen_shot
 from userbot import bot,CMD_HELP
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
