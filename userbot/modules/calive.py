@@ -11,7 +11,7 @@ from userbot import CMD_HELP,  client
 import re
 TG_BOT_USER_NAME_BF_HER=os.environ.get("TG_BOT_USER_NAME_BF_HER",None)
 CUSTOM_CMD=os.environ.get("CUSTOM_CMD","!shivam")
-PROFILE_PP = os.environ.get("PROFILE_PP" , None)
+PROFILE_PP = os.environ.get("PROFILE_PP" , "https://telegra.ph/file/5d084db1197c6e7f0db59.jpg")
 ALIVE_PHOTTO = PROFILE_PP
 @javes05(outgoing=True, pattern=f"^{CUSTOM_CMD}(?: |$|\n)([\s\S]*)")
 async def gtlost(event):
