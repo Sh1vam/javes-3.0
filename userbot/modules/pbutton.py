@@ -4,6 +4,7 @@
 # by @sandy1709 (@mrconfused)
 import os
 import re
+import shutil
 from userbot import tebot as tgbot
 from telethon import Button
 from userbot import bot
@@ -41,6 +42,31 @@ BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>
 sedpath = "./shivambutton/"
 if not os.path.isdir(sedpath):
     os.makedirs(sedpath)
+@bot.on(admin_cmd(pattern=r"psave( (.*)|$)", outgoing=True))
+async def sabe(event):
+    if event.fwd_from:
+        return
+    reply_to_id = None
+    chat = event.chat_id
+    reply_message = await event.get_reply_message()
+    await event.delete()
+    if event.reply_to_msg_id:
+        reply_to_id = event.reply_to_msg_id
+        global img
+        img = await borg.download_media(reply_message.media, sedpath)
+@bot.on(admin_cmd(pattern="pclear$"))
+
+
+async def pcls(event):
+    if event.fwd_from:
+        return
+    if not os.path.exists(sedpath):
+        await event.edit( "`There is nothing`")
+    else:
+        shutil.rmtree(sedpath)
+        await event.edit(
+            "`Noice Cleared all`",
+        )
 @bot.on(admin_cmd(pattern=r"pbutton( (.*)|$)", outgoing=True))
 async def _(event):
     if event.fwd_from:
@@ -56,7 +82,7 @@ async def _(event):
     catinput = "".join(event.text.split(maxsplit=1)[1:])
 
 
-    # soon will try to add media support
+
     if not catinput:
         catinput = (await event.get_reply_message()).text
     catinput = "url"+ catinput
