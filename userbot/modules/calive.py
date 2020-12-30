@@ -57,7 +57,7 @@ if TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     buttons=buttons,
                 )
             await event.answer([result] if result else None)
-    if not event.query.user_id == me.id:
-        resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
-        await event.answer([resultm])
-        return
+        if not event.query.user_id == me.id:
+            resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
+            await event.answer([resultm])
+            return
