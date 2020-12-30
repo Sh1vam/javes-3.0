@@ -43,7 +43,7 @@ import re
 TG_BOT_USER_NAME_BF_HER=os.environ.get("TG_BOT_USER_NAME_BF_HER",None)
 CUSTOM_CMD2=os.environ.get("CUSTOM_CMD2","!sh1vam")
 PROFILE_PPP = os.environ.get("PROFILE_PPP" , "https://telegra.ph/file/5d084db1197c6e7f0db59.jpg")
-ALIVE_PHOTTO = PROFILE_PP
+ALIVE_PHOTTO = PROFILE_PPP
 @javes05(outgoing=True, pattern=f"^{CUSTOM_CMD2}(?: |$|\n)([\s\S]*)")
 async def glost(event):
     await event.delete()
