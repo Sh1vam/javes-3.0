@@ -135,7 +135,7 @@ async def figlet(e):
     	rkp = await e.edit("`processing`")
     if e.fwd_from:
         return
-    CMD_FIG = {"slant": "slant", "3D": "3-d", "5line": "5lineoblique", "alpha": "alphabet", "banner": "banner3-D", "doh": "doh", "iso": "isometric1", "letter": "letters", "allig": "alligator", "dotm": "dotmatrix", "bubble": "bubble", "bulb": "bulbhead", "digi": "digital"}
+    CMD_FIG = {"slant": "slant", "3D": "3-d", "5line": "5lineoblique", "alpha": "alphabet", "banner": "banner3-D", "doh": "doh", "iso": "isometric1", "letter": "letters", "allig": "alligator", "dotm": "dotmatrix", "bubble": "bubble", "bulb": "bulbhead", "digi": "digital", "3x5": "3x5"}
     input_str = e.pattern_match.group(1)
     if "." in input_str:
         text, cmd = input_str.split(".", maxsplit=1)
@@ -543,7 +543,7 @@ CMD_HELP.update({
 "`!telegraph media / text <reply to a media / message >`\
 \n**Usage:**  Upload text & media on Telegraph\
 \n\n`!figlet `<text.style>\
-\n**Usage:**  Enhance ur text Styles (`slant`, `3D`, `5line`, `alpha`, `banner`, `doh`, `iso`, `letter`, `allig`, `dotm`, `bubble`, `bulb`, `digi`)\
+\n**Usage:**  Enhance ur text Styles (`slant`, `3D`, `5line`, `alpha`, `banner`, `doh`, `iso`, `letter`, `allig`, `dotm`, `bubble`, `bulb`, `digi`,`3x5`)\
 \n\n`!docpic `<reply to a img>\
 \n**Usage:**  Convert any Document Image to Full Size Image.\
 \n\n`!ifsc` <code>\
