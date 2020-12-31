@@ -49,7 +49,7 @@ async def sabe(event):
     reply_to_id = None
     chat = event.chat_id
     reply_message = await event.get_reply_message()
-    await event.delete()
+    await event.edit("Saved Now U Can Use inline mode @yourbotname url and querry")
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
         global img
