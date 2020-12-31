@@ -150,7 +150,7 @@ async def figlet(e):
         try:
             font = CMD_FIG[cmd]
         except KeyError:
-            await rkp.edit("`Invalid selected font.`")
+            await rkp.edit("[Invalid selected font.](https://telegra.ph/%E2%84%B9-12-31)")
             return
         result = pyfiglet.figlet_format(text, font=font)
     else:
@@ -544,7 +544,7 @@ CMD_HELP.update({
 "`!telegraph media / text <reply to a media / message >`\
 \n**Usage:**  Upload text & media on Telegraph\
 \n\n`!figlet `<text.style>\
-\n**Usage:**  Enhance ur text Styles (`slant`, `3D`, `5line`, `alpha`, `banner`, `doh`, `iso`, `letter`, `allig`, `dotm`, `bubble`, `bulb`, `digi`,`3x5`)\
+\n**Usage:**  [Enhance ur text Styles Click Me to get Available stiles](https://telegra.ph/%E2%84%B9-12-31)\
 \n\n`!docpic `<reply to a img>\
 \n**Usage:**  Convert any Document Image to Full Size Image.\
 \n\n`!ifsc` <code>\
