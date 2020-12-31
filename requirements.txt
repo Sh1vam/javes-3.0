@@ -3,7 +3,7 @@ virtualenv
 setuptools
 wheel
 Pillow
-pymediainfo
+#pymediainfo
 #MediaInfo
 moviepy
 glitch_this
