@@ -105,7 +105,7 @@ async def chrome(chrome_options=None):
     return driver
     
 @javes05(outgoing=True, pattern="^!pic (.*)")
-@javes.on(rekcah05(pattern=f"img (.*)", allow_sudo=True))
+@javes.on(rekcah05(pattern=f"pic (.*)", allow_sudo=True))
 async def img_sampler(event):
     me = await event.client.get_me()
     query,limit = event.pattern_match.group(1).split(";")    
