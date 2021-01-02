@@ -75,6 +75,7 @@ RUN mv userbot/javes_main/extra/apktool /usr/local/bin
 RUN mv userbot/javes_main/extra/apktool.jar /usr/local/bin
 RUN mv userbot/javes_main/extra/apk.rb /usr/share/metasploit-framework/lib/msf/core/payload
 RUN chmod +x /usr/local/bin/*
+RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 #RUN python3 -m pip install --no-warn-script-location --no-cache-dir --upgrade -r requirements.txt
 #RUN sudo chmod o+r /usr/lib/python3/dist-packages/*
