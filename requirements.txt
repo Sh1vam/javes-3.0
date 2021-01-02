@@ -80,7 +80,8 @@ python-dotenv
 youtube-dl
 pytz
 qrcode
-requests==2.25.0
+#requests==2.25.0
+requests
 search-engine-parser
 speedtest-cli
 sqlalchemy
