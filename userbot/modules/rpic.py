@@ -29,9 +29,9 @@ async def scan(event):
     
     maskPath = f"{pic}"
     
-    cascPath = "haarcascade_frontalface_default.xml"
+    #cascPath = "haarcascade_frontalface_default.xml"
    
-    faceCascade = cv2.CascadeClassifier(cascPath)
+    faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
    
     image = cv2.imread(imagePath)
    
@@ -80,9 +80,9 @@ async def scan(event):
     
     maskPath = f"{pic}"
     
-    cascPath = "haarcascade_frontalcatface.xml"
+    #cascPath = "haarcascade_frontalcatface.xml"
    
-    faceCascade = cv2.CascadeClassifier(cascPath)
+    faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalcatface.xml")
    
     image = cv2.imread(imagePath)
    
