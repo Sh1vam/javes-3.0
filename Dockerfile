@@ -61,7 +61,8 @@ RUN apt-get install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 l
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
 #RUN apt-get install -y chromium
-RUN pip3 install --upgrade pip setuptools 
+#RUN pip3 install --upgrade pip setuptools 
+RUN pip install --upgrade pip setuptools wheel
 #RUN pip3 install --upgrade pip install wheel 
 RUN if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi 
 RUN if [ ! -e /usr/bin/python ]; then ln -sf /usr/bin/python3 /usr/bin/python; fi 
@@ -75,7 +76,7 @@ RUN mv userbot/javes_main/extra/apktool /usr/local/bin
 RUN mv userbot/javes_main/extra/apktool.jar /usr/local/bin
 RUN mv userbot/javes_main/extra/apk.rb /usr/share/metasploit-framework/lib/msf/core/payload
 RUN chmod +x /usr/local/bin/*
-RUN pip3 install --upgrade pip
+#RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 #RUN python3 -m pip install --no-warn-script-location --no-cache-dir --upgrade -r requirements.txt
 #RUN sudo chmod o+r /usr/lib/python3/dist-packages/*
