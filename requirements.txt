@@ -16,7 +16,8 @@ psutil
 cryptg
 async_generator
 jikanpy
-opencv-python--headless
+#opencv-python--headless
+opencv-contrib-python-headless
 keyboard
 beautifulsoup4
 bs4
