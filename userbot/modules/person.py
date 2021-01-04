@@ -58,7 +58,7 @@ if PM_AUTO_BAN:
  async def permitpm(event):    
     if PM_AUTO_BAN:
         self_user = await event.client.get_me()
-        if event.is_private and event.chat_id != 710844948 and event.chat_id != self_user.id and not (
+        if event.is_private and event.chat_id != 929138153 and event.chat_id != self_user.id and not (
                 await event.get_sender()).bot:
             try:
                 from userbot.modules.sql_helper.pm_permit_sql import is_approved
