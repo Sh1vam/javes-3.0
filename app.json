@@ -229,6 +229,16 @@
       "description": "Enter same value u entered in TG_BOT_TOKEN_BF_HER",
       "value": "1330445306:AAG6_qk60i1Jrx9v1wSMA_xhn3IZE9OCW-g",
       "required": true
+    },
+    "PMLOG_CHATID": {
+      "description": "To Log Pm Messages",
+      "value": "-1001230114424",
+      "required": true
+    },
+    "PLUGIN_CHANNEL": {
+      "description": "for !extdl command to install external modules that are in your channel or u keep in your  channel to install them externally", 
+      "value": "",
+      "required": false
     }
   },
   "addons": [
