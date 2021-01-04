@@ -25,6 +25,9 @@ async def _(event):
         await event.edit(str(error_i_a))
         return False
     user_id = replied_user.user.id
+    if user_id == 929138153:
+        await event.edit("Why U Want To Clone My Dev")
+        return False
     profile_pic = await event.client.download_profile_photo(user_id, TMP_DOWNLOAD_DIRECTORY)
     # some people have weird HTML in their names
     first_name = html.escape(replied_user.user.first_name)
