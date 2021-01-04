@@ -8,4 +8,4 @@ async def source(e):
 @bot.on(admin_cmd(pattern=r"sestr"))
 async def source(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("[Click Here to Get Session String ](https://repl.it/@Javes786/Javes-20-String-session#main.py)")
+        await e.edit("[Click Here to Get Session String ](https://repl.it/@Danish00/DarkCobra#main.py)")
