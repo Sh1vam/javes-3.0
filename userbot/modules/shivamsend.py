@@ -58,6 +58,42 @@ async def inline_id_handler(event: events.InlineQuery.Event):
         resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="send ", same_peer=True)],], )
         await event.answer([resultm])
         return
+@tgbot.on(events.InlineQuery(pattern=r"hsend (.*)"))
+async def inline_id_handler(event: events.InlineQuery.Event):
+    builder = event.builder
+    me = await client.get_me()
+    if event.query.user_id == me.id:
+        input_str = event.pattern_match.group(1)
+        try:
+            sh1vam = builder.document(f"./userbot/helpers/{input_str}.py",title=f"{input_str}.py",description=f"Module {input_str} Found",text=f"{input_str}.py use .neko to paste in neko bin",buttons=[[Button.switch_inline("Search Again", query="send ", same_peer=True)],], )
+            await event.answer([sh1vam])
+            return
+        except:
+            shivamscode = builder.article(title=f"Module {input_str}.py Not Found",description=f"No Such Module",text=f"No Module Named {input_str}.py",buttons=[[Button.switch_inline("Search Again", query="hsend ", same_peer=True)],], )
+            await event.answer([shivamscode])
+            return
+    if not event.query.user_id == me.id:
+        resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="hsend ", same_peer=True)],], )
+        await event.answer([resultm])
+        return
+@tgbot.on(events.InlineQuery(pattern=r"ssend (.*)"))
+async def inline_id_handler(event: events.InlineQuery.Event):
+    builder = event.builder
+    me = await client.get_me()
+    if event.query.user_id == me.id:
+        input_str = event.pattern_match.group(1)
+        try:
+            sh1vam = builder.document(f"./userbot/modules/sql_helper/{input_str}.py",title=f"{input_str}.py",description=f"Module {input_str} Found",text=f"{input_str}.py use .neko to paste in neko bin",buttons=[[Button.switch_inline("Search Again", query="send ", same_peer=True)],], )
+            await event.answer([sh1vam])
+            return
+        except:
+            shivamscode = builder.article(title=f"Module {input_str}.py Not Found",description=f"No Such Module",text=f"No Module Named {input_str}.py",buttons=[[Button.switch_inline("Search Again", query="ssend ", same_peer=True)],], )
+            await event.answer([shivamscode])
+            return
+    if not event.query.user_id == me.id:
+        resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="ssend ", same_peer=True)],], )
+        await event.answer([resultm])
+        return
 @tgbot.on(events.InlineQuery(pattern=r"logs"))
 async def inline_id_handler(event: events.InlineQuery.Event):
     builder = event.builder
