@@ -1,9 +1,11 @@
-pip
-virtualenv
-setuptools
-wheel
+#pip
+#virtualenv
+#setuptools
+#wheel
 Pillow
 #pymediainfo
+scipy
+scikit-learn
 #MediaInfo
 moviepy
 glitch_this
