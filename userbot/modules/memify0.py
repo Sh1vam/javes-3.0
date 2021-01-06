@@ -895,13 +895,13 @@ async def memes(cat):
 
 CMD_HELP.update(
     {
-        "memify": "**Plugin : **`memify`\
+        "memify0": "**Plugin : **`memify0`\
     \n\n  • **Syntax :** `.mm3f toptext ; bottomtext`\
     \n  • **Function : **Creates a image meme with give text at specific locations and sends\
     \n\n  • **Syntax : **`.mm3s toptext ; bottomtext`\
     \n  • **Function : **Creates a sticker meme with give text at specific locations and sends\
     \n\n  • **Syntax : **`.cfont` <Font Name>\
-    \n  • **Function : **Change the font style use for memify,\nTo get fonts name use this cmd (`.ls userbot/helpers/styles`)\
+    \n  • **Function : **Change the font style use for memify,\nTo get fonts name use this cmd (`!term ls userbot/helpers/styles`)\
     \n\n  • **Syntax : **`.asci`\
     \n  • **Function : **reply to media file to get ascii image of that media\
     \n\n  • **Syntax : **`.envert`\
