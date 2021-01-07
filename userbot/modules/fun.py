@@ -1192,7 +1192,15 @@ async def payf(event):
     await event.edit(pay)
 
 
+@javes05(outgoing=True, pattern=r"^!helmo$")
+async def helmo(event):
+    
+    await event.edit( "\n╔┓┏╦━━╦┓╔┓╔━━╗"
+	   "\n║┗┛║┗━╣┃║┃║ * .* ║"
+	   "\n║┏┓║┏━╣┗╣┗╣╰╯║"
+	   "\n╚┛┗╩━━╩━╩━╩━━╝")
 
+    
 
 
 
