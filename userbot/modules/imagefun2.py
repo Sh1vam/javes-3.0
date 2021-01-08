@@ -234,12 +234,12 @@ async def howitworks(event):
        await bot.send_file(event.chat.id, file = "V.jpg", caption =
        """ㅤ                                            Check Difference 
 
-                                            ©DARKCOBRA""")
+                                            """)
     if x == 2:                    
        await bot.send_file(event.chat.id,file = "H.jpg", caption = 
        """ㅤ                                            Check Difference 
     
-                                            ©DARKCOBRA""")
+                                            """)
     shutil.rmtree(path)
     #os.remove("a.jpg")
     os.remove("b.jpg")
