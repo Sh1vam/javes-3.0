@@ -1,14 +1,10 @@
-#Made By Sh1vam  Donot KANG
-# ME MADE MORE THAN ONE AND MORE COMPLEX ONE WAS YT COMMENT 
-#I REMOVED COLOUR CAUSE ALL NEED TO REMEMBER HEX COLOUR CODES # replaced by %23
 # DARKCOBRA ORIGINAL 
-# by @shivam_patel , fix nd edited by @danish_00
+# by @danish_00
 # by #team dc
 
 # Kangers Keep Credits
 
 # Kepp Credits
-
 
 
 import cv2
@@ -53,16 +49,14 @@ async def hehe(event):
     shutil.rmtree(path)
     os.remove("danish.jpg")
 
-    ##Made By Sh1vam  Donot KANG
-# ME MADE MORE THAN ONE AND MORE COMPLEX ONE WAS YT COMMENT 
-#I REMOVED COLOUR CAUSE ALL NEED TO REMEMBER HEX COLOUR CODES # replaced by %23
 # DARKCOBRA ORIGINAL 
-# by @shivam_patel , fix nd edited by @danish_00
+# by @danish_00
 # by #team dc
 
 # Kangers Keep Credits
 
 # Kepp Credits
+
     
 @bot.on(admin_cmd("blr"))
 async def hehe(event):
@@ -229,46 +223,15 @@ async def hehe(event):
     await event.delete()
     shutil.rmtree(path)
     os.remove("danish.jpg")            
-
-          #Made By Sh1vam  Donot KANG
-# ME MADE MORE THAN ONE AND MORE COMPLEX ONE WAS YT COMMENT 
-#I REMOVED COLOUR CAUSE ALL NEED TO REMEMBER HEX COLOUR CODES # replaced by %23
 # DARKCOBRA ORIGINAL 
-# by @shivam_patel , fix nd edited by @danish_00
+# by @danish_00
 # by #team dc
 
 # Kangers Keep Credits
 
 # Kepp Credits
-
-
-
-
         
 
 
-CMD_HELP.update(
-    {
-        "imagefun": "__**PLUGIN NAME :** Image Fun _\
-    \n\n📌** CMD ★** `.trig (reply to image)`\
-    \n**USAGE   ★  **Makes a Triggered Gif\
-    \n\n📌** CMD ★** `.wst(reply to image)`\
-    \n**USAGE   ★  **Show A Wasted Image 😂😂\
-    \n\n📌** CMD ★** `.grey(reply to image)`\
-    \n**USAGE   ★  **Convert Colour image to Black nd white\
-    \n\n📌** CMD ★** `.ytc (Name).(text)(reply to image)`\
-    \n**USAGE   ★  **Show A Youtube Comment of ur repled img and typed name. (note :- that dot . in middle is important)\
-    \n\n📌** CMD ★** `.invert`\
-    \n**USAGE   ★  **Create a Negative image to return it back to normal use .invert again\
-    \n\n📌** CMD ★** `.blur /.pencil /.enhance / .smooth / .embross /.bright / .sharp / .` \
-    \ncheck them on ur own 😁😁\
-    \n(note:- it work only on images, u can use .stoi to convert a sticker info image then u can use😁😁)"
-      
-    }
-)
 
 
-
-
-#gtfo
-#nikal mc
