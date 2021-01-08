@@ -21,7 +21,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 """ Userbot module for frying stuff. ported by @NeoMatrix90 """
-
+#modie fied and ported to javes 3.0 by Sh1vam
 import io
 from random import randint, uniform
 
@@ -32,7 +32,7 @@ from telethon.tl.types import DocumentAttributeFilename
 from userbot.utils import admin_cmd
 from userbot import bot,CMD_HELP
 
-
+from userbot import bot as borg
 
 
 
