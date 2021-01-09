@@ -21,10 +21,12 @@ async def scan(event):
 
     import cv2
 
+    img = cv2.VideoCapture(lol) 
+    tales, miraculous = img.read()
     
     os.system('wget https://telegra.ph/file/2369a71cc9c8b47a85735.png')
 
-    imagePath = lol
+    imagePath = cv2.imwrite("shivam.jpg", miraculous)
     
     maskPath = "2369a71cc9c8b47a85735.png"
     
@@ -32,13 +34,13 @@ async def scan(event):
    
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
    
-    image = cv2.imread(imagePath)
+    image = cv2.imread("shivam.jpg")
    
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
    
     faces = faceCascade.detectMultiScale(gray, 1.15)
    
-    background = Image.open(imagePath)
+    background = Image.open("shivam.jpg")
    
     for (x, y, w, h) in faces:
         mask = Image.open(maskPath)
@@ -74,12 +76,13 @@ async def scan(event):
 
 
     import cv2
-
+    img = cv2.VideoCapture(lol) 
+    tales, miraculous = img.read()
   
     
     os.system('wget https://telegra.ph/file/f061c861ba85fbb23a51e.png')
 
-    imagePath = lol
+    imagePath = cv2.imwrite("shivam.jpg", miraculous)
     
     maskPath = "f061c861ba85fbb23a51e.png"
     
@@ -87,13 +90,13 @@ async def scan(event):
    
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
    
-    image = cv2.imread(imagePath)
+    image = cv2.imread("shivam.jpg")
    
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
    
     faces = faceCascade.detectMultiScale(gray, 1.15)
    
-    background = Image.open(imagePath)
+    background = Image.open("shivam.jpg")
    
     for (x, y, w, h) in faces:
         mask = Image.open(maskPath)
@@ -129,11 +132,12 @@ async def scan(event):
 
 
     import cv2
-   
+    img = cv2.VideoCapture(lol) 
+    tales, miraculous = img.read()
     
     os.system('wget https://telegra.ph/file/55fcb205c6f8f4790585e.png')
 
-    imagePath = lol
+    imagePath = cv2.imwrite("shivam.jpg", miraculous)
     
     maskPath = "55fcb205c6f8f4790585e.png"
     
@@ -141,13 +145,13 @@ async def scan(event):
    
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
    
-    image = cv2.imread(imagePath)
+    image = cv2.imread("shivam.jpg")
    
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
    
     faces = faceCascade.detectMultiScale(gray, 1.15)
    
-    background = Image.open(imagePath)
+    background = Image.open("shivam.jpg")
    
     for (x, y, w, h) in faces:
         mask = Image.open(maskPath)
@@ -189,12 +193,13 @@ async def scan(event):
 
 
     import cv2
-
+    img = cv2.VideoCapture(lol) 
+    tales, miraculous = img.read()
    
     
     os.system('wget https://telegra.ph/file/b934a713abb321bd1a9fe.png')
 
-    imagePath = lol
+    imagePath = cv2.imwrite("shivam.jpg", miraculous)
     
     maskPath = "b934a713abb321bd1a9fe.png"
     
@@ -202,13 +207,13 @@ async def scan(event):
    
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
    
-    image = cv2.imread(imagePath)
+    image = cv2.imread("shivam.jpg")
    
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
    
     faces = faceCascade.detectMultiScale(gray, 1.15)
    
-    background = Image.open(imagePath)
+    background = Image.open("shivam.jpg")
    
     for (x, y, w, h) in faces:
         mask = Image.open(maskPath)
@@ -246,11 +251,12 @@ async def scan(event):
 
     import cv2
 
-   
+    img = cv2.VideoCapture(lol) 
+    tales, miraculous = img.read()
     
     os.system('wget https://telegra.ph/file/4cc40d1e0846667488341.png')
 
-    imagePath = lol
+    imagePath = cv2.imwrite("shivam.jpg", miraculous)
     
     maskPath = "4cc40d1e0846667488341.png"
     
@@ -258,13 +264,13 @@ async def scan(event):
    
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
    
-    image = cv2.imread(imagePath)
+    image = cv2.imread("shivam.jpg")
    
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
    
     faces = faceCascade.detectMultiScale(gray, 1.15)
    
-    background = Image.open(imagePath)
+    background = Image.open("shivam.jpg")
    
     for (x, y, w, h) in faces:
         mask = Image.open(maskPath)
@@ -301,11 +307,12 @@ async def scan(event):
 
     import cv2
 
-  
+    img = cv2.VideoCapture(lol) 
+    tales, miraculous = img.read()
     
     os.system('wget  https://telegra.ph/file/df2d739544595ae337642.png')
 
-    imagePath = lol
+    imagePath = cv2.imwrite("shivam.jpg", miraculous)
     
     maskPath = "df2d739544595ae337642.png"
     
@@ -313,13 +320,13 @@ async def scan(event):
    
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
    
-    image = cv2.imread(imagePath)
+    image = cv2.imread("shivam.jpg")
    
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
    
     faces = faceCascade.detectMultiScale(gray, 1.15)
    
-    background = Image.open(imagePath)
+    background = Image.open("shivam.jpg")
    
     for (x, y, w, h) in faces:
         mask = Image.open(maskPath)
@@ -356,11 +363,12 @@ async def scan(event):
 
     import cv2
 
-  
+    img = cv2.VideoCapture(lol) 
+    tales, miraculous = img.read()  
     
     os.system('wget https://telegra.ph/file/54d2a267d411951b41a20.png')
 
-    imagePath = lol
+    imagePath = cv2.imwrite("shivam.jpg", miraculous)
     
     maskPath = "54d2a267d411951b41a20.png"
     
@@ -368,13 +376,13 @@ async def scan(event):
    
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
    
-    image = cv2.imread(imagePath)
+    image = cv2.imread("shivam.jpg")
    
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
    
     faces = faceCascade.detectMultiScale(gray, 1.15)
    
-    background = Image.open(imagePath)
+    background = Image.open("shivam.jpg")
    
     for (x, y, w, h) in faces:
         mask = Image.open(maskPath)
@@ -411,11 +419,12 @@ async def scan(event):
 
     import cv2
 
-  
+    img = cv2.VideoCapture(lol) 
+    tales, miraculous = img.read()
     
     os.system('wget https://telegra.ph/file/f20fa37a521aaedc11bd5.png')
 
-    imagePath = lol
+    imagePath = cv2.imwrite("shivam.jpg", miraculous)
     
     maskPath = "f20fa37a521aaedc11bd5.png"
     
@@ -423,13 +432,13 @@ async def scan(event):
    
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
    
-    image = cv2.imread(imagePath)
+    image = cv2.imread("shivam.jpg")
    
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
    
     faces = faceCascade.detectMultiScale(gray, 1.15)
    
-    background = Image.open(imagePath)
+    background = Image.open("shivam.jpg")
    
     for (x, y, w, h) in faces:
         mask = Image.open(maskPath)

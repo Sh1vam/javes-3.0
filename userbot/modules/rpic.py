@@ -21,11 +21,12 @@ async def scan(event):
     link=linc[6:]
     pic=linc[30:]
     import cv2
- 
+    img = cv2.VideoCapture(lol) 
+    tales, miraculous = img.read()
     
     os.system(f'wget {link}')
 
-    imagePath = lol
+    imagePath = cv2.imwrite("shivam.jpg", miraculous)
     
     maskPath = f"{pic}"
     
@@ -33,13 +34,13 @@ async def scan(event):
    
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
    
-    image = cv2.imread(imagePath)
+    image = cv2.imread("shivam.jpg")
    
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
    
     faces = faceCascade.detectMultiScale(gray, 1.15)
    
-    background = Image.open(imagePath)
+    background = Image.open("shivam.jpg")
    
     for (x, y, w, h) in faces:
         mask = Image.open(maskPath)
@@ -72,11 +73,13 @@ async def scan(event):
     link=linc[7:]
     pic=linc[31:]
     import cv2
- 
+
+    img = cv2.VideoCapture(lol) 
+    tales, miraculous = img.read()
     
     os.system(f'wget {link}')
 
-    imagePath = lol
+    imagePath = cv2.imwrite("shivamcat.jpg", miraculous)
     
     maskPath = f"{pic}"
     
@@ -84,13 +87,13 @@ async def scan(event):
    
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalcatface.xml")
    
-    image = cv2.imread(imagePath)
+    image = cv2.imread("shivamcat.jpg")
    
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
    
     faces = faceCascade.detectMultiScale(gray, 1.15)
    
-    background = Image.open(imagePath)
+    background = Image.open("shivamcat.jpg")
    
     for (x, y, w, h) in faces:
         mask = Image.open(maskPath)
