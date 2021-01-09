@@ -15,9 +15,7 @@ if not os.path.isdir(sedpath):
     os.makedirs(sedpath)
 @borg.on(admin_cmd(pattern=r"tpic"))
 async def hmm(event):
-    if not event.reply_to_msg_id:
-        await event.reply("Reply to any Image.")
-        return
+
     await event.delete()
     sed = await event.get_reply_message()
     linc = event.text
@@ -25,13 +23,12 @@ async def hmm(event):
     text,colors,thicknes,orgs,fontsize=links.split("|")
     a,b,c=colors.split(";")
     c,d=orgs.split(";")
-    if isinstance(sed.media, MessageMediaPhoto):
-        img = await borg.download_media(sed.media, sedpath)
-    elif "image" in sed.media.document.mime_type.split("/"):
-        img = await borg.download_media(sed.media, sedpath)
-    else:
-        await event.edit("Reply To Image")
-        return
+
+    img = await borg.download_media(sed.media, sedpath)
+    miraculous=cv2.VideoCapture(img)
+    ladybug,catnoar = miraculous.read()
+    cv2.imwrite("shivammememe.png", catnoar)
+    img = "shivammememe.png"
     window_name = 'Made By Shivam'
     image = cv2.imread(img) 
     font = cv2.FONT_HERSHEY_SIMPLEX
@@ -62,13 +59,11 @@ async def hmm(event):
     text,colors,thicknes,orgs,fontsize=links.split("|")
     a,b,c=colors.split(";")
     c,d=orgs.split(";")
-    if isinstance(sed.media, MessageMediaPhoto):
-        img = await borg.download_media(sed.media, sedpath)
-    elif "image" in sed.media.document.mime_type.split("/"):
-        img = await borg.download_media(sed.media, sedpath)
-    else:
-        await event.edit("Reply To Image with .ipic text|no1;no2;no3|thickness|coordinate x;coordinate y|fontsize")
-        return
+    img = await borg.download_media(sed.media, sedpath)
+    miraculous=cv2.VideoCapture(img)
+    ladybug,catnoar = miraculous.read()
+    cv2.imwrite("shivammememe.png", catnoar)
+    img = "shivammememe.png"
     window_name = 'Made By Shivam'
     image = cv2.imread(img) 
     font = cv2.FONT_HERSHEY_SIMPLEX

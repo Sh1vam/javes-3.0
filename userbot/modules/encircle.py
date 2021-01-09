@@ -1,4 +1,5 @@
-import PIL
+from telethon import events
+import subprocess, os , asyncio, PIL, cv2, shutil
 from userbot.utils import admin_cmd
 from userbot import CMD_HELP
 import pygments, os, asyncio
@@ -20,8 +21,11 @@ async def shiv(event):
     reply = await event.get_reply_message()
     
     download = await borg.download_media(reply.media, path)
+    miraculous=cv2.VideoCapture(download)
+    ladybug,catnoar = miraculous.read()
+    cv2.imwrite("shivamcircular.png", catnoar)
     #image = PIL.Image.open(download)
-    img=Image.open(download).convert("RGB")
+    img=Image.open("shivamcircular.png").convert("RGB")
     npImage=np.array(img)
     h,w=img.size
     alpha = Image.new('L', img.size,0)
@@ -40,7 +44,7 @@ async def shiv(event):
     await event.client.send_file(event.chat_id, "sirsle.png", force_document=False, reply_to=event.reply_to_msg_id)
     os.remove(download)
     os.remove("sirsle.png")
-
+    os.remove("shivamcircular.png")
 
 
 
