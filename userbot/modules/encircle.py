@@ -10,7 +10,7 @@ from userbot import bot
 from userbot import bot as borg
 import numpy as np
 from PIL import Image, ImageDraw
-@bot.on(admin_cmd(pattern="circle", outgoing=True))
+@bot.on(admin_cmd(pattern="icircle", outgoing=True))
 # By @shivam_patel
 # Enhanced @danish_00
 #dont kang
@@ -39,7 +39,7 @@ async def shiv(event):
     npImage=np.dstack((npImage,npAlpha))
 
     # Save with alpha
-    Image.fromarray(npImage).save('isirsle.png')
+    Image.fromarray(npImage).save('sirsle.png')
     #await event.edit(f"Dimensions Of Image are {shi} by {vam}")
     #img.save("sh1vam.png", format="PNG", optimize=True)
     await event.client.send_file(event.chat_id, "sirsle.png", force_document=True, reply_to=event.reply_to_msg_id)
