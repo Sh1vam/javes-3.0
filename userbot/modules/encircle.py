@@ -76,6 +76,7 @@ async def shiv(event):
     npAlpha=np.array(alpha)
     npImage=np.dstack((npImage,npAlpha))
     Image.fromarray(npImage).save('shivam.webp')
+    await event.delete()
     await event.client.send_file(event.chat_id, "shivam.webp", force_document=False, reply_to=event.reply_to_msg_id)
     shutil.rmtree(path)
     os.remove("shivam.webp")
