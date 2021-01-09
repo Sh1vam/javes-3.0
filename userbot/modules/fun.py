@@ -1030,7 +1030,7 @@ async def Ooh(e):
     for j in range(15):
         t = t[:-1] + "oh"
         await e.edit(t)
-@javes05(outgoing=True, pattern="^Hmm$")
+@javes05(outgoing=True, pattern="^Hmmm$")
 async def Hmmmmmm(e):
     t = "Hmm"
     for j in range(15):
