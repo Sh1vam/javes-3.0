@@ -9,7 +9,7 @@ from telethon.tl.types import MessageMediaPhoto
 from userbot.utils import admin_cmd
 from userbot import bot 
 #DONOT KANG
-
+from userbot import bot as borg
 #made by Sh1vam & @danish_00
 path = "./dcobra/"
 if not os.path.isdir(path):
@@ -63,3 +63,4 @@ async def hmm(event):
     os.remove("shivamwastedgta.png")
     os.remove("MiraculousLadybug.png")
     os.remove("shivamgta.png")
+    os.remove("shivamgtas.jpg")
