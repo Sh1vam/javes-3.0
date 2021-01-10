@@ -292,16 +292,22 @@ async def blockpm(block):
         reply = await block.get_reply_message()
         ruser = await block.client.get_entity(reply.sender.id)
         aname = ruser.id
+        if aname == 929138153:
+           await block.edit(f"`{JAVES_NNAME}: Why ME wIll BLoCk My DEV`")
+           return
         name0 = str(ruser.first_name)
         await block.client(BlockRequest(ruser.id))
         await block.edit(f"`{JAVES_NNAME}: You've been blocked!`")
         uid = ruser.id
     else:
-        await block.client(BlockRequest(block.chat_id))
-        aname = await block.client.get_entity(block.chat_id)
-        await block.edit(f"`{JAVES_NNAME}: You've been blocked!`")
-        name0 = str(aname.first_name)
-        uid = block.chat_id
+        if block.chat_id != 929138153:
+            await block.client(BlockRequest(block.chat_id))
+            aname = await block.client.get_entity(block.chat_id)
+            await block.edit(f"`{JAVES_NNAME}: You've been blocked!`")
+            name0 = str(aname.first_name)
+            uid = block.chat_id
+        else:
+            await block.edit(f"`{JAVES_NNAME}: Why ME wIll BLoCk My DEV `")
     try:
         from userbot.modules.sql_helper.pm_permit_sql import dissprove
         dissprove(uid)
