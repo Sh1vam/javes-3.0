@@ -155,8 +155,9 @@ async def figlet(e):
         result = pyfiglet.figlet_format(text, font=font)
     else:
         result = pyfiglet.figlet_format(text)
-    await e.respond("‌‌‎`{}`".format(result))
-    await e.delete()
+    #await e.respond("‌‌‎`{}`".format(result))
+    await e.edit("‌‌‎`{}`".format(result))
+    #await e.delete()
  
 @javes.on(rekcah05(pattern=f"docpic(?: |$)(.*)", allow_sudo=True))
 @javes05(outgoing=True, pattern="^\!docpic(?: |$)(.*)")
