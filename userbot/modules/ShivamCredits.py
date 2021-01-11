@@ -209,7 +209,7 @@ async def show_wafu(event):
         return
     cws = get_current_wafu_settings(event.chat_id)
     if not cws:
-        await event.edit(f"`{JAVES_NNAME}`: **auto wafu on.**")
+        await event.edit(f"`{JAVES_NNAME}`: **auto wafu not on.**")
         return
     else:
         await event.edit(f"`{JAVES_NNAME}`: **auto wafu on.**")
