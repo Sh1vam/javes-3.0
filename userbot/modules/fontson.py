@@ -19,9 +19,6 @@ async def inline_id_handler(e: events.InlineQuery.Event):
         elif input_str is not None:
             cmd = None
             text = input_str
-        else:
-            resultm = builder.article(title="Please add some text to figlet",description="Give Correct input",text="see .chk tools2",buttons=[[Button.switch_inline("Search Again", query="figlet ", same_peer=True)],],)
-            await e.answer([resultm])
         if cmd is not None:
             try:
                 font = CMD_FIG[cmd]
