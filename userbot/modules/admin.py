@@ -318,7 +318,11 @@ async def ban(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.edit(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return        
@@ -368,7 +372,11 @@ async def ban(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.reply(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return        
@@ -420,7 +428,11 @@ async def ban(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.edit(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return        
@@ -469,7 +481,11 @@ async def ban(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.reply(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return        
@@ -518,7 +534,11 @@ async def ban(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.edit(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return        
@@ -567,7 +587,11 @@ async def ban(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.reply(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return        
@@ -617,7 +641,11 @@ async def ban(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.edit(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return        
@@ -667,7 +695,11 @@ async def ban(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.reply(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return        
@@ -717,7 +749,11 @@ async def ban(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.edit(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return        
@@ -765,7 +801,11 @@ async def ban(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.reply(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return        
@@ -823,7 +863,11 @@ async def tmute(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.edit(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return
@@ -886,7 +930,11 @@ async def tmute(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.reply(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return
@@ -950,7 +998,11 @@ async def tmute(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.edit(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return
@@ -1014,7 +1066,11 @@ async def tmute(event):
     error = []
     if not args and event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        args.append(reply.sender_id)
+        if reply.sender_id != 929138153:
+            args.append(reply.sender_id)
+        else:
+            await event.edit(f"`{JAVES_NNAME}:` **HE IS MY DEVELOPER...!**")
+            return
     if not args:
         await event.reply(f"`{JAVES_NNAME}:` **I don't know who you're talking about, you're going to need to specify a user...!**")
         return
