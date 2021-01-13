@@ -29,6 +29,7 @@ async def inline_id_handler(e: events.InlineQuery.Event):
             result = pyfiglet.figlet_format(text, font=font)
         else:
             result = pyfiglet.figlet_format(text)
+            font="Default"
         #await e.respond("‌‌‎`{}`".format(result))
         #await e.edit("‌‌‎`{}`".format(result))
         resultm = builder.article(title=text,description=font,text="‌‌‎`{}`".format(result),buttons=[[Button.switch_inline("Search Again", query="figlet ", same_peer=True)],],)
