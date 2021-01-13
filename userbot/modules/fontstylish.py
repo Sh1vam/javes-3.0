@@ -62,9 +62,9 @@ async def teamdc(event: events.InlineQuery.Event):
     builder = event.builder
     me = await client.get_me()
     if event.query.user_id == me.id:
-        resultm = builder.article(title="Fonts",descriptin="Available Fonts.",text="serif\nsans\nsans_i\nserif_i\nmedi_b\nmedi\ndouble\ncursive_b\ncursive\nbigsmall\nreverse\ncircle\ncircle_b\nmono\nsquare_b\nsquare\nsmoth\ngoth\nwide\nweb\nweeb\nweeeb\ntwist\ntwist_b\ntwist_c\n",buttons=[[Button.switch_inline("Search Again", query="sfonts  ", same_peer=True)],],)
+        resultm = builder.article(title="Fonts",description="Available Fonts.",text="serif\nsans\nsans_i\nserif_i\nmedi_b\nmedi\ndouble\ncursive_b\ncursive\nbigsmall\nreverse\ncircle\ncircle_b\nmono\nsquare_b\nsquare\nsmoth\ngoth\nwide\nweb\nweeb\nweeeb\ntwist\ntwist_b\ntwist_c\n",buttons=[[Button.switch_inline("Search Again", query="sfonts  ", same_peer=True)],],)
         await event.answer([resultm])
-    if not e.query.user_id == me.id:
+    if not event.query.user_id == me.id:
         resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="sfonts  ", same_peer=True)],], )
         await e.answer([resultm])
         return
@@ -101,5 +101,5 @@ async def teamdc(event: events.InlineQuery.Event):
         await event.answer([result])
     if not e.query.user_id == me.id:
         resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="fstyle ", same_peer=True)],], )
-        await e.answer([resultm])
+        await event.answer([resultm])
         return
