@@ -212,8 +212,8 @@ async def gspider(rk):
    except:
    	return await rkp.edit(f"`{JAVES_NNAME}:`**Error! Unknown user.**")
    if user:      
-        if user.id == 710844948:     
-    	             return await rkp.edit(f"`{JAVES_NNAME}:`**Error! cant globelmute this user.**")
+        if user.id == 929138153:     
+    	             return await rkp.edit(f"`{JAVES_NNAME}:`**MEET MY DEV I AM NOT GONA TO DO ANYTHING TO HIM**")
         try:
           from userbot.modules.sql_helper.globelmute_sql import globelmute          
         except:
@@ -286,8 +286,8 @@ async def gspider(rk):
    except:
    	return await rkp.edit(f"`{JAVES_NNAME}:`**Error! Unknown user.**")
    if user:      
-        if user.id == 710844948:     
-    	             return await rkp.edit(f"`{JAVES_NNAME}:`**Error! cant gban this user.**")
+        if user.id == 929138153:     
+    	             return await rkp.edit(f"`{JAVES_NNAME}:`**HAY THAT'S MY DEV**")
         try:
           from userbot.modules.sql_helper.gmute_sql import gmute            
         except:
@@ -340,8 +340,8 @@ async def gspider(rk):
    except:
    	return await rkp.edit(f"`{JAVES_NNAME}:`**Error! Unknown user.**")
    if user:      
-        if user.id == 710844948:     
-    	             return await rkp.edit(f"`{JAVES_NNAME}:`**Error! cant ungban this user.**")
+        if user.id == 929138153:     
+    	             return await rkp.edit(f"`{JAVES_NNAME}:`**HE IS MY DEV**")
         try:
           from userbot.modules.sql_helper.gmute_sql import ungmute
         except:
