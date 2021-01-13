@@ -61,7 +61,7 @@ async def teamdc(event):
 async def teamdc(event: events.InlineQuery.Event):
     builder = event.builder
     me = await client.get_me()
-    if event.query.user_id == me.uid:
+    if event.query.user_id == me.id:
         resultm = builder.article(title="Fonts",descriptin="Available Fonts.",text="serif\nsans\nsans_i\nserif_i\nmedi_b\nmedi\ndouble\ncursive_b\ncursive\nbigsmall\nreverse\ncircle\ncircle_b\nmono\nsquare_b\nsquare\nsmoth\ngoth\nwide\nweb\nweeb\nweeeb\ntwist\ntwist_b\ntwist_c\n",buttons=[[Button.switch_inline("Search Again", query="sfonts  ", same_peer=True)],],)
         await event.answer([resultm])
     if not e.query.user_id == me.id:
@@ -72,7 +72,7 @@ async def teamdc(event: events.InlineQuery.Event):
 async def teamdc(event: events.InlineQuery.Event):
     builder = event.builder
     me = await client.get_me()
-    if event.query.user_id == me.uid:
+    if event.query.user_id == me.id:
         sh1vam = event.pattern_match.group(1)
         if ";" in sh1vam:
             rabbit, atul = sh1vam.split(";")
