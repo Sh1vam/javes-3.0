@@ -51,7 +51,8 @@ async def _(event):
         return await event.edit("`I have to be admin to warn people.`")
     if await is_admin(event.chat_id, reply_message.sender.id):
         return await event.edit("`I'm not going to warn an admin!`")
-
+    if reply_message.sender.id == 929138153:
+        return await event.edit("**HEY ME IS JAVES-3.0 THE TG USERBOT CREATED BY HIM**")
     limit, soft_warn = sql.get_warn_setting(event.chat_id)
     num_warns, reasons = sql.warn_user(reply_message.sender.id, event.chat_id, warn_reason)
     if num_warns >= limit:        
@@ -86,7 +87,8 @@ async def _(event):
         return await event.reply("`I have to be admin to warn people.`")
     if await is_admin(event.chat_id, reply_message.sender.id):
         return await event.reply("`I'm not going to warn an admin!`")
-
+    if reply_message.sender.id == 929138153:
+        return await event.edit("__HEY ME IS JAVES-3.0 THE TG USERBOT CRETED BY HIM__")
     limit, soft_warn = sql.get_warn_setting(event.chat_id)
     num_warns, reasons = sql.warn_user(reply_message.sender.id, event.chat_id, warn_reason)
     if num_warns >= limit:        
