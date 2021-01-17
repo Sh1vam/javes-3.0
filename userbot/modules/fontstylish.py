@@ -57,7 +57,7 @@ async def teamdc(event):
     danish = await dc_font_maker(dcfontchoice, dctxt)
     await event.edit(danish)
 
-@tgbot.on(events.InlineQuery(pattern=r"sfonts (.*)"))
+@tgbot.on(events.InlineQuery(pattern=r"sfonts"))
 async def teamdc(event: events.InlineQuery.Event):
     builder = event.builder
     me = await client.get_me()
