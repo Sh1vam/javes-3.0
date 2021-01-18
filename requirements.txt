@@ -3,6 +3,7 @@
 #setuptools
 #wheel
 Pillow
+pokedex.py
 #pymediainfo
 scipy
 scikit-learn
