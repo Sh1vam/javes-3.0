@@ -99,7 +99,7 @@ async def teamdc(event: events.InlineQuery.Event):
         danish = await dc_font_maker(dcfontchoice, dctxt)
         result = builder.article(title=shivam,description=dcfontchoice,text=f"{danish}",buttons=[[Button.switch_inline("Search Again", query="fstyle ", same_peer=True)],],)
         await event.answer([result])
-    if not e.query.user_id == me.id:
+    if not event.query.user_id == me.id:
         resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="fstyle ", same_peer=True)],], )
         await event.answer([resultm])
         return
