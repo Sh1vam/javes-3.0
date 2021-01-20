@@ -2,6 +2,8 @@ from pokedex import pokedex as badhiya
 import os
 import shutil
 from re import findall
+from userbot import bot
+from userbot import bot as borg
 from userbot.utils import admin_cmd
 import requests
 @borg.on(admin_cmd(pattern="pokedex ?(.*)"))
