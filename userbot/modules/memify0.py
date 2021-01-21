@@ -118,14 +118,7 @@ def random_color():
 
 
 CNG_FONTS = "userbot/helpers/styles/impact.ttf"
-FONTS = "1. `ProductSans-BoldItalic.ttf`\n2. `ProductSans-Light.ttf`\n3. `RoadRage-Regular.ttf`\n4. `digital.ttf`\n5. `impact.ttf`"
-font_list = [
-    "ProductSans-BoldItalic.ttf",
-    "ProductSans-Light.ttf",
-    "RoadRage-Regular.ttf",
-    "digital.ttf",
-    "impact.ttf","vermin_vibes.ttf","go3v2.ttf"
-]
+
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="(mm3f|mm3s) ?(.*)"))
@@ -222,7 +215,7 @@ async def memes(cat):
         if files and os.path.exists(files):
             os.remove(files)
 
-
+font_list=os.system("ls userbot/helpers/styles")
 @bot.on(admin_cmd(pattern="cfont(?: |$)(.*)"))
 
 async def lang(event):
@@ -236,14 +229,14 @@ async def lang(event):
     if input_str not in font_list:
         catevent = await event.edit( "`Give me a correct font name...`")
         await asyncio.sleep(1)
-        await catevent.edit(f"**Available Fonts names are here:-**\n\n{FONTS}")
+        await catevent.edit(f"**Available Fonts names are here:-**\n\n{font_list}")
     else:
         arg = f"userbot/helpers/styles/{input_str}"
         CNG_FONTS = arg
         await event.edit( f"**Fonts for Memify changed to :-** `{input_str}`")
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="asci ?(.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern="asi ?(.*)"))
 
 async def memes(cat):
     if cat.fwd_from:
