@@ -1,4 +1,5 @@
 from userbot.events import javes05
+NO_PERM="No Permission"
 from userbot import bot, BOTLOG_CHATID
 import asyncio
 from telethon import events
@@ -1466,6 +1467,25 @@ async def pin(msg):
         await msg.edit(NO_PERM)
         return
     await msg.edit(f"`{JAVES_NNAME}`: ** Pinned Successfully !!**")
+@javes05(outgoing=True, pattern="^\!pinit(?: |$)(.*)")
+async def pin(msg):
+    chat = await msg.get_chat()
+
+    to_pin = msg.reply_to_msg_id
+    if not to_pin:
+        await msg.edit(f"`{JAVES_NNAME}`: ** Reply to a message to pin it.**")
+        return
+    options = msg.pattern_match.group(1)
+    is_silent = True
+    if options.lower() == "loud":
+        is_silent = False
+    try:
+        await msg.client(
+            UpdatePinnedMessageRequest(msg.to_id, to_pin, is_silent))
+    except BadRequestError:
+        await msg.edit(NO_PERM)
+        return
+    await msg.edit(f"`{JAVES_NNAME}`: ** Pinned Successfully !!**")
 
 @javes.on(rekcah05(pattern=f"pin(?: |$)(.*)", allow_sudo=True))
 async def pin(msg):
@@ -1891,7 +1911,7 @@ CMD_HELP.update({
 \n**Usage:** Retrieves a list of bots in the chat.\
 \n\n!users  <Retrieves a list of members in the chat.>\
 \n**Usage:** Retrieves all (or queried) users in the chat.\
-\n\n!pin <reply to message>\
+\n\n!pin or !pinit <reply to message>\
 \n**Usage:** Changes the group's display picture.\
 \n\n!akick / !akick <option>\
 \n**Usage:** !akick - give users details !akick<option> kick user(Available Options: p - reserved for channel, e - usercount, y - userstatusempty, m - userstatuslastmonth, w - userstatuslastweek, o - userstatusoffline, q - userstatusonline, r - userstatusrecently, b - bot, d - deleted account )\
