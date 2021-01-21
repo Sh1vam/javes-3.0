@@ -39,7 +39,7 @@ from wand.image import Image as catimage
 MARGINS = [50, 150, 250, 350, 450]
 CNG_FONTS = "userbot/helpers/styles/impact.ttf"
 font_list = os.system("ls userbot/helpers/styles")
-FONTS = list(font_list)
+FONTS = font_list
 from userbot.utils import admin_cmd
 from userbot import bot , CMD_HELP
 async def cat_meme(CNG_FONTS, topString, bottomString, filename, endname):
