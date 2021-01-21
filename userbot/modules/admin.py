@@ -1492,19 +1492,16 @@ async def upin(msg):
 
     to_pin = msg.reply_to_msg_id
     if not to_pin:
-        await msg.edit(f"`{JAVES_NNAME}`: ** Reply to a message to pin it.**")
+        await msg.edit(f"`{JAVES_NNAME}`: ** Reply to a message to unpin it.**")
         return
-    options = msg.pattern_match.group(1)
-    is_silent = True
-    if options.lower() == "loud":
-        is_silent = False
+
+
     try:
-        await msg.client(
-            UpdatePinnedMessageRequest(msg.to_id, to_pin, is_silent))
+        await msg.client.unpin_message(msg.to_id, to_pin)
     except BadRequestError:
         await msg.edit(NO_PERM)
         return
-    await msg.edit(f"`{JAVES_NNAME}`: ** Pinned Successfully !!**")
+    await msg.edit(f"`{JAVES_NNAME}`: ** UnPinned Successfully !!**")
 
 @javes.on(rekcah05(pattern=f"pin(?: |$)(.*)", allow_sudo=True))
 async def pin(msg):
