@@ -30,15 +30,15 @@ from typing import Optional, Tuple
 
 import numpy as np
 
-
+from os import listdir
 from PIL import Image, ImageDraw, ImageFont
 from wand.color import Color
 from wand.drawing import Drawing
 from wand.image import Image as catimage
-
+miraculous_ladybug = "userbot/helpers/styles/"
 MARGINS = [50, 150, 250, 350, 450]
 CNG_FONTS = "userbot/helpers/styles/impact.ttf"
-font_list = os.system("ls userbot/helpers/styles")
+font_list = listdir(miraculous_ladybug)
 FONTS = font_list
 from userbot.utils import admin_cmd
 from userbot import bot , CMD_HELP
