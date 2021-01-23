@@ -16,7 +16,7 @@ from userbot.helpers import fonts as emojify
 @borg.on(admin_cmd(pattern="eem(?: |$)(.*)"))
 
 async def itachi(event):
-    args = event.pattern_match.group(1)
+    args = event.text
     if not args:
         get = await event.get_reply_message()
         args = get.text
@@ -39,7 +39,8 @@ async def itachi(event):
 @borg.on(admin_cmd(pattern="cmoji(?: |$)(.*)"))
 
 async def itachi(event):
-    args = event.pattern_match.group(1)
+    miraculousseason4 = event.text
+    args = miraculousseason4[7:]
     if not args:
         get = await event.get_reply_message()
         args = get.text
