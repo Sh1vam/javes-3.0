@@ -49,7 +49,7 @@ async def itachi(event):
         )
         return
     try:
-        emoji, arg = args.split(" ", 1)
+        emoji, arg = args.split(";")
     except:
         arg = args
         emoji = "😺"
