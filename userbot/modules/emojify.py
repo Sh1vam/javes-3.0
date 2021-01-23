@@ -4,6 +4,7 @@ modified by  @mrconfused
 Userbot plugin for CatUserbot
 """
 #ported by Sh1vam For javes
+#Bug fixed by Sh1vam
 import emoji
 
 from userbot import CMD_HELP
@@ -16,7 +17,7 @@ from userbot.helpers import fonts as emojify
 @borg.on(admin_cmd(pattern="eem(?: |$)(.*)"))
 
 async def itachi(event):
-    args = event.text
+    args = event.pattern_match.group(1)
     if not args:
         get = await event.get_reply_message()
         args = get.text
@@ -39,8 +40,8 @@ async def itachi(event):
 @borg.on(admin_cmd(pattern="cmoji(?: |$)(.*)"))
 
 async def itachi(event):
-    miraculousseason4 = event.text
-    args = miraculousseason4[7:]
+    ars = event.text
+    args = ars[7:]
     if not args:
         get = await event.get_reply_message()
         args = get.text
@@ -50,13 +51,13 @@ async def itachi(event):
         )
         return
     try:
-        emoji, arg = args.split(";")
+         arg,emoji = args.split(";")
     except:
         arg = args
         emoji = "😺"
-    if not char_is_emoji(emoji):
+    '''if not char_is_emoji(emoji):
         arg = args
-        emoji = "😺"
+        emoji = "😺"'''
     result = ""
     for a in arg:
         a = a.lower()
@@ -68,8 +69,8 @@ async def itachi(event):
     await event.edit(result)
 
 
-def char_is_emoji(character):
-    return character in emoji.UNICODE_EMOJI
+'''def char_is_emoji(character):
+    return character in emoji.UNICODE_EMOJI'''
 
 
 CMD_HELP.update(
@@ -77,7 +78,7 @@ CMD_HELP.update(
         "emojify": "**Plugin :** `emojify`\
       \n\n**Syntax :** `.eem` <text>\
       \n****Usage : **Converts your text to big emoji text, with default emoji. \
-      \n\n**Syntax :** `.cmoji` <emoji> <text>\
+      \n\n**Syntax :** `.cmoji` <text>;<emoji>\
       \n****Usage : **Converts your text to big emoji text, with your custom emoji.\
       "
     }
