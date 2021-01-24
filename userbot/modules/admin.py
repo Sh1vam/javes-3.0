@@ -1378,7 +1378,7 @@ async def _(event):
                     f" **Unknown** `{n}`")
                     
 
-
+CHAT_PP_CHANGED=" ⭐️ Congrats ! Bravo ! Your Group Profile Pic Changed SuccessFully  ⭐️"
 
 
 @javes05(outgoing=True, pattern="^\!setgpic$", groups_only=True)
