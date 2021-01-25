@@ -260,7 +260,7 @@
       "value": "-1001336057285",
       "required": false
     },
-  {
+  }
   "addons": [
     {
       "plan": "heroku-postgresql",
