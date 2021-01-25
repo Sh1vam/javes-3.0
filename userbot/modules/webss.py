@@ -15,6 +15,9 @@ from selenium import webdriver
 from userbot import bot as javes
 from userbot.javes_main.heroku_var import Config
 from userbot.utils import admin_cmd
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 @javes.on(admin_cmd("webss (.*)"))
 async def webss(message):
@@ -35,7 +38,8 @@ async def webss(message):
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-gpu")
-    driver = webdriver.Chrome(chrome_options=chrome_options)
+    #driver = webdriver.Chrome(chrome_options=chrome_options)
+    driver = webdriver.Chrome((ChromeDriverManager().install()),chrome_options=chrome_options)
     driver.get(link)
     height = driver.execute_script(
         "return Math.max(document.body.scrollHeight, document.body.offsetHeight, "
