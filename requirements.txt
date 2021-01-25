@@ -3,6 +3,7 @@
 #setuptools
 #wheel
 Pillow
+webdriver-manager
 pokedex.py
 #pymediainfo
 scipy
