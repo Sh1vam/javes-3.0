@@ -4,6 +4,7 @@
 #wheel
 Pillow
 webdriver-manager
+folium
 pokedex.py
 #pymediainfo
 scipy
