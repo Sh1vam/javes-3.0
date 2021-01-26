@@ -232,9 +232,9 @@ async def lang(event):
     if input_str not in font_list:
         event = await event.edit( "`Give me a correct font name...`")
         await asyncio.sleep(1)
+        #try:
+            #await event.edit(f"**Available Fonts names are here:-**\n\n{font_list}")
         try:
-            await event.edit(f"**Available Fonts names are here:-**\n\n{font_list}")
-        except:
             file="Shivam_fonts.txt"
             f=open(file,"w")
             f.write(font_list)
@@ -244,7 +244,7 @@ async def lang(event):
             await event.edit("File Sent....")
             await event.edit("......")
             await event.delete()
-        else:
+        except:
             await event.edit("use !term ls userbot/helpers/styles")
             
     else:
