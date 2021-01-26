@@ -1,6 +1,7 @@
 """
 Created by @mrconfused and @sandy1709
 memify plugin
+Modified TO Automatically Adopt any new fonts by Sh1vam
 """
 import asyncio
 import os
@@ -229,9 +230,23 @@ async def lang(event):
         await event.edit(f"**Available Fonts names are here:-**\n\n{FONTS}")
         return
     if input_str not in font_list:
-        catevent = await event.edit( "`Give me a correct font name...`")
+        event = await event.edit( "`Give me a correct font name...`")
         await asyncio.sleep(1)
-        await catevent.edit(f"**Available Fonts names are here:-**\n\n{font_list}")
+        try:
+            await event.edit(f"**Available Fonts names are here:-**\n\n{font_list}")
+        except:
+            file="Shivam_fonts.txt"
+            f=open(file,"w")
+            f.write(font_list)
+            f.close()
+            await event.edit("Too Many Fonts Sending File....")
+            await event.client.send_file(event.chat_id, file)
+            await event.edit("File Sent....")
+            await event.edit("......")
+            await event.delete()
+        else:
+            await event.edit("use !term ls userbot/helpers/styles")
+            
     else:
         arg = f"userbot/helpers/styles/{input_str}"
         CNG_FONTS = arg
