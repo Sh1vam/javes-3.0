@@ -227,8 +227,18 @@ async def lang(event):
     global CNG_FONTS
     input_str = event.pattern_match.group(1)
     if not input_str:
-        await event.edit(f"**Available Fonts names are here:-**\n\n{FONTS}")
-        return
+        try:
+            file="Shivam_fonts.txt"
+            f=open(file,"w")
+            f.write(font_list)
+            f.close()
+            await event.edit("Too Many Fonts Sending File....")
+            await event.client.send_file(event.chat_id, file)
+            await event.edit("File Sent....")
+            await event.edit("......")
+            await event.delete()
+        except:
+            await event.edit("use !term ls userbot/helpers/styles")
     if input_str not in font_list:
         event = await event.edit( "`Give me a correct font name...`")
         await asyncio.sleep(1)
