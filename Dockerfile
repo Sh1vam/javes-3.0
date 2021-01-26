@@ -40,7 +40,7 @@ RUN apt-get install -y\
     libreadline-dev \
     metasploit-framework \
     apktool \
-    openjdk-13-jdk \
+    #openjdk-13-jdk \
     zipalign \
     sqlite3 \
     ffmpeg \
