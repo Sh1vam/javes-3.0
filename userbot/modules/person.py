@@ -134,7 +134,7 @@ if PM_AUTO_BAN:
             async for message in event.client.iter_messages(event.chat_id,
                                                             reverse=True,
                                                             limit=1):
-                if message.message is not UNAPPROVED_MSG and message.from_id == self_user.id:
+                if message.message is not UNAPPROVED_MSG and message.sender.id == self_user.id:
                     try:
                         approve(event.chat_id)
                     except IntegrityError:
@@ -685,9 +685,10 @@ async def who(event):
     except AttributeError:
         rkp.edit("`Could not fetch info of that user.`")
         return
-    r_msg = await event.get_reply_message()
+    #r_msg = await event.get_reply_message()
     #message_id_to_reply = event.message.reply_to_msg_id
-    message_id_to_reply = r_msg.sender.id
+    message_id_to_reply = event.reply_to_msg_id
+    #message_id_to_reply = r_msg.sender.id
     if not message_id_to_reply:
         message_id_to_reply = None
     try:
