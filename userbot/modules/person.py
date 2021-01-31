@@ -685,7 +685,9 @@ async def who(event):
     except AttributeError:
         rkp.edit("`Could not fetch info of that user.`")
         return
-    message_id_to_reply = event.message.reply_to_msg_id
+    r_msg = await event.get_reply_message()
+    #message_id_to_reply = event.message.reply_to_msg_id
+    message_id_to_reply = r_msg.sender.id
     if not message_id_to_reply:
         message_id_to_reply = None
     try:
