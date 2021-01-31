@@ -708,7 +708,7 @@ async def get_user(event):
     if event.reply_to_msg_id and not event.pattern_match.group(1):
         previous_message = await event.get_reply_message()
         ruser = await event.client(
-            GetFullUserRequest(previous_message.from_id))
+            GetFullUserRequest(previous_message.sender.id))
     else:
         user = event.pattern_match.group(1)
         if user.isnumeric():
