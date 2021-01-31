@@ -682,7 +682,7 @@ async def okgoogle(img):
         except TypeError:
             pass
         await rkp.edit(
-            f"[{guess}]({fetchUrl})\n\n[View imilar images]({imgspage})")
+            f"[{guess}]({fetchUrl})\n\n[View similar images]({imgspage})")
 
 
 
