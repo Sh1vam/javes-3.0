@@ -1,6 +1,6 @@
 from userbot.utils import admin_cmd
 from userbot import bot as borg
-@borg.on(admin_cmd(pattern=r"wis ?(.*)"))
+@borg.on(admin_cmd(pattern=r"wis"))
 async def wis(event):
     if event.fwd_from:
         return
@@ -12,7 +12,7 @@ async def wis(event):
         except ValueError:
             new_update = await borg.get_entity('me')
         await event.edit(new_update.stringify())
-@borg.on(admin_cmd(pattern=r"uis ?(.*)"))
+@borg.on(admin_cmd(pattern=r"uis"))
 async def ues(event):
     giveVar = event.text
     a = giveVar[5:]
@@ -21,7 +21,7 @@ async def ues(event):
     except ValueError:
         new_update = await borg.get_entity('me')
     await event.edit(new_update.stringify())
-@borg.on(admin_cmd(pattern=r"mes ?(.*)"))
+@borg.on(admin_cmd(pattern=r"mes"))
 async def mes(event):
     new_update = await borg.get_entity('me')
     await event.edit(new_update.stringify())
