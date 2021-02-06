@@ -15,6 +15,7 @@ from userbot import CMD_HELP, ALIVE_NAME, PM_MESSAGE, JAVES_NAME, JAVES_MSG, ORI
 client2 = client3 = None
 try:
   from userbot import bot, client2 , client3
+  from userbot import bot as borg
 except:
 	pass
 
