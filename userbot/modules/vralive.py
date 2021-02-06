@@ -80,7 +80,7 @@ async def alive(alive):
                     f" °  `Uptime:` ** {str(datetime.now() - START_TIME).split('.')[0]} **\n\n"                                   
                     f"**{ALIVE_E_MMSG}**")
 
-    await bot.send_file(alive.chat_id,ALIVE_MEDIA2,caption="Iam On type !javes or !help  or  .hlp for more info")
+    await bot.send_file(alive.chat_id,ALIVE_MEDIA2,caption=miraculous)
     await alive.delete()
 
 
