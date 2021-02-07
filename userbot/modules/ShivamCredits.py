@@ -123,8 +123,10 @@ async def on_new_message(event):
 
 
         name = event.raw_text
-        snip = """A qt waifu appeared!
-Add them to your harem by sending /protecc character name"""
+        snip = """appeared!
+Add them to your harem by sending /protecc character name""" 
+
+
         pattern = r"( |^|[^\w])" + re.escape(snip) + r"( |$|[^\w])"
         if re.search(pattern, name, flags=re.IGNORECASE):
             try:
@@ -187,7 +189,7 @@ async def save_wafu(event):
         return await event.edit("`Running on Non-SQL mode!`")
 
     
-    string = """A qt waifu appeared!
+    string = """appeared!
 Add them to your harem by sending /protecc character name"""
     msg_id = None
     if add_wafu_setting(event.chat_id, 0,string, msg_id) is True:
