@@ -64,7 +64,7 @@ else:
 	logrk = '[Failed to connect](https://telegra.ph/RkPavi-06-09-3)'
 
 
-@client.on(events.NewMessage(outgoing=True, pattern='!bot'))
+@client.on(events.NewMessage(outgoing=True, pattern='!start'))
 async def alive(alive):
     shivam=await borg.get_entity('me')
     miraculous=(""
@@ -89,7 +89,7 @@ async def alive(alive):
 @javes05(outgoing=True, pattern="^\.me$")
 @javes05(outgoing=True, pattern="^\!me$")
 async def alive(alive):
-    await bot.send_file(alive.chat_id,ALIVE_MEDIA1,caption="Iam On type !javes or !help  or  .hlp for more info")
+    await bot.send_file(alive.chat_id,ALIVE_MEDIA1,caption="Iam On type !javes or !help  or  .hlp or !start for more info")
     await alive.delete()
 
 
