@@ -340,8 +340,7 @@ async def gspider(rk):
    except:
    	return await rkp.edit(f"`{JAVES_NNAME}:`**Error! Unknown user.**")
    if user:      
-        if user.id == 929138153:     
-    	             return await rkp.edit(f"`{JAVES_NNAME}:`**HE IS MY DEV**")
+
         try:
           from userbot.modules.sql_helper.gmute_sql import ungmute
         except:
