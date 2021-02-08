@@ -39,6 +39,7 @@ from datetime import datetime
 x = math.inf
 counter = 0
 start=t.time()
+from userbot.javes_main.heroku_var import config
 from sqlalchemy.exc import IntegrityError
 from userbot import (COUNT_PM, CMD_HELP, BOTLOG, BOTLOG_CHATID, PM_AUTO_BAN,LASTMSG, LOGS)
 from userbot import CMD_HELP, ALIVE_NAME, PM_MESSAGE, JAVES_NAME, JAVES_MSG, ORI_MSG
@@ -46,6 +47,7 @@ JAVES_NNAME = str(JAVES_NAME) if JAVES_NAME else str(JAVES_MSG)
 BLOCK_MMSG = str(BLOCK_MESSAGE) if BLOCK_MESSAGE else str(BLOCK_MSG)
 AFK_MMSG = str(AFK_MESSAGE) if AFK_MESSAGE else str(AFK_MSG)
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+MAX_FLOOD_IN_P_M_s = config.MAX_FLOOD_IN_P_M_s
 PM_MESSAGE = str(PM_MESSAGE) if PM_MESSAGE else str(ORI_MSG)
 javes = bot
 UNAPPROVED_MSG = (
@@ -86,10 +88,10 @@ if PM_AUTO_BAN:
                     COUNT_PM.update({event.chat_id: 1})
                 else:
                     COUNT_PM[event.chat_id] = COUNT_PM[event.chat_id] + 1
-                if COUNT_PM[event.chat_id] == 3:
+                if COUNT_PM[event.chat_id] == MAX_FLOOD_IN_P_M_s:
                     await event.respond(
                              f"`{JAVES_NNAME}`: ** Dont spam my master's pm this is your last warning!!**")
-                if COUNT_PM[event.chat_id] > 3:
+                if COUNT_PM[event.chat_id] > MAX_FLOOD_IN_P_M_s:
                     await event.respond(
                              f"`{JAVES_NNAME}`: ** {BLOCK_MMSG} **")                        
                     try:

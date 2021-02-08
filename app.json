@@ -18,6 +18,11 @@
       "description": "Get this value from my.telegram.org. Don't Steal May Your Account Get ban.[IMPORTANT]",
       "value": ""
     },
+	"MAX_FLOOD_IN_P_M_s": {
+      "description": "For Pm Protect Warns ",
+      "value": "3",
+	  "required": false
+    },
     "PROFILE_PPP": {
       "description": "for your personal custom javes cmd",
       "value": "https://telegra.ph/file/8e5138dfc400730a2396c.jpg",
