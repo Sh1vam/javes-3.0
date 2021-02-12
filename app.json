@@ -296,7 +296,7 @@
       "description": "for !extdl command to install external modules that are in your channel or u keep in your  channel to install them externally", 
       "value": "-1001336057285",
       "required": false
-    },
+    }
   },
   "addons": [
     {
