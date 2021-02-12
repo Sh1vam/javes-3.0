@@ -251,11 +251,6 @@
       "value": "-1001230114424",
       "required": false
     },
-    "WHITE_CHATS": {
-      "description": "To disable afk response , spam watch shout out in specific groups you can add multiple chat ids by space in heroku var",
-      "value": "0",
-      "required": false
-    },
     "SPAMWATCH_API_KEY ": {
       "description": "get it from @SpamWatchBot",
       "value": "",
