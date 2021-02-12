@@ -49,8 +49,6 @@
       "description": "need for !lyrics comand , Get your own api token from https://genius.com/developers",      
        "value": "Enter genius api here if you need ",
        "required": false
-      
-      
     },
     "COUNTRY": {
       "description": "Set your Country to be used in the !time and !date commands.",
@@ -71,32 +69,21 @@
       "description": "Your photo link for !autopic command and your own personal custom alive cmd",
       "value": "https://telegra.ph/file/5d084db1197c6e7f0db59.jpg",
       "required": false
-     
-    
-    
     },
 
     "ALIVE_MEDIA2": {
       "description": "any media link for !bot cmd",
       "value": "https://telegra.ph/file/b18ea7028b1cde8a0c573.mp4",
       "required": false
-     
-    
-    
     },
     "ALIVE_MEDIA1": {
       "description": "any media link for !me cmd",
       "value": "https://telegra.ph/file/ccc536e748881fbe6ac24.mp4",
-      "required": false
-     
-    
-    
     },
     "OPEN_WEATHER_MAP_APPID": {
       "description": "need for !weather command, (API key)from https://api.openweathermap.org",
       "value": "Enter api here if you need ",
-      "required": false
-       
+      "required": false   
     },
     "BOTLOG": {
       "description": "Recommed to true ,BOTLOG_CHATID must be filled correct if you set it true",
@@ -126,8 +113,7 @@
     "CONSOLE_LOGGER_VERBOSE": {
       "description": "BOTLOG_CHATID must be filled correct if you set it true",
       "value": "True",
-      "required": false
-      
+      "required": false    
     },
     "PM_PROTECTOR": {
       "description": "Prevent unknown people to spam your pm , type !allow to allow them to pm",
@@ -167,32 +153,27 @@
     "CLEAN_WELCOME": {
       "description": "When a new person joins, the old welcome message is deleted.",
       "value": "True",
-      "required": false
-          
+      "required": false      
     },
     "ALIVE_S_MESSAGE": {
       "description": "Edit if you want",
       "value": "Javes 3.0 is Alive with Necessary Dynos",
-      "required": false
-      
+      "required": false 
     },
     "ALIVE_E_MESSAGE": {
       "description": "Edit if you want",
       "value": "My Databases functioning normally!!",
-      "required": false
-      
+      "required": false    
     },
     "BIO_MESSAGE": {
       "description": "custom bio message while u using !autobio command",
       "value": "Current date",
-      "required": false
-      
+      "required": false  
     },
     "JAVES_NAME": {
       "description": "You can edit bot's name",
       "value": "Javes 3.0 ",
       "required": false
-    
     },
     "PM_MESSAGE": {
       "description": "you can edit what pm_protecter message!",
@@ -218,8 +199,6 @@
       "description": "Edit if you want!",
       "value": "I am not going to allow you to spam My master's PM, You have been blocked!",
       "required": false
-      
-    
     },
     "YOUR_SHORT_NAME": {
       "description": "Name to show in !javes message!",
@@ -230,8 +209,6 @@
       "description": "need for auto replay (lydia) future get api key from https://coffeehouse.intellivoid.net/",
       "value": "enter lydia api key here",
       "required": false
-      
-    
     },
     "WEATHER_DEFCITY": {
       "description": "Set the default city for the userbot's !weather module.",
