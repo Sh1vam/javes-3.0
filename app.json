@@ -33,7 +33,8 @@
       "value": ""
     },
     "TELEGRAM_STRING_SESSION": {
-      "description": "Get this value by running [python3 string_session.py] in Termux or heroku[IMPORTANT]"    
+      "description": "Get this value by running [python3 string_session.py] in Termux or heroku[IMPORTANT]",
+      "value": ""
     },
     "HEROKU_APIKEY": {
       "description": "very important for !update command to make javes 3.0 up-to-date , get it from 'https://dashboard.heroku.com/account.",
@@ -168,25 +169,25 @@
       "value": "True",
       "required": false
           
-      },
+    },
     "ALIVE_S_MESSAGE": {
       "description": "Edit if you want",
       "value": "Javes 3.0 is Alive with Necessary Dynos",
       "required": false
       
-      },
+    },
     "ALIVE_E_MESSAGE": {
       "description": "Edit if you want",
       "value": "My Databases functioning normally!!",
       "required": false
       
-      },
+    },
     "BIO_MESSAGE": {
       "description": "custom bio message while u using !autobio command",
       "value": "Current date",
       "required": false
       
-      },
+    },
     "JAVES_NAME": {
       "description": "You can edit bot's name",
       "value": "Javes 3.0 ",
@@ -224,7 +225,7 @@
       "description": "Name to show in !javes message!",
       "value": "Javes",
       "required": true
-      },
+    },
     "LYDIA_API_KEY": {
       "description": "need for auto replay (lydia) future get api key from https://coffeehouse.intellivoid.net/",
       "value": "enter lydia api key here",
