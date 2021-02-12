@@ -70,7 +70,6 @@
       "value": "https://telegra.ph/file/5d084db1197c6e7f0db59.jpg",
       "required": false
     },
-
     "ALIVE_MEDIA2": {
       "description": "any media link for !bot cmd",
       "value": "https://telegra.ph/file/b18ea7028b1cde8a0c573.mp4",
@@ -179,22 +178,17 @@
     "PM_MESSAGE": {
       "description": "you can edit what pm_protecter message!",
       "value": "Hello Sir, I can't allow you to my master's PM without his permissions please be patient, Thankyou",
-      "required": false
-      
+      "required": false 
     },
     "SUDO_USERS": {
       "description": "give sudo user's id , it can control your javes, you can add multiple sudo users id by space , sudo users cant access your privacy untill you on full_sudo",
       "value": "",
-      "required": false
-            
-      
+      "required": false  
     },
     "AFK_MESSAGE": {
       "description": "Edit if you want!",
       "value": "Hello Sir, My master offline just leave your message, Thankyou!",
-      "required": false
-           
-      
+      "required": false  
     },
     "BLOCK_MESSAGE": {
       "description": "Edit if you want!",
