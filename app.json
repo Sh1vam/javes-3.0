@@ -42,8 +42,7 @@
     },
     "HEROKU_APPNAME": {
       "description": "enter this app name again here, very important for !update command to make javes 3.0 up-to-date ",
-      "value": ""
-      
+      "value": ""  
     },
     "COUNTRY": {
       "description": "Set your Country to be used in the !time and !date commands.",
