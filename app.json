@@ -79,6 +79,7 @@
     "ALIVE_MEDIA1": {
       "description": "any media link for !me cmd",
       "value": "https://telegra.ph/file/ccc536e748881fbe6ac24.mp4",
+	  "required": false
     },
     "OPEN_WEATHER_MAP_APPID": {
       "description": "need for !weather command, (API key)from https://api.openweathermap.org",
