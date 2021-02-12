@@ -21,7 +21,7 @@
     "MAX_FLOOD_IN_P_M_s": {
       "description": "For Pm Protect Warns ",
       "value": "3",
-	  "required": false
+      "required": false
     },
     "PROFILE_PPP": {
       "description": "for your personal custom javes cmd",
