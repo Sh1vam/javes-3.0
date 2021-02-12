@@ -18,7 +18,7 @@
       "description": "Get this value from my.telegram.org. Don't Steal May Your Account Get ban.[IMPORTANT]",
       "value": ""
     },
-	"MAX_FLOOD_IN_P_M_s": {
+    "MAX_FLOOD_IN_P_M_s": {
       "description": "For Pm Protect Warns ",
       "value": "3",
 	  "required": false
