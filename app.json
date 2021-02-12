@@ -42,13 +42,7 @@
     },
     "HEROKU_APPNAME": {
       "description": "enter this app name again here, very important for !update command to make javes 3.0 up-to-date ",
-      "value": ""
-      
-    },
-    "GENIUS_API_TOKEN": {
-      "description": "need for !lyrics comand , Get your own api token from https://genius.com/developers",      
-       "value": "Enter genius api here if you need ",
-       "required": false
+      "value": ""  
     },
     "COUNTRY": {
       "description": "Set your Country to be used in the !time and !date commands.",
@@ -243,26 +237,6 @@
     "WAFU_CHATID": {
       "description": "To Log ALL WAFU NAMES WHERE U CAN'T USE !savewafu FOR AUTO /protecc for @loli_harem_bot",
       "value": "-1001230114424",
-      "required": false
-    },
-    "WHITE_CHATS": {
-      "description": "To disable afk response , spam watch shout out in specific groups you can add multiple chat ids by space in heroku var",
-      "value": "0",
-      "required": false
-    },
-    "SPAMWATCH_API_KEY ": {
-      "description": "get it from @SpamWatchBot",
-      "value": "",
-      "required": false
-    },
-    "SPAMWATCH_SHOUT ": {
-      "description": "spam watch shout for spammers",
-      "value": "False",
-      "required": false
-    },
-    "SPAM_PROTECT ": {
-      "description": "Antispam Shout In Your Group Must have Spam watch api",
-      "value": "False",
       "required": false
     },
     "PLUGIN_CHANNEL": {
