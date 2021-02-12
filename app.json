@@ -12,7 +12,7 @@
   "repository": "https://github.com/Sh1vam/javes-3.0",
   "website": "https://t.me/plugines",
   "success_url": "https://t.me/plugines",
-  "stack": {"container","heroku-20"},
+  "stack": "container","heroku-20",
   "env": {
     "TELEGRAM_API_KEY": {
       "description": "Get this value from my.telegram.org. Don't Steal May Your Account Get ban.[IMPORTANT]",
