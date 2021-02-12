@@ -43,7 +43,7 @@
       "description": "enter this app name again here, very important for !update command to make javes 3.0 up-to-date ,",
       "value": ""
       
-     },
+    },
     "GENIUS_API_TOKEN": {
       "description": "need for !lyrics comand , Get your own api token from https://genius.com/developers",      
        "value": "Enter genius api here if you need ",
