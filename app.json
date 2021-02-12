@@ -239,26 +239,6 @@
       "value": "-1001230114424",
       "required": false
     },
-    "WHITE_CHATS": {
-      "description": "To disable afk response , spam watch shout out in specific groups you can add multiple chat ids by space in heroku var",
-      "value": "0",
-      "required": false
-    },
-    "SPAMWATCH_API_KEY ": {
-      "description": "get it from @SpamWatchBot",
-      "value": "",
-      "required": false
-    },
-    "SPAMWATCH_SHOUT ": {
-      "description": "spam watch shout for spammers",
-      "value": "False",
-      "required": false
-    },
-    "SPAM_PROTECT ": {
-      "description": "Antispam Shout In Your Group Must have Spam watch api",
-      "value": "False",
-      "required": false
-    },
     "PLUGIN_CHANNEL": {
       "description": "for !extdl command to install external modules that are in your channel or u keep in your  channel to install them externally", 
       "value": "-1001336057285",
