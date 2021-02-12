@@ -267,11 +267,6 @@
       "value": "1330445306:AAG6_qk60i1Jrx9v1wSMA_xhn3IZE9OCW-g",
       "required": true
     },
-    "PMLOG_CHATID": {
-      "description": "To Log Pm Messages",
-      "value": "-1001230114424",
-      "required": true
-    },
     "WAFU_CHATID": {
       "description": "To Log ALL WAFU NAMES WHERE U CAN'T USE !savewafu FOR AUTO /protecc for @loli_harem_bot",
       "value": "-1001230114424",
