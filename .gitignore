@@ -8,6 +8,7 @@ userbot/helpers/__pycache__/*
 userbot/helpers/resources/__pycache__/*
 userbot/modules/__pycache__/*
 userbot/modules/sql_helper/__pycache__/*
+userbot/helpers/styles/*
 .progress
 .vscode/*
 bin/*

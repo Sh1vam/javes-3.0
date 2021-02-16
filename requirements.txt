@@ -1,4 +1,6 @@
 Pillow
+aria2p 
+cloudmersive_virus_api_client 
 webdriver-manager
 folium
 pokedex.py
