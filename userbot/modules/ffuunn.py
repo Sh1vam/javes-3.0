@@ -40,12 +40,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@friday.on(events.NewMessage(pattern=r"\.oof", outgoing=True))
-async def Oof(e):
-    t = "Oof"
-    for j in range(15):
-        t = t[:-1] + "of"
-        await e.edit(t)
+
 
 
 @friday.on(friday_on_cmd("bigoof"))
@@ -75,12 +70,7 @@ async def _(event):
         await event.edit(animation_chars[i % 40])
 
 
-@friday.on(events.NewMessage(pattern=r"\.ok", outgoing=True))
-async def Ok(e):
-    t = "Ok"
-    for j in range(15):
-        t = t[:-1] + "k"
-        await e.edit(t)
+
 
 
 @friday.on(events.NewMessage(pattern=r"\.meme", outgoing=True))
@@ -198,37 +188,9 @@ async def _(event):
         deq.rotate(1)
 
 
-@friday.on(events.NewMessage(pattern=r"\.clock", outgoing=True))
-async def _(event):
-    if event.fwd_from:
-        return
-    deq = deque(list("🕙🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛"))
-    for _ in range(48):
-        await asyncio.sleep(0.1)
-        await event.edit("".join(deq))
-        deq.rotate(1)
 
 
-@friday.on(events.NewMessage(pattern=r"\.moon", outgoing=True))
-async def _(event):
-    if event.fwd_from:
-        return
-    deq = deque(list("🌗🌘🌑🌒🌓🌔🌕🌖"))
-    for _ in range(48):
-        await asyncio.sleep(0.1)
-        await event.edit("".join(deq))
-        deq.rotate(1)
 
-
-@friday.on(events.NewMessage(pattern=r"\.earth", outgoing=True))
-async def _(event):
-    if event.fwd_from:
-        return
-    deq = deque(list("🌏🌍🌎🌎🌍🌏🌍🌎"))
-    for _ in range(48):
-        await asyncio.sleep(0.1)
-        await event.edit("".join(deq))
-        deq.rotate(1)
 
 
 @friday.on(events.NewMessage(pattern=r"\.smile", outgoing=True))
@@ -491,7 +453,7 @@ async def _(event):
         await event.edit("".join(deq))
         deq.rotate(1)
 
-
+'''
 @friday.on(events.NewMessage(pattern=r"\.solar", outgoing=True))
 async def _(event):
     if event.fwd_from:
@@ -647,7 +609,7 @@ async def _(event):
 
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
-        await event.edit(animation_chars[i % 64])
+        await event.edit(animation_chars[i % 64])'''
 
 
 @friday.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
@@ -752,48 +714,6 @@ async def test(event):
         "🌕🌕🌕🌕🌕🌕🌕🌕\n🌕🌕🌖🌔🌖🌔🌕🌕\n🌕🌕🌗🌔🌖🌓🌕🌕\n🌕🌕🌗🌔🌖🌓🌕🌕\n🌕🌕🌖🌓🌗🌔🌕🌕\n🌕🌕🌗🌑🌑🌓🌕🌕\n🌕🌕🌗👀🌑🌓🌕🌕\n🌕🌕🌘👄🌑🌓🌕🌕\n🌕🌕🌗🌑🌑🌒🌕🌕\n🌕🌖🌑🌑🌑🌑🌔🌕\n🌕🌘🌑🌑🌑🌑🌒🌕\n🌖🌑🌑🌑🌑🌑🌑🌔\n🌕🤜🏻🌑🌑🌑🌑🤛🏻🌕\n🌕🌖🌑🌑🌑🌑🌔🌕\n🌘🌑🌑🌑🌑🌑🌑🌒\n🌕🌕🌕🌕🌕🌕🌕🌕"
     )
 
-
-@friday.on(friday_on_cmd(pattern=r"city"))
-async def test(event):
-    if event.fwd_from:
-        return
-    await event.edit(
-        """☁☁🌞      ☁           ☁
-       ☁  ✈         ☁    🚁    ☁    ☁        ☁          ☁     ☁   ☁
-
-🏬🏨🏫🏢🏤🏥🏦🏪🏫
-              🌲/     l🚍\🌳👭
-           🌳/  🚘 l  🏃 \🌴 👬                       👬  🌴/            l  🚔    \🌲
-      🌲/   🚖     l               \
-   🌳/🚶           |   🚍         \ 🌴🚴🚴
-🌴/                    |                     \🌲"""
-    )
-
-
-@friday.on(events.NewMessage(pattern=r"\.bombs", outgoing=True))
-async def _(event):
-    if event.fwd_from:
-        return
-
-    await event.edit("▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n")
-    await asyncio.sleep(0.5)
-    await event.edit("💣💣💣💣 \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n")
-    await asyncio.sleep(0.5)
-    await event.edit("▪️▪️▪️▪️ \n💣💣💣💣 \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n")
-    await asyncio.sleep(0.5)
-    await event.edit("▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n💣💣💣💣 \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n")
-    await asyncio.sleep(0.5)
-    await event.edit("▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n💣💣💣💣 \n▪️▪️▪️▪️ \n")
-    await asyncio.sleep(0.5)
-    await event.edit("▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n💣💣💣💣 \n")
-    await asyncio.sleep(1)
-    await event.edit("▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n💥💥💥💥 \n")
-    await asyncio.sleep(0.5)
-    await event.edit("▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n💥💥💥💥 \n💥💥💥💥 \n")
-    await asyncio.sleep(0.5)
-    await event.edit("▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n😵😵😵😵 \n")
-    await asyncio.sleep(0.5)
-    await event.edit("RIP...")
 
 
 @friday.on(events.NewMessage(pattern=r"\.plane", outgoing=True))
