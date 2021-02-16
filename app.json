@@ -96,12 +96,12 @@
     },
     "BOTLOG_CHATID": {
       "description": "Important for wark some plugins,bot logs , make super group with @missrose_bot then type /id to get this value",
-      "value": "-1001422622196",
+      "value": "-1001417703271",
       "required": true
     },
     "PMLOG_CHATID": {
       "description": "Important for work some plugins,like pm loging , make super group with @missrose_bot then type /id to get this value",
-      "value": "-1001422622196",
+      "value": "-1001159218396",
       "required": true
     },
     "CONSOLE_LOGGER_VERBOSE": {
@@ -211,7 +211,7 @@
     },
     "TAG_LOG": {
       "description": "Important for wark some plugins,taglogs logs , make super group with @missrose_bot then type /id to get this value then add your inline bot if u have set later on add some vars TG_BOT_USER_NAME_BF_HER , TG_BOT_TOKEN_BF_HER ,INLINE_MODE=True,then add your inline bot in yout personal group",
-      "value": "-1001422622196",
+      "value": "-1001230114424",
       "required": true
     },
     "TG_BOT_USER_NAME_BF_HER": {
@@ -221,7 +221,7 @@
     },
     "TG_BOT_TOKEN_BF_HER": {
       "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the token of your bot. And Don't Forget To Turn of inline Mode on bot settings. Get it.",
-      "value": "1330445306:AAG6_qk60i1Jrx9v1wSMA_xhn3IZE9OCW-g",
+      "value": "1330445306:AAETazloFE_EG_YiokS8HuI7sNFYBvnL_FE",
       "required": true
     },
     "INLINE_MODE": {
@@ -231,12 +231,12 @@
     },
     "BOT_TOKEN": {
       "description": "Enter same value u entered in TG_BOT_TOKEN_BF_HER",
-      "value": "1330445306:AAG6_qk60i1Jrx9v1wSMA_xhn3IZE9OCW-g",
+      "value": "1330445306:AAETazloFE_EG_YiokS8HuI7sNFYBvnL_FE",
       "required": true
     },
     "WAFU_CHATID": {
       "description": "To Log ALL WAFU NAMES WHERE U CAN'T USE !savewafu FOR AUTO /protecc for @loli_harem_bot",
-      "value": "-1001230114424",
+      "value": "-1001472904163",
       "required": false
     },
     "PLUGIN_CHANNEL": {
