@@ -77,7 +77,7 @@ async def cmd_list(event):
         else:
             string = "<b>Please specify which plugin do you want help for !!\
                 \nNumber of plugins : </b><code>{count}</code>\
-                \n<b>Usage:</b> <code>.hlp</code> plugin name\n\nfor ffuunn :-[Click Here](https://telegra.ph/%E2%84%B9-02-16)"
+                \n<b>Usage:</b> <code>.hlp</code> plugin name\n\nfor ffuunn :-https://telegra.ph/%E2%84%B9-02-16"
             catcount = 0
             for i in sorted(CMD_LIST):
                 string += "• " + f"<code>{str(i)}</code>"
