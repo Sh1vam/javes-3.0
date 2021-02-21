@@ -1,10 +1,4 @@
-"""Emoji
 
-Available Commands:
-
-.isro
-
-built by @r4v4n4 , isse bhi loot lo betichod"""
 from userbot import CMD_HELP, BOTLOG, BOTLOG_CHATID,client
 
 from userbot.events import javes05, bot, rekcah05
@@ -31,9 +25,7 @@ async def _(event):
 
     animation_ttl = range(0, 5)
 
-    #input_str = event.pattern_match.group(1)
 
-  #  if input_str == "isro":
 
     await event.edit("Connecting..")
 
@@ -69,84 +61,7 @@ from youtubesearchpython import SearchVideos
 from userbot import ALIVE_NAME, CMD_HELP, CMD_LIST
 
 
-@tgbot.on(events.InlineQuery(pattern=r"tor (.*)"))
-async def inline_id_handler(event: events.InlineQuery.Event):
-    builder = event.builder
-    me = await client.get_me()
-    inp = event.pattern_match.group(1)
-    if event.query.user_id == me.id:
-        sn = urllib.parse.quote_plus(inp)
-        results = []
-        sl = "https://api.sumanjay.cf/torrent/?query=" + sn
-        try:
-            op = requests.get(url=sl, timeout=10).json()
-        except:
-            pass
-        ed = len(op)
-        if  ed == 0:
-            resultm = builder.article(
-                title="No Result",
-                description="Try Again With correct Spelling",
-                text="**No Matching Found**",
-                buttons=[
-                    [
-                        Button.switch_inline(
-                            "Search Again", query="torrent ", same_peer=True
-                        )
-                    ],
-                ],
-            )
-            await event.answer([resultm])
-            return
-        if  ed > 30:
-            for i in range(30):
-                ds = op[i]["age"]
-                ops = op[i]["leecher"]
-                ssk = op[i]["magnet"]
-                okk = op[i]["name"]
-                sizes = op[i]["size"]
-                type = op[i]["type"]
-                seeders = op[i]["seeder"]
-                ok = f"**Title :** `{okk}` \n**Size :** `{sizes}` \n**Type :** `{type}` \n**Seeder :** `{seeders}` \n**Leecher :** `{ops}` \n**Magnet :** `{ssk}` "
-                me = f"Size : {sizes} Type : {type} Age : {ds}"
-                results.append(
-                    await event.builder.article(
-                        title=okk,
-                        description=me,
-                        text=ok,
-                        buttons=Button.switch_inline(
-                            "Search Again", query="tor ", same_peer=True
-                        ),
-                    )
-                )
-        else:
-            for dz in op:
-                siz = dz["size"]
-                typ = dz["type"]
-                seede = dz["seeder"]
-                ag = dz["age"]
-                leech = dz["leecher"]
-                mag = dz["magnet"]
-                nam = dz["name"]            
-                all = f"**Title :** `{nam}` \n**Size :** `{siz}` \n**Type :** `{typ}` \n**Seeder :** `{seede}` \n**Leecher :** `{leech}` \n**Magnet :** `{mag}` "
-                mi = f"Size : {siz} Type : {typ} Age : {ag}"
-                results.append(
-                    await event.builder.article(
-                        title=nam,
-                        description=mi,
-                        text=all,
-                        buttons=[
-                            Button.switch_inline(
-                                "Search Again", query="tor ", same_peer=True
-                            )
-                        ],
-                    )
-                )
-        await event.answer(results)
-    if not event.query.user_id == me.id:
-        resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="tor ", same_peer=True)],], )
-        await event.answer([resultm])
-        return
+
 
 @tgbot.on(events.InlineQuery(pattern=r"yt (.*)"))
 async def inline_id_handler(event: events.InlineQuery.Event):
