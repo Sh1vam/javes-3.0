@@ -1,15 +1,15 @@
 from telethon import events
 from var import Var
 from pathlib import Path
-from userbot.config import Config
+from ub.config import Config
 import re, logging, inspect, sys, json, os
 from asyncio import create_subprocess_shell as asyncsubshell, subprocess as asyncsub
 from os import remove
 from time import gmtime, strftime
 from traceback import format_exc
 from typing import List
-from userbot.javes_main.heroku_var import *
-from userbot import *
+from ub.javes_main.heroku_var import *
+from ub import *
 from sys import *
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 from telethon import TelegramClient, functions, types
@@ -79,30 +79,30 @@ def zzaacckkyy(**args):
 async def a(): 
     test1 = await bot.get_messages(cIient, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) ; total_doxx = range(0, total)
     for ixo in total_doxx:
-        mxo = test1[ixo].id ; await client.download_media(await borg.get_messages(cIient, ids=mxo), "userbot/modules/")
+        mxo = test1[ixo].id ; await client.download_media(await borg.get_messages(cIient, ids=mxo), "ub/modules/")
         
        
 def load_module(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import userbot.events
+        import ub.events
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"userbot/modules/{shortname}.py")
-        name = "userbot.modules.{}".format(shortname)
+        path = Path(f"ub/modules/{shortname}.py")
+        name = "ub.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         print("Successfully (re)imported "+shortname)
     else:
-        import userbot.events
+        import ub.events
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"userbot/modules/{shortname}.py")
-        name = "userbot.modules.{}".format(shortname)
+        path = Path(f"ub/modules/{shortname}.py")
+        name = "ub.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -110,12 +110,12 @@ def load_module(shortname):
         mod.Var = Var
         mod.command = command
         mod.logger = logging.getLogger(shortname)
-        sys.modules["uniborg.util"] = userbot.events
+        sys.modules["uniborg.util"] = ub.events
         mod.Config = Config
         mod.borg = bot
-        sys.modules["userbot.events"] = userbot.events
+        sys.modules["ub.events"] = ub.events
         spec.loader.exec_module(mod)
-        sys.modules["userbot.modules."+shortname] = mod
+        sys.modules["ub.modules."+shortname] = mod
         print("Successfully (re)imported "+shortname)
 
 def remove_plugin(shortname):
@@ -126,7 +126,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except:
-            name = f"userbot.modules.{shortname}"
+            name = f"ub.modules.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -344,7 +344,7 @@ class Loader():
         bot.add_event_handler(func, events.NewMessage(**args))
 
 
-data = json.load(open("userbot/javes_main/extra/meaning.json")) 
+data = json.load(open("ub/javes_main/extra/meaning.json")) 
 def meaning(w): 
 	w = w.lower() 
 	if w in data: 
