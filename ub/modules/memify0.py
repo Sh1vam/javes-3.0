@@ -126,7 +126,7 @@ CNG_FONTS = "ub/helpers/styles/impact.ttf"
 
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="(mm3f|mm3s) ?(.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern="(mmf|mms) ?(.*)"))
 
 async def memes(cat):
     if cat.fwd_from:
@@ -145,7 +145,7 @@ async def memes(cat):
             top = catinput
             bottom = ""
     else:
-        await cat.edit( "```what should i write on that u idiot give some text```"
+        await cat.edit( "```what should i write on that give some text```"
         )
         return
     if not os.path.isdir("./temp/"):
@@ -159,17 +159,14 @@ async def memes(cat):
         os.remove(catsticker)
         await cat.edit( "```Supported Media not found...```")
         return
-    import base64
+
 
     if catsticker.endswith(".tgs"):
         await cat.edit(
             "```Transfiguration Time! Mwahaha memifying this animated sticker! (」ﾟﾛﾟ)｣```"
         )
-        catfile = os.path.join("./temp/", "meme.png")
-        process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
-        stdout, stderr = await process.communicate()
+        catfile = os.path.join("./temp/", "meme.jpg")
+        os.system(f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}")
 
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
@@ -216,7 +213,7 @@ async def memes(cat):
         await cat_meme(CNG_FONTS, top, bottom, meme_file, meme)
     else:
         await cat_meeme(top, bottom, CNG_FONTS, meme_file, meme)
-    if cmd != "mm3f":
+    if cmd != "mmf":
         meme = await convert_tosticker(meme)
     await cat.client.send_file(cat.chat_id, meme, reply_to=catid)
     await cat.delete()
@@ -272,11 +269,9 @@ async def memes(cat):
         await cat.edit(
             "```Transfiguration Time! Mwahaha converting to ascii image of this animated sticker! (」ﾟﾛﾟ)｣```"
         )
-        catfile = os.path.join("./temp/", "meme.png")
-        process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
-        stdout, stderr = await process.communicate()
+        catfile = os.path.join("./temp/", "meme.jpg")
+        os.system(f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}")
+
 
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
@@ -357,11 +352,9 @@ async def memes(cat):
         await cat.edit(
             "```Transfiguration Time! Mwahaha inverting colors of this animated sticker! (」ﾟﾛﾟ)｣```"
         )
-        catfile = os.path.join("./temp/", "meme.png")
-        process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
-        stdout, stderr = await process.communicate()
+        catfile = os.path.join("./temp/", "meme.jpg")
+        os.system(f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}")
+
 
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
@@ -441,11 +434,9 @@ async def memes(cat):
         await cat.edit(
             "```Transfiguration Time! Mwahaha solarizeing this animated sticker! (」ﾟﾛﾟ)｣```"
         )
-        catfile = os.path.join("./temp/", "meme.png")
-        process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
-        stdout, stderr = await process.communicate()
+        catfile = os.path.join("./temp/", "meme.jpg")
+        os.system(f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}")
+
 
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
@@ -524,11 +515,9 @@ async def memes(cat):
         await cat.edit(
             "```Transfiguration Time! Mwahaha converting to mirror image of this animated sticker! (」ﾟﾛﾟ)｣```"
         )
-        catfile = os.path.join("./temp/", "meme.png")
-        process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
-        stdout, stderr = await process.communicate()
+        catfile = os.path.join("./temp/", "meme.jpg")
+        os.system(f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}")
+
 
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
@@ -608,11 +597,9 @@ async def memes(cat):
         await cat.edit(
             "```Transfiguration Time! Mwahaha fliping this animated sticker! (」ﾟﾛﾟ)｣```"
         )
-        catfile = os.path.join("./temp/", "meme.png")
-        process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
-        stdout, stderr = await process.communicate()
+        catfile = os.path.join("./temp/", "meme.jpg")
+        os.system(f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}")
+
 
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
@@ -692,11 +679,9 @@ async def memes(cat):
         await cat.edit(
             "```Transfiguration Time! Mwahaha changing to black-and-white this animated sticker! (」ﾟﾛﾟ)｣```"
         )
-        catfile = os.path.join("./temp/", "meme.png")
-        process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
-        stdout, stderr = await process.communicate()
+        catfile = os.path.join("./temp/", "meme.jpg")
+        os.system(f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}")
+
 
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
@@ -778,11 +763,9 @@ async def memes(cat):
         await cat.edit(
             "```Transfiguration Time! Mwahaha zooming this animated sticker! (」ﾟﾛﾟ)｣```"
         )
-        catfile = os.path.join("./temp/", "meme.png")
-        process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
-        stdout, stderr = await process.communicate()
+        catfile = os.path.join("./temp/", "meme.jpg")
+        os.system(f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}")
+
 
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
@@ -869,18 +852,16 @@ async def memes(cat):
         os.remove(catsticker)
         await cat.edit( "```Supported Media not found...```")
         return
-    import base64
+
 
     jisanidea = None
     if catsticker.endswith(".tgs"):
         await cat.edit(
             "```Transfiguration Time! Mwahaha framing this animated sticker! (」ﾟﾛﾟ)｣```"
         )
-        catfile = os.path.join("./temp/", "meme.png")
-        process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
-        stdout, stderr = await process.communicate()
+        catfile = os.path.join("./temp/", "meme.jpg")
+        os.system(f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}")
+
 
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
@@ -940,9 +921,9 @@ async def memes(cat):
 CMD_HELP.update(
     {
         "memify0": "**Plugin : **`memify0`\
-    \n\n  • **Syntax :** `.mm3f toptext ; bottomtext`\
+    \n\n  • **Syntax :** `.mmf toptext ; bottomtext`\
     \n  • **Function : **Creates a image meme with give text at specific locations and sends\
-    \n\n  • **Syntax : **`.mm3s toptext ; bottomtext`\
+    \n\n  • **Syntax : **`.mms toptext ; bottomtext`\
     \n  • **Function : **Creates a sticker meme with give text at specific locations and sends\
     \n\n  • **Syntax : **`.cfont` <Font Name>\
     \n  • **Function : **Change the font style use for memify,\nTo get fonts name use this cmd (`!term ls ub/helpers/styles`)\
