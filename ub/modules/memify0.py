@@ -7,7 +7,8 @@ Modified TO Automatically Adopt any new fonts by Sh1vam
 import asyncio
 import os
 import random
-
+if not os.path.isdir("./temp/"):
+        os.mkdir("./temp/")
 from ub.helpers import (
     add_frame,
     asciiart,
@@ -166,7 +167,7 @@ async def memes(cat):
         )
         catfile = os.path.join("./temp/", "meme.png")
         process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
 
@@ -273,7 +274,7 @@ async def memes(cat):
         )
         catfile = os.path.join("./temp/", "meme.png")
         process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
 
@@ -358,7 +359,7 @@ async def memes(cat):
         )
         catfile = os.path.join("./temp/", "meme.png")
         process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
 
@@ -442,7 +443,7 @@ async def memes(cat):
         )
         catfile = os.path.join("./temp/", "meme.png")
         process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
 
@@ -525,7 +526,7 @@ async def memes(cat):
         )
         catfile = os.path.join("./temp/", "meme.png")
         process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
 
@@ -609,7 +610,7 @@ async def memes(cat):
         )
         catfile = os.path.join("./temp/", "meme.png")
         process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
 
@@ -693,7 +694,7 @@ async def memes(cat):
         )
         catfile = os.path.join("./temp/", "meme.png")
         process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
 
@@ -779,7 +780,7 @@ async def memes(cat):
         )
         catfile = os.path.join("./temp/", "meme.png")
         process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
 
@@ -877,7 +878,7 @@ async def memes(cat):
         )
         catfile = os.path.join("./temp/", "meme.png")
         process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
 

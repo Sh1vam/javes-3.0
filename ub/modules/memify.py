@@ -52,7 +52,7 @@ async def memes(cat):
         stdout, stderr = (await runcmd(catcmd))[:2]'''
 
         process = await asyncio.create_subprocess_exec(
-            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
 

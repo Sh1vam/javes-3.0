@@ -37,5 +37,19 @@ async def messup(message):
    #os.remove("tgs.tgs")
    await message.delete()
    
-   
+@javes.on(admin_cmd("png"))
+async def messup(message):
+   await message.edit("`making PNG....`")
+   reply = await message.get_reply_message()
+   stkr = await reply.download_media("tgs.tgs")
+   process = await asyncio.create_subprocess_shell(f"lottie_convert.py --frame 0 -if lottie -of png tgs.tgs shivam.png",stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
+   stdout, stderr = await process.communicate()
+   os.remove(stkr)
+   if message.reply_to_msg_id:
+        message_id = message.reply_to_msg_id
+  
+   await message.client.send_file(message.chat_id, "shivam.png",force_document=False,reply_to=message_id)
+   os.remove("shivam.png")
+   #os.remove("tgs.tgs")
+   await message.delete()  
    
