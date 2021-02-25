@@ -19,7 +19,7 @@ async def messup(message):
   
    await message.client.send_file(message.chat_id, "shivam.html",force_document=False,reply_to=message_id)
    os.remove("shivam.html")
-   os.remove("tgs.tgs")
+   #os.remove("tgs.tgs")
    await message.delete()
    
    
