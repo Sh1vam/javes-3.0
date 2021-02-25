@@ -145,54 +145,7 @@ async def on_file_to_photo(event):
     await catt.delete()
 
 
-@borg.on(admin_cmd(pattern="gif$"))
-async def _(event):
-    catreply = await event.get_reply_message()
-    if not catreply or not catreply.media or not catreply.media.document:
-        return await event.edit("`Stupid!, This is not animated sticker.`")
-    if catreply.media.document.mime_type != "application/x-tgsticker":
-        return await event.edit("`Stupid!, This is not animated sticker.`")
-    reply_to_id = event.message
-    if event.reply_to_msg_id:
-        reply_to_id = await event.get_reply_message()
-    chat = "@tgstogifbot"
-    catevent = await event.edit("`Converting to gif ⌛⏳ takes time 🤭 ...`")
-    async with event.client.conversation(chat) as conv:
-        try:
-            await silently_send_message(conv, "/start")
-            await event.client.send_file(chat, catreply.media)
-            response = await conv.get_response()
-            await event.client.send_read_acknowledge(conv.chat_id)
-            if response.text.startswith("Send me an animated sticker!"):
-                return await catevent.edit("`This file is not supported`")
-            catresponse = response if response.media else await conv.get_response()
-            await event.client.send_read_acknowledge(conv.chat_id)
-            catfile = Path(await event.client.download_media(catresponse, "./temp/"))
-            catgif = Path(await unzip(catfile))
-            sandy = await event.client.send_file(
-                event.chat_id,
-                catgif,
-                support_streaming=True,
-                force_document=False,
-                reply_to=reply_to_id,
-            )
-            await event.client(
-                functions.messages.SaveGifRequest(
-                    id=types.InputDocument(
-                        id=sandy.media.document.id,
-                        access_hash=sandy.media.document.access_hash,
-                        file_reference=sandy.media.document.file_reference,
-                    ),
-                    unsave=True,
-                )
-            )
-            await catevent.delete()
-            for files in (catgif, catfile):
-                if files and os.path.exists(files):
-                    os.remove(files)
-        except YouBlockedUserError:
-            await catevent.edit("Unblock @tgstogifbot")
-            return
+
 
 
 @borg.on(admin_cmd(pattern="nfc ?(.*)"))

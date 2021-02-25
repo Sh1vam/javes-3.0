@@ -21,7 +21,21 @@ async def messup(message):
    os.remove("shivam.html")
    #os.remove("tgs.tgs")
    await message.delete()
-   
+@javes.on(admin_cmd("gif"))
+async def messup(message):
+   await message.edit("`making GIF....`")
+   reply = await message.get_reply_message()
+   stkr = await reply.download_media("tgs.tgs")
+   process = await asyncio.create_subprocess_shell(f"lottie_convert.py --frame 0 -if lottie -of gif tgs.tgs shivam.gif",stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
+   stdout, stderr = await process.communicate()
+   os.remove(stkr)
+   if message.reply_to_msg_id:
+        message_id = message.reply_to_msg_id
+  
+   await message.client.send_file(message.chat_id, "shivam.gif",force_document=False,reply_to=message_id)
+   os.remove("shivam.gif")
+   #os.remove("tgs.tgs")
+   await message.delete()
    
    
    
