@@ -50,14 +50,12 @@ async def memes(cat):
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
         )
         stdout, stderr = (await runcmd(catcmd))[:2]'''
-        cmd = ["lottie_convert.py", f"{catsticker}", f"{catfile}"]#Taken From Ultroid 
-        file = "meme.png"
+
         process = await asyncio.create_subprocess_exec(
-            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
-        stderr.decode().strip()
-        stdout.decode().strip()#Taken From Ultroid till here
+
         if not os.path.lexists(catfile):
             await cat.edit("`Template not found...`")
             LOGS.info(stdout + stderr)

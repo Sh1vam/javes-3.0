@@ -52,18 +52,16 @@ async def mim(event):
         DocumentAttributeFilename(file_name="AnimatedSticker.tgs")
         in reply_message.media.document.attributes
     ):
-        await bot.download_media(
+        dls_loc=await bot.download_media(
             reply_message,
-            "meme.tgs",
+            "AnimatedSticker.tgs",
         )
-        cmd = ["lottie_convert.py", "meme.tgs", "meme.png"]#Taken From Ultroid 
-        file = "meme.png"
+
+
         process = await asyncio.create_subprocess_exec(
-            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
+            f"lottie_convert.py {dls_loc} meme.png", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+        )#Taken From Ultroid till here
         stdout, stderr = await process.communicate()
-        stderr.decode().strip()
-        stdout.decode().strip()#Taken From Ultroid till here
         dls_loc = "meme.png"
     elif reply_message.video:
         video = await bot.download_media(
@@ -221,18 +219,15 @@ async def mim(event):
         DocumentAttributeFilename(file_name="AnimatedSticker.tgs")
         in reply_message.media.document.attributes
     ):
-        await bot.download_media(
+        dls_loc=await bot.download_media(
             reply_message,
-            "meme.tgs",
+            "AnimatedSticker.tgs",
         )
-        cmd = ["lottie_convert.py", "meme.tgs", "meme.png"]#Taken From Ultroid 
-        file = "meme.png"
+
         process = await asyncio.create_subprocess_exec(
-            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-        )
+            f"lottie_convert.py {dls_loc} meme.png", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+        )#Taken From Ultroid till here
         stdout, stderr = await process.communicate()
-        stderr.decode().strip()
-        stdout.decode().strip()#Taken From Ultroid till here
         dls_loc = "meme.png"
     elif reply_message.video:
         video = await bot.download_media(

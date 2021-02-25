@@ -2,6 +2,7 @@ Pillow
 cloudmersive_virus_api_client 
 webdriver-manager
 folium
+cairosvg
 pokedex.py
 scipy
 scikit-learn

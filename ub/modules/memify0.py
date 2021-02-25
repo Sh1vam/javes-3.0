@@ -165,14 +165,11 @@ async def memes(cat):
             "```Transfiguration Time! Mwahaha memifying this animated sticker! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "meme.png")
-        cmd = ["lottie_convert.py", f"{catsticker}", f"{catfile}"]#Taken From Ultroid 
-        file = "meme.png"
         process = await asyncio.create_subprocess_exec(
-            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
-        stderr.decode().strip()
-        stdout.decode().strip()#Taken From Ultroid till here
+
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
         )
@@ -275,14 +272,11 @@ async def memes(cat):
             "```Transfiguration Time! Mwahaha converting to ascii image of this animated sticker! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "meme.png")
-        cmd = ["lottie_convert.py", f"{catsticker}", f"{catfile}"]#Taken From Ultroid 
-        file = "meme.png"
         process = await asyncio.create_subprocess_exec(
-            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
-        stderr.decode().strip()
-        stdout.decode().strip()#Taken From Ultroid till here
+
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
         )
@@ -363,14 +357,11 @@ async def memes(cat):
             "```Transfiguration Time! Mwahaha inverting colors of this animated sticker! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "meme.png")
-        cmd = ["lottie_convert.py", f"{catsticker}", f"{catfile}"]#Taken From Ultroid 
-        file = "meme.png"
         process = await asyncio.create_subprocess_exec(
-            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
-        stderr.decode().strip()
-        stdout.decode().strip()#Taken From Ultroid till here
+
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
         )
@@ -450,14 +441,11 @@ async def memes(cat):
             "```Transfiguration Time! Mwahaha solarizeing this animated sticker! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "meme.png")
-        cmd = ["lottie_convert.py", f"{catsticker}", f"{catfile}"]#Taken From Ultroid 
-        file = "meme.png"
         process = await asyncio.create_subprocess_exec(
-            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
-        stderr.decode().strip()
-        stdout.decode().strip()#Taken From Ultroid till here
+
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
         )
@@ -536,14 +524,11 @@ async def memes(cat):
             "```Transfiguration Time! Mwahaha converting to mirror image of this animated sticker! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "meme.png")
-        cmd = ["lottie_convert.py", f"{catsticker}", f"{catfile}"]#Taken From Ultroid 
-        file = "meme.png"
         process = await asyncio.create_subprocess_exec(
-            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
-        stderr.decode().strip()
-        stdout.decode().strip()#Taken From Ultroid till here
+
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
         )
@@ -623,14 +608,11 @@ async def memes(cat):
             "```Transfiguration Time! Mwahaha fliping this animated sticker! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "meme.png")
-        cmd = ["lottie_convert.py", f"{catsticker}", f"{catfile}"]#Taken From Ultroid 
-        file = "meme.png"
         process = await asyncio.create_subprocess_exec(
-            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
-        stderr.decode().strip()
-        stdout.decode().strip()#Taken From Ultroid till here
+
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
         )
@@ -710,14 +692,11 @@ async def memes(cat):
             "```Transfiguration Time! Mwahaha changing to black-and-white this animated sticker! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "meme.png")
-        cmd = ["lottie_convert.py", f"{catsticker}", f"{catfile}"]#Taken From Ultroid 
-        file = "meme.png"
         process = await asyncio.create_subprocess_exec(
-            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
-        stderr.decode().strip()
-        stdout.decode().strip()#Taken From Ultroid till here
+
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
         )
@@ -799,14 +778,11 @@ async def memes(cat):
             "```Transfiguration Time! Mwahaha zooming this animated sticker! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "meme.png")
-        cmd = ["lottie_convert.py", f"{catsticker}", f"{catfile}"]#Taken From Ultroid 
-        file = "meme.png"
         process = await asyncio.create_subprocess_exec(
-            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
-        stderr.decode().strip()
-        stdout.decode().strip()#Taken From Ultroid till here
+
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
         )
@@ -900,14 +876,11 @@ async def memes(cat):
             "```Transfiguration Time! Mwahaha framing this animated sticker! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "meme.png")
-        cmd = ["lottie_convert.py", f"{catsticker}", f"{catfile}"]#Taken From Ultroid 
-        file = "meme.png"
         process = await asyncio.create_subprocess_exec(
-            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            f"lottie_convert.py {catsticker} {catfile}", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
-        stderr.decode().strip()
-        stdout.decode().strip()#Taken From Ultroid till here
+
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
         )
