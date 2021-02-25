@@ -56,7 +56,14 @@ async def mim(event):
             reply_message,
             "meme.tgs",
         )
-        os.system("lottie_convert.py --frame 0 -if lottie -of png meme.tgs meme.png")
+        cmd = ["lottie_convert.py", "meme.tgs", "meme.png"]#Taken From Ultroid 
+        file = "meme.png"
+        process = await asyncio.create_subprocess_exec(
+            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+        )
+        stdout, stderr = await process.communicate()
+        stderr.decode().strip()
+        stdout.decode().strip()#Taken From Ultroid till here
         dls_loc = "meme.png"
     elif reply_message.video:
         video = await bot.download_media(
@@ -218,7 +225,14 @@ async def mim(event):
             reply_message,
             "meme.tgs",
         )
-        os.system("lottie_convert.py --frame 0 -if lottie -of png meme.tgs meme.png")
+        cmd = ["lottie_convert.py", "meme.tgs", "meme.png"]#Taken From Ultroid 
+        file = "meme.png"
+        process = await asyncio.create_subprocess_exec(
+            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+        )
+        stdout, stderr = await process.communicate()
+        stderr.decode().strip()
+        stdout.decode().strip()#Taken From Ultroid till here
         dls_loc = "meme.png"
     elif reply_message.video:
         video = await bot.download_media(
