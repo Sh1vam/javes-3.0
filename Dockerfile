@@ -43,6 +43,7 @@ RUN apt-get install -y\
     zipalign \
     sqlite3 \
     ffmpeg \
+    imagemagick \
     libsqlite3-dev \
     chromium-bsu \
     zlib1g-dev \

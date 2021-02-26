@@ -82,5 +82,6 @@ async def hmm(event):
     os.remove("s_h_i_v_a_m.jpg")
 CMD_HELP.update({
     "CustomMemefy":"\n\n.tpic text|no1;no2;no3|thickness|coordinate x;coordinate y|fontsize\
-    \n\n.ipic text|no1;no2;no3|thickness|coordinate x;coordinate y|fontsize"})
+    \n\n.ipic text|no1;no2;no3|thickness|coordinate x;coordinate y|fontsize\
+	\n\n.vedt text|color|fontsize|textduration|position(centre,top,bottom etc)|strart;end|volume"})
 #MADE BY SHIVAM DONT KANG#MADE BY SHIVAM DONT KANG#MADE BY SHIVAM DONT KANG#MADE BY SHIVAM DONT KANG#MADE BY SHIVAM DONT KANG
