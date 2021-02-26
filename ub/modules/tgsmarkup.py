@@ -52,4 +52,19 @@ async def messup(message):
    os.remove("shivam.png")
    #os.remove("tgs.tgs")
    await message.delete()  
-   
+@javes.on(admin_cmd("convert"))
+async def messup(message):
+   convert_to=event.text[9:]
+   await message.edit(f"`making {convert_to}....`")
+   reply = await message.get_reply_message()
+   stkr = await reply.download_media("tgs.tgs")
+   process = await asyncio.create_subprocess_shell(f"lottie_convert.py --frame 0 -if lottie -of {convert_to} tgs.tgs shivam.{convert_to}",stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
+   stdout, stderr = await process.communicate()
+   os.remove(stkr)
+   if message.reply_to_msg_id:
+        message_id = message.reply_to_msg_id
+  
+   await message.client.send_file(message.chat_id, f"shivam.{convert_to}",force_document=False,reply_to=message_id)
+   os.remove(f"shivam.{convert_to}")
+   #os.remove("tgs.tgs")
+   await message.delete()  
