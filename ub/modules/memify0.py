@@ -90,6 +90,8 @@ async def cat_meme(CNG_FONTS, topString, bottomString, filename, endname):
     draw.text(bottomTextPosition, bottomString, (255, 255, 255), font=font)
     img.save(endname)
 
+def get_warp_length(width):
+    return int((20.0 / 1024.0) * (width + 0.0))
 
 async def cat_meeme(upper_text, lower_text, CNG_FONTS, picture_name, endname):
     main_image = catimage(filename=picture_name)
