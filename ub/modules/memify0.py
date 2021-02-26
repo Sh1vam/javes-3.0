@@ -166,7 +166,7 @@ async def memes(cat):
             "```Transfiguration Time! Mwahaha memifying this animated sticker! (」ﾟﾛﾟ)｣```"
         )
         catfile = os.path.join("./temp/", "temp.jpg")
-        os.system(f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} ./temp/temp.jpg")
+        os.system(f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}")
 
         '''catcmd = (
             f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
