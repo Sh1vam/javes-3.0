@@ -54,7 +54,7 @@ async def messup(message):
    await message.delete()  
 @javes.on(admin_cmd("convert"))
 async def messup(message):
-   convert_to=event.text[9:]
+   convert_to=message.text[9:]
    await message.edit(f"`making {convert_to}....`")
    reply = await message.get_reply_message()
    stkr = await reply.download_media("tgs.tgs")
