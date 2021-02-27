@@ -1,6 +1,6 @@
 {
-  "name":"JAVES-3.0",
-  "description": "Dont forget to read instructions on top of box",
+  "name":"Javes-3.0",
+  "description": "Dont forget to read instructions on top of each box",
   "logo": "https://telegra.ph/file/8e5138dfc400730a2396c.jpg",
   "keywords": [
     "telegram",
@@ -52,11 +52,6 @@
     "TZ_NUMBER": {
       "description": "Change this value in case your country has multiple Time Zones.",
       "value": "1",
-      "required": false
-    },
-    "FULL_SUDO": {
-      "description": "if you set it true sudo users can access your full datas ",
-      "value": "",
       "required": false
     },
     "PROFILE_PP": {
@@ -173,11 +168,6 @@
       "description": "you can edit what pm_protecter message!",
       "value": "Hello Sir, I can't allow you to my master's PM without his permissions please be patient, Thankyou",
       "required": false 
-    },
-    "SUDO_USERS": {
-      "description": "give sudo user's id , it can control your javes, you can add multiple sudo users id by space , sudo users cant access your privacy untill you on full_sudo",
-      "value": "",
-      "required": false  
     },
     "AFK_MESSAGE": {
       "description": "Edit if you want!",
