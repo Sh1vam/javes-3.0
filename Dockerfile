@@ -39,7 +39,7 @@ RUN apt-get install -y\
     python3-pip \
     libreadline-dev \
     #metasploit-framework \
-    msfconsole \
+    gnupg \
     apktool \
     #openjdk-13-jdk \
     zipalign \
