@@ -48,9 +48,16 @@ async def _(event):
         else :
             mentions +=f" \n [{x.first_name}](tg://user?id={x.id}),( @{x.username} )"
     #await event.edit(mentions)
-    #await event.delete()
-    if event.reply_to_msg_id:
-        await javes.send_message(event.chat_id,mentions,reply_to=event.reply_to_msg_id)
-    else:
-        await javes.send_message(event.chat_id,mentions)
     await event.delete()
+    try:
+        if event.reply_to_msg_id:
+            await javes.send_message(event.chat_id,mentions,reply_to=event.reply_to_msg_id)
+        else:
+            await javes.send_message(event.chat_id,mentions)
+    except:
+        limits = 4096
+        ladybug = [mentions[miracul:miracul+limits] for miracul in range(0, len(mentions), limits)]
+        for miracul in ladybug:
+            chatnoir = f"**{shivam}** \n{miracul}"
+            await event.client.send_message(event.chat_id, chatnoir)
+    #await event.delete()
