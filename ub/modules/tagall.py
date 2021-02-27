@@ -15,18 +15,25 @@ async def _(event):
     shivam=shiv[8:]
     mentions = f"{shivam}"
     chat = await event.get_input_chat()
-    async for x in javes.iter_participants(chat, 100):
+    async for x in javes.iter_participants(chat):
         if x.username == None:
             mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
         else :
-            mentions +=f" \n [{x.first_name}](tg://user?id={x.id}),(@{x.username})"
+            mentions +=f" \n [{x.first_name}](tg://user?id={x.id}),( @{x.username} )"
     #await event.edit(mentions)
-    #await event.delete()
-    if event.reply_to_msg_id:
-        await javes.send_message(event.chat_id,mentions,reply_to=event.reply_to_msg_id)
-    else:
-        await javes.send_message(event.chat_id,mentions)
     await event.delete()
+    try:
+        if event.reply_to_msg_id:
+            await javes.send_message(event.chat_id,mentions,reply_to=event.reply_to_msg_id)
+        else:
+            await javes.send_message(event.chat_id,mentions)
+        #await event.delete()
+    except:
+        limits = 4096
+        ladybug = [mentions[miracul:miracul+limits] for miracul in range(0, len(mentions), limits)]
+        for miracul in ladybug:
+            chatnoir = f"**{shivam}** \n{miracul}"
+            await event.client.send_message(event.chat_id, chatnoir)
 @javes.on(admin_cmd(pattern=r"admin", outgoing=True))
 async def _(event):
     if event.fwd_from:
@@ -39,7 +46,7 @@ async def _(event):
         if x.username == None:
             mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
         else :
-            mentions +=f" \n [{x.first_name}](tg://user?id={x.id}),(@{x.username})"
+            mentions +=f" \n [{x.first_name}](tg://user?id={x.id}),( @{x.username} )"
     #await event.edit(mentions)
     #await event.delete()
     if event.reply_to_msg_id:
