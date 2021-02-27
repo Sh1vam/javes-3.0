@@ -16,7 +16,10 @@ async def _(event):
     mentions = f"{shivam}"
     chat = await event.get_input_chat()
     async for x in javes.iter_participants(chat, 100):
-        mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
+        if x.username == None:
+            mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
+        else :
+            mentions +=f" \n [{x.first_name}](tg://user?id={x.id}),(@{x.username})"
     #await event.edit(mentions)
     #await event.delete()
     if event.reply_to_msg_id:
@@ -33,7 +36,10 @@ async def _(event):
     mentions = f"{shivam}"
     chat = await event.get_input_chat()
     async for x in javes.iter_participants(chat, filter=ChannelParticipantsAdmins):
-        mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
+        if x.username == None:
+            mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
+        else :
+            mentions +=f" \n [{x.first_name}](tg://user?id={x.id}),(@{x.username})"
     #await event.edit(mentions)
     #await event.delete()
     if event.reply_to_msg_id:
