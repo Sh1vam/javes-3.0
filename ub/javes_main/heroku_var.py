@@ -14,10 +14,10 @@ from telethon.sessions import StringSession
 load_dotenv("config.env")
 from distutils.util import strtobool as sb
 class config(object):
-    API_KEY = int(os.environ.get("TELEGRAM_API_KEY", None))
-    APP_ID = int(os.environ.get("TELEGRAM_API_KEY", None))
-    API_HASH = os.environ.get("TELEGRAM_API_HASH", None)
-    STRING_SESSION = os.environ.get("TELEGRAM_STRING_SESSION", None)
+    API_KEY = int(os.environ.get("TG_API_KEY", None))
+    APP_ID = int(os.environ.get("TG_API_KEY", None))
+    API_HASH = os.environ.get("TG_API_HASH", None)
+    STRING_SESSION = os.environ.get("TG_STRING_SESSION", None)
     TAG_LOG =int(os.environ.get("TAG_LOG",None))
     SCREEN_SHOT_KEY = os.environ.get("SCREEN_SHOT_KEY", None)
     SCREEN_SHOT_LAYER_ACCESS_KEY = SCREEN_SHOT_KEY
@@ -86,10 +86,10 @@ class config(object):
     DB_URI = os.environ.get("DATABASE_URL", None)
     TMP_DOWNLOAD_DIRECTORY=TEMP_DOWNLOAD_DIRECTORY
 class Var(object):
-    API_KEY = int(os.environ.get("TELEGRAM_API_KEY", None))
-    APP_ID = int(os.environ.get("TELEGRAM_API_KEY", None))
-    API_HASH = os.environ.get("TELEGRAM_API_HASH", None)
-    STRING_SESSION = os.environ.get("TELEGRAM_STRING_SESSION", None)
+    API_KEY = int(os.environ.get("TG_API_KEY", None))
+    APP_ID = int(os.environ.get("TG_API_KEY", None))
+    API_HASH = os.environ.get("TG_API_HASH", None)
+    STRING_SESSION = os.environ.get("TG_STRING_SESSION", None)
     SCREEN_SHOT_KEY = os.environ.get("SCREEN_SHOT_KEY", None)
     SCREEN_SHOT_LAYER_ACCESS_KEY = SCREEN_SHOT_KEY
     swapi = os.environ.get("SPAMWATCH_API_KEY", None)
@@ -158,11 +158,11 @@ class Var(object):
     TAG_LOG =int(os.environ.get("TAG_LOG",None))
     TMP_DOWNLOAD_DIRECTORY=TEMP_DOWNLOAD_DIRECTORY
 class Config(object):
-    API_KEY = int(os.environ.get("TELEGRAM_API_KEY", None))
+    API_KEY = int(os.environ.get("TG_API_KEY", None))
     TAG_LOG =int(os.environ.get("TAG_LOG",None))
-    APP_ID = int(os.environ.get("TELEGRAM_API_KEY", None))
-    API_HASH = os.environ.get("TELEGRAM_API_HASH", None)
-    STRING_SESSION = os.environ.get("TELEGRAM_STRING_SESSION", None)
+    APP_ID = int(os.environ.get("TG_API_KEY", None))
+    API_HASH = os.environ.get("TG_API_HASH", None)
+    STRING_SESSION = os.environ.get("TG_STRING_SESSION", None)
     BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", None))
     BOTLOG = sb(os.environ.get("BOTLOG", "False"))
     LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))

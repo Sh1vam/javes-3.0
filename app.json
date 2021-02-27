@@ -2,19 +2,13 @@
   "name":"Javes-3.0",
   "description": "Dont forget to read instructions on top of each box",
   "logo": "https://telegra.ph/file/8e5138dfc400730a2396c.jpg",
-  "keywords": [
-    "telegram",
-    "ub",
-    "plugin",
-    "modular",
-    "productivity"
-  ],
+  "keywords": ["😶"],
   "repository": "https://github.com/Sh1vam/javes-3.0",
-  "website": "https://t.me/plugines",
-  "success_url": "https://t.me/plugines",
+  "website": "#IDC",
+  "success_url": "#IDK",
   "stack": "container",
   "env": {
-    "TELEGRAM_API_KEY": {
+    "TG_API_KEY": {
       "description": "Get this value from my.telegram.org. Don't Steal May Your Account Get ban.[IMPORTANT]",
       "value": ""
     },
@@ -28,11 +22,11 @@
       "value": "https://telegra.ph/file/8e5138dfc400730a2396c.jpg",
       "required": false
     },
-    "TELEGRAM_API_HASH": {
+    "TG_API_HASH": {
       "description": "Get this value from my.telegram.org. Don't Steal may Your Account Get ban.[IMPORTANT]",
       "value": ""
     },
-    "TELEGRAM_STRING_SESSION": {
+    "TG_STRING_SESSION": {
       "description": "Get this value by running [python3 string_session.py] in Termux or heroku[IMPORTANT]",
       "value": ""
     },
@@ -161,7 +155,7 @@
     },
     "JAVES_NAME": {
       "description": "You can edit bot's name",
-      "value": "Javes 3.0 ",
+      "value": "Javes 3.0",
       "required": false
     },
     "PM_MESSAGE": {
