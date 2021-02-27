@@ -6,7 +6,7 @@ from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 from ub.utils import admin_cmd
 from ub import bot as javes
-
+#MODIFIED BY SH1VAM
 @javes.on(admin_cmd(pattern=r"tagall", outgoing=True))
 async def _(event):
     if event.fwd_from:
