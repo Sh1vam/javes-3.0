@@ -76,7 +76,7 @@ RUN mkdir /root/ub/bin/
 WORKDIR /root/ub/
 RUN mv ub/javes_main/extra/apktool /usr/local/bin
 RUN mv ub/javes_main/extra/apktool.jar /usr/local/bin
-RUN mv ub/javes_main/extra/apk.rb /usr/share/metasploit-framework/lib/msf/core/payload
+#RUN mv ub/javes_main/extra/apk.rb /usr/share/metasploit-framework/lib/msf/core/payload
 RUN chmod +x /usr/local/bin/*
 #RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
