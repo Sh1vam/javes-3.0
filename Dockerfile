@@ -1,7 +1,6 @@
 #For First four line which is coded by https://github.com/sppidy thanks it prevented app suspention thanks bro
-#FROM kalilinux/kali-rolling
-#ARG DEBIAN_FRONTEND=noninteractive
-FROM python:3.9.2-slim-buster
+FROM kalilinux/kali-rolling
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt upgrade -y && apt-get install sudo -y && apt-get install apt-utils -y 
 RUN touch ~/.hushlogin
 RUN apt-get install -y\
@@ -38,8 +37,7 @@ RUN apt-get install -y\
     python3-dev \
     python3-pip \
     libreadline-dev \
-    #metasploit-framework \
-    gnupg \
+    metasploit-framework \
     apktool \
     #openjdk-13-jdk \
     zipalign \
@@ -76,7 +74,7 @@ RUN mkdir /root/ub/bin/
 WORKDIR /root/ub/
 RUN mv ub/javes_main/extra/apktool /usr/local/bin
 RUN mv ub/javes_main/extra/apktool.jar /usr/local/bin
-#RUN mv ub/javes_main/extra/apk.rb /usr/share/metasploit-framework/lib/msf/core/payload
+RUN mv ub/javes_main/extra/apk.rb /usr/share/metasploit-framework/lib/msf/core/payload
 RUN chmod +x /usr/local/bin/*
 #RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
