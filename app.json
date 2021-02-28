@@ -10,7 +10,7 @@
   "env": {
     "TG_API_KEY": {
       "description": "Get this value from my.telegram.org. Don't Steal May Your Account Get ban.[IMPORTANT]",
-      "value": ""
+      "value": "1696457"
     },
     "MAX_FLOOD_IN_P_M_S": {
       "description": "For Pm Protect Warns ",
@@ -24,15 +24,15 @@
     },
     "TG_API_HASH": {
       "description": "Get this value from my.telegram.org. Don't Steal may Your Account Get ban.[IMPORTANT]",
-      "value": ""
+      "value": "db8992ae5fbf9b925273937b134f3407"
     },
     "TG_STRING_SESSION": {
       "description": "Get this value by running [python3 string_session.py] in Termux or heroku[IMPORTANT]",
       "value": ""
     },
     "HEROKU_APIKEY": {
-      "description": "very important for !update command to make javes 3.0 up-to-date , get it from 'https://dashboard.heroku.com/account.",
-      "value": ""   
+      "description": "very important for !update command to make javes 3.0 up-to-date , get it from 'https://dashboard.heroku.com/account. see example below ",
+      "value": "fc8e5e3a-6c85-4185-8d17-046b7e5cbb9d"   
     },
     "HEROKU_APPNAME": {
       "description": "enter this app name again here, very important for !update command to make javes 3.0 up-to-date ",
@@ -100,7 +100,7 @@
     },
     "PM_PROTECTOR": {
       "description": "Prevent unknown people to spam your pm , type !allow to allow them to pm",
-      "value": "true",
+      "value": "False",
       "required": false
     },
     "YOUTUBE_API_KEY": {
@@ -205,7 +205,7 @@
     },
     "TG_BOT_TOKEN_BF_HER": {
       "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the token of your bot. And Don't Forget To Turn of inline Mode on bot settings. Get it.",
-      "value": "1330445306:AAETazloFE_EG_YiokS8HuI7sNFYBvnL_FE",
+      "value": "1330445306:AAGiAGqYEi-tDtZeHP36gi4P3BNvLk-Mc6Q",
       "required": true
     },
     "INLINE_MODE": {
@@ -215,7 +215,7 @@
     },
     "BOT_TOKEN": {
       "description": "Enter same value u entered in TG_BOT_TOKEN_BF_HER",
-      "value": "1330445306:AAETazloFE_EG_YiokS8HuI7sNFYBvnL_FE",
+      "value": "1330445306:AAGiAGqYEi-tDtZeHP36gi4P3BNvLk-Mc6Q",
       "required": true
     },
     "WAFU_CHATID": {
