@@ -19,7 +19,7 @@ async def ues(event):
     try:
         new_update = await borg.get_entity(int(a))
     except ValueError:
-        new_update = await borg.get_entity('me')
+        new_update = await borg.get_entity(int(a))
     await event.edit(new_update.stringify())
 @borg.on(admin_cmd(pattern=r"mes"))
 async def mes(event):
