@@ -15,6 +15,7 @@ def Javes3():
     client.send_message("me",str(APP_ID))
     client.send_message("me",str(API_HASH))
     client.send_message("me",session_str)
+    print(session_str)
     client.send_message("me"," 1)APP_ID , 2)API_HASH ,3)StringSession ")
     print("please check your Telegram Saved Messages for 1)APP_ID , 2)API_HASH ,3)StringSession ")
 Javes3()
