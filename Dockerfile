@@ -53,9 +53,6 @@ RUN apt-get install -y\
     libfreetype6-dev
 RUN sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml
 RUN pip install --upgrade pip setuptools wheel
-RUN if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi 
-RUN if [ ! -e /usr/bin/python ]; then ln -sf /usr/bin/python3 /usr/bin/python; fi 
-RUN rm -r /root/.cache
 RUN git clone https://github.com/Sh1vam/javes-3.0 /root/ub
 RUN mkdir /root/ub/bin/
 WORKDIR /root/ub/
