@@ -1,4 +1,3 @@
-#For First four line which is coded by https://github.com/sppidy thanks it prevented app suspention thanks bro
 FROM kalilinux/kali-rolling
 ARG DEBIAN_FRONTEND=noninteractive
 #RUN apt-get update && apt upgrade -y && apt-get install sudo -y && apt-get install apt-utils -y 
