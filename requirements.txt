@@ -1,4 +1,6 @@
 Pillow 
+idna==2.6
+six==1.11.0
 cloudmersive_virus_api_client 
 webdriver-manager
 folium

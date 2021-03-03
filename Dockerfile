@@ -69,6 +69,6 @@ RUN mv ub/javes_main/extra/apktool.jar /usr/local/bin
 RUN chmod +x /usr/local/bin/*
 ##RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
-##RUN python3.9 -m pip install --no-warn-script-location --no-cache-dir --upgrade -r requirements.txt
-RUN sudo chmod o+r /usr/lib/python3.9 /dist-packages/*
+##RUN python3 -m pip install --no-warn-script-location --no-cache-dir --upgrade -r requirements.txt
+##RUN sudo chmod o+r /usr/lib/python3 /dist-packages/*
 CMD ["python3","-m","ub"]
