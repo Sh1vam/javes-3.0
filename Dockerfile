@@ -29,7 +29,9 @@ RUN apt-get install -y\
     postgresql-client \
     postgresql-server-dev-all \
     #chromedriver \
-    python3-pip  \
+    python3 \
+    python3-dev \
+    python3-pip \
     openssl \
     pv \
     jq \
