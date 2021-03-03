@@ -53,6 +53,9 @@ RUN apt-get install -y\
     libfreetype6-dev
 RUN sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml
 RUN pip install --upgrade pip setuptools wheel
+RUN if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi 
+RUN if [ ! -e /usr/bin/python ]; then ln -sf /usr/bin/python3 /usr/bin/python; fi 
+RUN rm -r /root/.cache
 RUN git clone https://github.com/Sh1vam/javes-3.0 /root/ub
 RUN mkdir /root/ub/bin/
 WORKDIR /root/ub/
@@ -60,6 +63,4 @@ RUN mv ub/javes_main/extra/apktool /usr/local/bin
 RUN mv ub/javes_main/extra/apktool.jar /usr/local/bin
 RUN chmod +x /usr/local/bin/*
 RUN pip3 install -r requirements.txt
-#RUN python3 -m pip install --no-warn-script-location --no-cache-dir --upgrade -r requirements.txt
-#RUN sudo chmod o+r /usr/lib/python3/dist-packages/*
 CMD ["python3","-m","ub"]
