@@ -47,8 +47,8 @@ RUN apt-get install -y\
     recoverjpeg \
     zip \
     megatools \
-    axel \
-    procps \
+    #axel \
+    #procps \
     policykit-1\
     libfreetype6-dev
 RUN sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml
