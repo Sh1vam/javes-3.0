@@ -51,7 +51,6 @@ RUN apt-get install -y\
     #procps \
     #policykit-1\
     libfreetype6-dev
-RUN sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml
 RUN pip install --upgrade pip setuptools wheel
 RUN git clone https://github.com/Sh1vam/javes-3.0 /root/ub
 RUN mkdir /root/ub/bin/
@@ -60,4 +59,5 @@ RUN mv ub/javes_main/extra/apktool /usr/local/bin
 RUN mv ub/javes_main/extra/apktool.jar /usr/local/bin
 RUN chmod +x /usr/local/bin/*
 RUN pip3 install -r requirements.txt
+RUN sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml
 CMD ["python3","-m","ub"]
