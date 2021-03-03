@@ -8,3 +8,4 @@ ub/helpers/__pycache__/*
 ub/helpers/resources/__pycache__/*
 ub/modules/__pycache__/*
 ub/modules/sql_helper/__pycache__/*
+*.egg-info
