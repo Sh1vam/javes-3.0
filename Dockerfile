@@ -70,5 +70,5 @@ RUN chmod +x /usr/local/bin/*
 ##RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 ##RUN python3.9 -m pip install --no-warn-script-location --no-cache-dir --upgrade -r requirements.txt
-RUN sudo chmod o+r /usr/lib/python3/dist-packages/*
+RUN sudo chmod o+r /usr/lib/python3.9 /dist-packages/*
 CMD ["python3","-m","ub"]
