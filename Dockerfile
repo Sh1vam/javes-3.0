@@ -1,7 +1,7 @@
 FROM kalilinux/kali-rolling
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt upgrade -y && apt-get install sudo -y && apt-get install apt-utils -y 
 RUN touch ~/.hushlogin
+RUN apt-get update && apt upgrade -y && apt-get install sudo -y && apt-get install apt-utils -y
 RUN apt-get install -y\
     coreutils \
     bash \
@@ -28,16 +28,16 @@ RUN apt-get install -y\
     postgresql-client \
     postgresql-server-dev-all \
     #chromedriver \
-    python3 \
-    python3-dev \
-    python3-pip \
     openssl \
     pv \
     jq \
     wget \
+    python3 \
+    python3-dev \
+    python3-pip \
     libreadline-dev \
-    #apktool \
-    #zipalign \
+    apktool \
+    zipalign \
     sqlite3 \
     ffmpeg \
     imagemagick \
@@ -47,10 +47,11 @@ RUN apt-get install -y\
     recoverjpeg \
     zip \
     megatools \
-    #axel \
-    #procps \
-    #policykit-1\
+    axel \
+    procps \
+    policykit-1\
     libfreetype6-dev
+RUN sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml
 RUN pip install --upgrade pip setuptools wheel
 RUN git clone https://github.com/Sh1vam/javes-3.0 /root/ub
 RUN mkdir /root/ub/bin/
@@ -59,5 +60,4 @@ RUN mv ub/javes_main/extra/apktool /usr/local/bin
 RUN mv ub/javes_main/extra/apktool.jar /usr/local/bin
 RUN chmod +x /usr/local/bin/*
 RUN pip3 install -r requirements.txt
-RUN sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml
 CMD ["python3","-m","ub"]
