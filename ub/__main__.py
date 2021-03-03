@@ -39,12 +39,14 @@ async def a():
   ar = glob.glob("ub/modules/*.py")
   f = len(ar)
   LOGS.info(f" loading {f} modules it may take 1 minute please wait")
-  for i in ar:
-     br = os.path.basename(i)
-     cr = (os.path.splitext(br)[0])
-     import_module(f"ub.modules.{cr}")
-     la += 1
-     LOGS.info(f" loaded {la}/{f} modules")  
+  try:
+    for i in ar:
+           br = os.path.basename(i)
+           cr = (os.path.splitext(br)[0])
+           import_module(f"ub.modules.{cr}")
+           la += 1
+           LOGS.info(f" loaded {la}/{f} modules")  
+  except:pass
   #os.system("rm ub/modules/*.py");
   LOGS.info(f"Sucessfully connected with {o}{o2}{o3}{o4} check it by typing !javes in any client's chat, type  !help for more info.")
   if len(argv) not in (1, 3, 4):

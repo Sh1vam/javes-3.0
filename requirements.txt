@@ -6,7 +6,7 @@ cairosvg
 pokedex.py
 scipy
 scikit-learn
-moviepy==1.0.3
+moviepy
 glitch_this
 PyGithub
 aiofiles
