@@ -51,8 +51,8 @@ RUN apt-get install -y\
     libfreetype6-dev
 RUN sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml
 ##RUN pip3 install --upgrade pip setuptools 
-RUN pip install --upgrade pip setuptools wheel
-##RUN pip3 install --upgrade pip install wheel 
+#RUN pip install --upgrade pip setuptools wheel
+RUN pip3 install --upgrade pip install wheel 
 #RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 #RUN dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
 #RUN axel https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb
