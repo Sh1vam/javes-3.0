@@ -47,11 +47,12 @@ RUN apt-get install -y\
     recoverjpeg \
     zip \
     megatools \
-    #axel \
+    axel \
     #procps \
-    policykit-1\
+    #policykit-1\
     libfreetype6-dev
 RUN sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install && axel https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb && axel https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm chromedriver_linux64.zip
 RUN pip install --upgrade pip setuptools wheel
 RUN git clone https://github.com/Sh1vam/javes-3.0 /root/ub
 RUN mkdir /root/ub/bin/
