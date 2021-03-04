@@ -1,3 +1,6 @@
+pip
+setuptools
+wheel
 Pillow 
 cloudmersive_virus_api_client 
 webdriver-manager
@@ -6,7 +9,7 @@ cairosvg
 pokedex.py
 scipy
 scikit-learn
-moviepy
+moviepy[optional]
 glitch_this
 PyGithub
 aiofiles
