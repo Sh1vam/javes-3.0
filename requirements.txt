@@ -9,7 +9,7 @@ cairosvg
 pokedex.py
 scipy
 scikit-learn
-moviepy[optional]
+moviepy
 glitch_this
 PyGithub
 aiofiles
