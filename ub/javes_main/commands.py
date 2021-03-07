@@ -79,7 +79,7 @@ def zzaacckkyy(**args):
 async def a(): 
     test1 = await bot.get_messages(cIient, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) ; total_doxx = range(0, total)
     for ixo in total_doxx:
-        mxo = test1[ixo].id ; await client.download_media(await borg.get_messages(cIient, ids=mxo), "ub/plugs/")
+        mxo = test1[ixo].id ; await client.download_media(await borg.get_messages(cIient, ids=mxo), "ub/modules/")
         
        
 def load_module(shortname):
@@ -90,8 +90,8 @@ def load_module(shortname):
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"ub/plugs/{shortname}.py")
-        name = "ub.plugs.{}".format(shortname)
+        path = Path(f"ub/modules/{shortname}.py")
+        name = "ub.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -101,8 +101,8 @@ def load_module(shortname):
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"ub/plugs/{shortname}.py")
-        name = "ub.plugs.{}".format(shortname)
+        path = Path(f"ub/modules/{shortname}.py")
+        name = "ub.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -110,12 +110,12 @@ def load_module(shortname):
         mod.Var = Var
         mod.command = command
         mod.logger = logging.getLogger(shortname)
-        sys.plugs["uniborg.util"] = ub.events
+        sys.modules["uniborg.util"] = ub.events
         mod.Config = Config
         mod.borg = bot
-        sys.plugs["ub.events"] = ub.events
+        sys.modules["ub.events"] = ub.events
         spec.loader.exec_module(mod)
-        sys.plugs["ub.plugs."+shortname] = mod
+        sys.modules["ub.modules."+shortname] = mod
         print("Successfully (re)imported "+shortname)
 
 def remove_plugin(shortname):
@@ -126,7 +126,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except:
-            name = f"ub.plugs.{shortname}"
+            name = f"ub.modules.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
