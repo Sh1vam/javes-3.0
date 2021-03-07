@@ -35,22 +35,22 @@ async def a():
          LOGS.info("Bot Token Wrong/ Expired please add new one  or delete var BOT_TOKEN ") ; quit(1)
   test1 = await client.get_messages(plugin_channel, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) ; total_doxx = range(0, total)
   for ixo in total_doxx:
-       mxo = test1[ixo].id ; await client.download_media(await client.get_messages(cIient, ids=mxo), "ub/modules/")
-  ar = glob.glob("ub/modules/*.py")
+       mxo = test1[ixo].id ; await client.download_media(await client.get_messages(cIient, ids=mxo), "ub/plugs/")
+  ar = glob.glob("ub/plugs/*.py")
   f = len(ar)
-  LOGS.info(f" loading {f} modules it may take 1 minute please wait")
+  LOGS.info(f" loading {f} plugs it may take 1 minute please wait")
   for i in ar:
          br = os.path.basename(i)
          cr = (os.path.splitext(br)[0])
          try:
-           import_module(f"ub.modules.{cr}")
+           import_module(f"ub.plugs.{cr}")
          except Exception as e:
            LOGS.info(f" Exception {e} ")
            pass
          la += 1
-         LOGS.info(f" loaded {la}/{f} modules")  
+         LOGS.info(f" loaded {la}/{f} plugs")  
 
-  #os.system("rm ub/modules/*.py");
+  #os.system("rm ub/plugs/*.py");
   LOGS.info(f"Sucessfully connected with {o}{o2}{o3}{o4} check it by typing !javes in any client's chat, type  !help for more info.")
   if len(argv) not in (1, 3, 4):
        await javes.disconnect()
