@@ -2,10 +2,15 @@
   "name":"Javes-3.0",
   "description": "Dont forget to read instructions on top of each box",
   "logo": "https://telegra.ph/file/8e5138dfc400730a2396c.jpg",
-  "keywords": ["😶"],
+  "keywords": ["telegram","upgraded","moded","javes","userbot","javes-3.0"],
   "repository": "https://github.com/Sh1vam/javes-3.0",
-  "website": "#IDC",
-  "success_url": "#IDK",
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+      }
+    }
+  ],
   "stack": "container",
   "env": {
     "TG_API_KEY": {
@@ -228,12 +233,5 @@
       "value": "-1001336057285",
       "required": false
     }
-  },
-  "addons": [
-    {
-      "plan": "heroku-postgresql",
-      "options": {
-      }
-    }
-  ]
+  }
 }
