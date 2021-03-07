@@ -1381,11 +1381,11 @@ async def _(event):
 CHAT_PP_CHANGED=" ⭐️ Congrats ! Bravo ! Your Group Profile Pic Changed SuccessFully  ⭐️"
 
 
-@javes05(outgoing=True, pattern="^\!setgpic$", groups_only=True)
+@javes05(outgoing=True, pattern="^\!setgpic$", groups_only=False)
 async def set_group_photo(gpic):
-    if not gpic.is_group:
+    '''if not gpic.is_group:
         await gpic.edit(f"`{JAVES_NNAME}:` **I don't think this is a group.**")
-        return
+        return'''
     replymsg = await gpic.get_reply_message()
     chat = await gpic.get_chat()
     admin = chat.admin_rights
@@ -1414,9 +1414,9 @@ async def set_group_photo(gpic):
 
 @javes.on(rekcah05(pattern=f"setgpic$", allow_sudo=True))
 async def set_group_photo(gpic):
-    if not gpic.is_group:
+    '''if not gpic.is_group:
         await gpic.reply(f"`{JAVES_NNAME}:` **I don't think this is a group.**")
-        return
+        return'''
     replymsg = await gpic.get_reply_message()
     chat = await gpic.get_chat()
     admin = chat.admin_rights
