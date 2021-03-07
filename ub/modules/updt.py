@@ -13,7 +13,7 @@ from ub.events import admin_cmd
 config=Config
 
 requirements_path = path.join(
-    path.dirname(path.dirname(path.dirname(__file__))), 'requirements.txt')
+    path.dirname(path.dirname(path.dirname(__file__))), 'ub.txt')
 
 HEROKU_API_KEY = config.HEROKU_API_KEY
 HEROKU_APP_NAME = config.HEROKU_APP_NAME

@@ -172,7 +172,7 @@ async def pipcheck(pip):
 
 
 requirements_path = path.join(
-    path.dirname(path.dirname(path.dirname(__file__))), 'requirements.txt')
+    path.dirname(path.dirname(path.dirname(__file__))), 'ub.txt')
 
 
 async def gen_chlog(repo, diff):

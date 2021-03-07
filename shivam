@@ -60,5 +60,5 @@ WORKDIR /root/ub/
 RUN mv ub/javes_main/extra/apktool /usr/local/bin
 RUN mv ub/javes_main/extra/apktool.jar /usr/local/bin
 RUN chmod +x /usr/local/bin/*
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r ub.txt
 CMD ["python3","-m","ub"]
