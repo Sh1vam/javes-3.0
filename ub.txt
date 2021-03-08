@@ -27,7 +27,6 @@ wand
 telegram
 lottie
 colour
-cfscrape
 bash
 coffeehouse
 show
