@@ -24,7 +24,6 @@ beautifulsoup4
 bs4
 bwb
 wand
-#pyrogram
 telegram
 lottie
 colour
