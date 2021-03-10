@@ -38,10 +38,50 @@ async def miraculous(event):
 @borg.on(admin_cmd(pattern=r"duration"))
 async def miraculous(event):
 
-
+    await event.delete()
     sed = await event.get_reply_message()
     vdo = await borg.download_media(sed.media, op)
     clip = VideoFileClip(vdo)
     duration = clip.duration
     await event.edit(f"Your Video Duration iz {duration}")
     shutil.rmtree(op)
+@borg.on(admin_cmd(pattern=r"vsize"))
+async def miraculous(event):
+
+    await event.delete()
+    sed = await event.get_reply_message()
+    vdo = await borg.download_media(sed.media, op)
+    clip = VideoFileClip(vdo)
+    duration = clip.size
+    await event.edit(f"Your Video Dimensions are {duration}")
+    shutil.rmtree(op)
+@borg.on(admin_cmd(pattern=r"vrsize"))
+async def miraculous(event):
+
+    await event.delete()
+    a,b = event.text[9:].split(":")
+    sed = await event.get_reply_message()
+    vdo = await borg.download_media(sed.media, op)
+    os.system( f'ffmpeg -i {vdo} -vf "crop={a}:{b}" resizedvideo.mp4')
+    await event.client.send_file(event.chat_id,"resizedvideo.mp4",force_document=False,reply_to=sed)
+    shutil.rmtree(op)
+    os.remove("resizedvideo.mp4")
+@borg.on(admin_cmd(pattern=r"vnote"))
+async def miraculous(event):
+
+    await event.delete()
+    sed = await event.get_reply_message()
+    vdo = await borg.download_media(sed.media, op)
+    await event.client.send_file(event.chat_id,vdo,force_document=False,video_note=True, reply_to=sed)
+    shutil.rmtree(op)
+@borg.on(admin_cmd(pattern=r"vcircle"))
+async def miraculous(event):
+
+    await event.delete()
+    a,b = event.text[9:].split(":")
+    sed = await event.get_reply_message()
+    vdo = await borg.download_media(sed.media, op)
+    os.system( f'ffmpeg -i {vdo} -vf "crop={a}:{b}" resizedvideo.mp4')
+    await event.client.send_file(event.chat_id,"resizedvideo.mp4",force_document=False,video_note=True, reply_to=sed)
+    shutil.rmtree(op)
+    os.remove("resizedvideo.mp4")
