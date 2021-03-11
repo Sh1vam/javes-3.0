@@ -38,7 +38,7 @@ async def miraculous(event):
 @borg.on(admin_cmd(pattern=r"duration"))
 async def miraculous(event):
 
-    await event.delete()
+    
     sed = await event.get_reply_message()
     vdo = await borg.download_media(sed.media, op)
     clip = VideoFileClip(vdo)
