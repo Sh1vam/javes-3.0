@@ -1,1 +1,1 @@
-worker: python3 -m ub
+worker: python3 sh1vamrun.py
