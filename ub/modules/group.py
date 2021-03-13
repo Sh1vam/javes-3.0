@@ -1066,17 +1066,18 @@ async def fetch_info(chat, event):
     first_msg_valid = True if msg_info and msg_info.messages and msg_info.messages[0].id == 1 else False
     # Same for msg_info.users
     creator_valid = True if first_msg_valid and msg_info.users else False
-    async for x in javes.iter_participants(await event.get_input_chat()):
+    async for x in javes.iter_participants(chat.full_chat.id):
                              a=x.status
                              b=x.participant
                              if isinstance(b, owner):
                                  #c=f"[{get_display_name(x)}](tg://user?id={x.id})"
-                                 d=x.id
-                                 e=x.username
-                                 f=x.first_name##solbed by Sh1vam
-    creator_id = int(d)
-    creator_firstname = f
-    creator_username = e
+                                 global creator_id,creator_username,creator_firstname
+                                 creator_id=x.id
+                                 creator_username=x.username
+                                 creator_firstname=x.first_name##solbed by Sh1vam
+    #creator_id = creator_id
+    #creator_firstname = creator_firstname
+    #creator_username = creator_username
     created = msg_info.messages[0].date if first_msg_valid else None
     former_title = msg_info.messages[0].action.title if first_msg_valid and type(msg_info.messages[0].action) is MessageActionChannelMigrateFrom and msg_info.messages[0].action.title != chat_title else None
     try:
@@ -1257,17 +1258,18 @@ async def fetch_info(chat, event):
     first_msg_valid = True if msg_info and msg_info.messages and msg_info.messages[0].id == 1 else False
     # Same for msg_info.users
     creator_valid = True if first_msg_valid and msg_info.users else False
-    async for x in javes.iter_participants(await event.get_input_chat()):
+    async for x in javes.iter_participants(chat.full_chat.id):
                              a=x.status
                              b=x.participant
                              if isinstance(b, owner):
                                  #c=f"[{get_display_name(x)}](tg://user?id={x.id})"
-                                 d=x.id
-                                 e=x.username
-                                 f=x.first_name##solbed by Sh1vam
-    creator_id = int(d)
-    creator_firstname = f
-    creator_username = e
+                                 global creator_id,creator_username,creator_firstname
+                                 creator_id=x.id
+                                 creator_username=x.username
+                                 creator_firstname=x.first_name##solbed by Sh1vam
+    #creator_id = creator_id=x.id
+    #creator_firstname = creator_firstname
+    #creator_username = creator_username
     created = msg_info.messages[0].date if first_msg_valid else None
     former_title = msg_info.messages[0].action.title if first_msg_valid and type(msg_info.messages[0].action) is MessageActionChannelMigrateFrom and msg_info.messages[0].action.title != chat_title else None
     try:
