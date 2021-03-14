@@ -164,3 +164,4 @@ async def messup(message):
         message_id = message.reply_to_msg_id
    await message.client.send_file(message.chat_id, "shivam.tgs",force_document=False,reply_to=message_id)
    os.remove("shivam.tgs")
+   await message.delete()
