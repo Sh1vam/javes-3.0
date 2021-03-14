@@ -142,3 +142,25 @@ async def messup(message):
    os.remove("shivam.tgs")
    #os.remove("tgs.tgs")
    await message.delete()
+@javes.on(admin_cmd("tgsresize"))
+async def messup(message):
+   ss=message.text[11:]
+   await message.edit(f"`tgs resizing to {ss} ....`")
+   reply = await message.get_reply_message()
+   stkr = await reply.download_media("tgs.tgs")
+   process = await asyncio.create_subprocess_shell("lottie_convert.py tgs.tgs json.json",stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
+   stdout, stderr = await process.communicate()
+   os.remove(stkr)
+   file = open("json.json", "rt")
+   data = file.read()
+   data = data.replace("512",ss)
+   file.close()
+   file = open("json.json", "wt")
+   file.write(data)
+   file.close()
+   os.system("lottie_convert.py json.json shivam.tgs")
+   os.remove("json.json")
+   if message.reply_to_msg_id:
+        message_id = message.reply_to_msg_id
+   await message.client.send_file(message.chat_id, "shivam.tgs",force_document=False,reply_to=message_id)
+   os.remove("shivam.tgs")
