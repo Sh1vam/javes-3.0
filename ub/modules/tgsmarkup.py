@@ -104,8 +104,7 @@ async def messup(message):
    await message.edit(f"`converting {a} to {b}....`")
    reply = await message.get_reply_message()
    stkr = await reply.download_media(f"tgs.{a}")
-   process = await asyncio.create_subprocess_shell(f"lottie_convert.py tgs.{a} shivam.{b}",stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
-   stdout, stderr = await process.communicate()
+   os.system(f"lottie_convert.py tgs.{a} shivam.{b}")
    os.remove(stkr)
    if message.reply_to_msg_id:
         message_id = message.reply_to_msg_id
@@ -126,7 +125,7 @@ async def messup(message):
         message_id = message.reply_to_msg_id
   
    await message.client.send_file(message.chat_id,"shivam.tgs",force_document=False,reply_to=message_id)
-   os.remove(f"shivam.tgs")
+   os.remove("shivam.tgs")
    #os.remove("tgs.tgs")
    await message.delete()
 @javes.on(admin_cmd("cjsontgs"))
@@ -134,8 +133,7 @@ async def messup(message):
    await message.edit("`converting json to tgs....`")
    reply = await message.get_reply_message()
    stkr = await reply.download_media("json.json")
-   process = await asyncio.create_subprocess_shell("lottie_convert.py json.json shivam.tgs",stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
-   stdout, stderr = await process.communicate()
+   os.system("lottie_convert.py json.json shivam.tgs")
    os.remove(stkr)
    if message.reply_to_msg_id:
         message_id = message.reply_to_msg_id
