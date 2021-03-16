@@ -1,6 +1,7 @@
 pip
 setuptools
 wheel
+ibm_db_sa
 Pillow 
 cloudmersive_virus_api_client 
 webdriver-manager
