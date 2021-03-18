@@ -29,7 +29,7 @@ async def inline_id_handler(trans: events.InlineQuery.Event):
             source_lan = LANGUAGES[f'{reply_text.src.lower()}']
             transl_lan = LANGUAGES[f'{reply_text.dest.lower()}']
             #reply_text = f"From **{source_lan.title()}**\nTo **{transl_lan.title()}:**\n\n{reply_text.text}"
-            s = builder.article(title=f"From {source_lan.title()} To {transl_lan.title()}",description=reply_text.text,text=reply_text.text,buttons=[[Button.switch_inline("Search Again", query="trt", same_peer=True)],], )
+            s = builder.article(title=f"From {source_lan.title()} To {transl_lan.title()}",description=reply_text.text,text=reply_text.text,buttons=[[Button.switch_inline("Search Again", query="trt ", same_peer=True)],], )
         else:
             reply_text = f"`Invalid Language code !!`\n`Available language codes for TRT`:\n\n`{LANGUAGES}`"
             s = builder.article(title="Invalid Language code !!",description="Check Your Input",text=reply_text,buttons=[[Button.switch_inline("Search Again", query="trt ", same_peer=True)],], )
