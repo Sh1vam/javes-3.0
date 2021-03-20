@@ -1,7 +1,7 @@
 
 #Copy That Plugin by @ViperAdnan
 #Give credit if you are going to kang it.
-#bug fix by Sh1vam
+
 import html
 import os
 from telethon.tl.functions.photos import GetUserPhotosRequest
@@ -47,9 +47,11 @@ async def _(event):
     user_bio = replied_user.about
     if user_bio is not None:
         user_bio = html.escape(replied_user.about)
-        if len(user_bio)>70:
-            lbcn=70-len(user_bio)
-            user_bio=user_bio[:lbcn]
+        if len(user_bio) > 70:
+            lbcn = 70-len(user_bio)
+            user_bio = user_bio[:lbcn]
+        else:
+            user_bio = user_bio 
     await bot(functions.account.UpdateProfileRequest(
         first_name=first_name
     ))
