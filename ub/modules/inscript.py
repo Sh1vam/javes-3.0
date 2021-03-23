@@ -67,22 +67,15 @@ async def inline_id_handler(event: events.InlineQuery.Event):
                     file = open("exec.txt", "w+")
                     file.write(result)
                     file.close()
-                    resultm = builder.document("exec.txt",title="text too long",description="hmmmmm",text=f"`{JAVES_NNAME}:` **Output too large sended as file,U Can Use !exec**",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
+                    resultm = builder.document("exec.txt",title="text too long",description="click me",text=f"`{JAVES_NNAME}:` **Output too large sended as file,U Can Use !exec**",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
                     await event.answer([resultm])
                     remove("exec.txt")
                     return
-            resultm = builder.article(title="bingo",description="hmmmmmmmmmm",text="**Query: **\n`"
-				 f"{codepre}"
-				 "`\n**Result: **\n`"
-				 f"{result}"
-				 "`",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
+            resultm = builder.article(title=f"{codepre}",description=f"{result}",text=f"**Query: **\n{codepre}`\n**Result: **\n`{result}",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
             await event.answer([resultm])
             return
     else:
-                resultm = builder.article(title="ohno",description="hmmmmmmmmmmmmmmmmm",text="**Query: **\n`"
-				 f"{codepre}"
-				 "`\n**Result: **\n`No Result Returned/False`"
-				 "`",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
+                resultm = builder.article(title=f"{codepre}",description="No Result Returned",text=f"**Query: **\n{codepre}\n**Result: **\n`No Result Returned/False`",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
                 await event.answer([resultm])
                 return
     if not event.query.user_id == me.id:
