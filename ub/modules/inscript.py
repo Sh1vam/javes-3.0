@@ -71,7 +71,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
                     await event.answer([resultm])
                     remove("exec.txt")
                     return
-            resultm = builder.article(title=f"{codepre}",description=f"{result}",text=f"**Query: **\n{codepre}`\n**Result: **\n`{result}",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
+            resultm = builder.article(title=f"{codepre}",description=f"{result}",text=f"**Query: **`\n{codepre}`\n**Result: **\n`{result}`",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
             await event.answer([resultm])
             return
     else:
@@ -112,7 +112,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
                             remove("eval.txt")
                             return
                         else:
-                            resultm = builder.article(title=f"{expression}",description=f"{evaluation}",text=f"**Query: **\n{expression}\n**Result: **\n`{evaluation}",buttons=[[Button.switch_inline("Search Again", query="eval ", same_peer=True)],], )
+                            resultm = builder.article(title=f"{expression}",description=f"{evaluation}",text=f"**Query: **\n{expression}\n**Result: **\n`{evaluation}`",buttons=[[Button.switch_inline("Search Again", query="eval ", same_peer=True)],], )
                             await event.answer([resultm])
                             return
                 else:
@@ -175,7 +175,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
                 pybase64.b64encode(bytes(event.pattern_match.group(2),
                                          "utf-8")))[2:]
 
-            resultm = builder.article(title="Encoded",description="en",text="Encoded: `" + lething[:-1] + "`",buttons=[[Button.switch_inline("Search Again", query="base64 ", same_peer=True)],], )
+            resultm = builder.article(title="Encoded",description=lething[:-1],text="Encoded: `" + lething[:-1] + "`",buttons=[[Button.switch_inline("Search Again", query="base64 ", same_peer=True)],], )
             await event.answer([resultm])
             return
 
@@ -183,7 +183,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
             lething = str(
                 pybase64.b64decode(bytes(event.pattern_match.group(2), "utf-8"),
                                    validate=True))[2:]
-            resultm = builder.article(title="Decoded",description="de",text="Decoded: `" + lething[:-1] + "`",buttons=[[Button.switch_inline("Search Again", query="base64 ", same_peer=True)],], )
+            resultm = builder.article(title="Decoded",description=lething[:-1],text="Decoded: `" + lething[:-1] + "`",buttons=[[Button.switch_inline("Search Again", query="base64 ", same_peer=True)],], )
             await event.answer([resultm])
             return
     if not event.query.user_id == me.id:
