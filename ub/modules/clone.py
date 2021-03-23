@@ -138,6 +138,8 @@ async def get_full_user(event):
 CMD_HELP.update({
     "cloneuser":
     "\
+Use !savemyinfo before making clone so that u can reverse it\
+Use !mereverse command used to reverse after cloning\
 !clone <username> or reply to a  user message\
 \nUsage: copy target user profile,name..etc set it as yours"
 })
