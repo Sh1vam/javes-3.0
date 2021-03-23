@@ -112,26 +112,15 @@ async def inline_id_handler(event: events.InlineQuery.Event):
                             remove("eval.txt")
                             return
                         else:
-                            resultm = builder.article(title="OwO",description="U got it",text="**Query: **\n`"
-								 f"{expression}"
-								 "`\n**Result: **\n`"
-								 f"{evaluation}"
-								 "`",buttons=[[Button.switch_inline("Search Again", query="eval ", same_peer=True)],], )
+                            resultm = builder.article(title=f"{expression}",description=f"{evaluation}",text=f"**Query: **\n{expression}\n**Result: **\n`{evaluation}",buttons=[[Button.switch_inline("Search Again", query="eval ", same_peer=True)],], )
                             await event.answer([resultm])
                             return
                 else:
-                    resultm = builder.article(title="ohno lol",description="u made it  wrong",text="**Query: **\n`"
-								 f"{expression}"
-								 "`\n**Result: **\n`No Result Returned/False`"
-								 "`",buttons=[[Button.switch_inline("Search Again", query="eval ", same_peer=True)],], )
+                    resultm = builder.article(title=f"{expression}",description="No Result Returned",text=f"**Query: **\n{expression}\n**Result: **\n`No Result Returned/False`",buttons=[[Button.switch_inline("Search Again", query="eval ", same_peer=True)],], )
                     await event.answer([resultm])
                     return
         except Exception as err:
-                resultm = builder.article(title="OoPs",description="Error",text="**Query: **\n`"
-				 f"{expression}"
-				 "`\n**Result: **\n`"
-				 f"{err}"
-				 "`",buttons=[[Button.switch_inline("Search Again", query="eval ", same_peer=True)],], )
+                resultm = builder.article(title=f"{expression}",description=f"{err}",text=f"**Query: **\n{expression}`\n**Result: **\n`{err}",buttons=[[Button.switch_inline("Search Again", query="eval ", same_peer=True)],], )
                 await event.answer([resultm])
                 return
     if not event.query.user_id == me.id:
