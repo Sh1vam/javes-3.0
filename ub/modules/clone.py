@@ -29,7 +29,7 @@ async def _(event):
         await event.edit("Why U Want To Clone My Dev")
         return False
     profile_pic = await event.client.download_profile_photo(user_id, TMP_DOWNLOAD_DIRECTORY)
-    # some people have weird HTML in their names
+    '''# some people have weird HTML in their names
     first_name = html.escape(replied_user.user.first_name)
     # https://stackoverflow.com/a/5072031/4723940
     # some Deleted Accounts do not have first_name
@@ -51,7 +51,33 @@ async def _(event):
             lbcn = 70-len(user_bio)
             user_bio = user_bio[:lbcn]
         else:
-            user_bio = user_bio 
+            user_bio = user_bio '''
+    #Now Complex code may fale se me made some new simple code #Sh1vam
+    first_name = replied_user.user.first_name
+    
+    if first_name == None:
+        first_name=" "
+
+    else :
+        first_name=first_name
+
+        
+    last_name = replied_user.user.last_name
+    
+    if last_name== None:
+        last_name=" "
+
+    else :
+        last_name=last_name
+
+        
+    user_bio = replied_user.about
+
+    if user_bio == None:
+        user_bio=" "
+
+    else:
+        user_bio=user_bio
     await bot(functions.account.UpdateProfileRequest(
         first_name=first_name
     ))
