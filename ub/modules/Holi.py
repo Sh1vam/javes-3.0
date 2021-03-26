@@ -1,7 +1,7 @@
 from telethon import events
 from ub import bot as javes
 import asyncio
-
+#BY Sh1vam Dont try to kang
 from ub.utils import admin_cmd
 
 @javes.on(admin_cmd("holi"))
