@@ -49,6 +49,7 @@ RUN apt-get install -y\
     megatools \
     axel \
     procps \
+    mediainfo \
     policykit-1\
     libfreetype6-dev
 RUN sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml
