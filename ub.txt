@@ -1,5 +1,6 @@
 pip
 setuptools
+pymediainfo
 wheel
 ibm_db_sa
 redshift-sqlalchemy 
