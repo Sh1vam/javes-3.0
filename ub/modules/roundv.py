@@ -1,4 +1,4 @@
-#ported from catuserbot 
+#ported from catub 
 #by Sh1vam
 import asyncio
 import os
@@ -10,18 +10,23 @@ from shutil import copyfile
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from pymediainfo import MediaInfo
-
+import lottie
 #import cv2
 from telethon.tl.types import DocumentAttributeVideo
 import asyncio
+import functools
 import difflib
 import shlex
 from typing import Tuple
-from userbot import bot
-from userbot.utils import admin_cmd
-from userbot.helpers import progress
+from ub import bot
+from ub.utils import admin_cmd
+from ub.helpers import progress
 PATH = os.path.join("./temp", "temp_vid.mp4")
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
+def run_sync(func, *args, **kwargs):
+    return asyncio.get_event_loop().run_in_executor(
+        None, functools.partial(func, *args, **kwargs)
+    )
 async def catlst_of_files(path):
     files = []
     for dirname, dirnames, filenames in os.walk(path):
