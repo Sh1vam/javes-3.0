@@ -49,8 +49,8 @@ async def a():
              if sh1vam.LOGSPAMMER == True or str(sh1vam.LOGSPAMMER) == 'true' or str(sh1vam.LOGSPAMMER) == "True":
                if sh1vam.BOTLOG == True or str(sh1vam.BOTLOG) == 'true' or str(sh1vam.BOTLOG) == "True":
                  await tebot.send_message(entity=sh1vam.BOTLOG_CHATID,message=e)
-           except Exception as f:
-              LOGS.info(f" Exception {f} ")
+           except Exception as na:
+              LOGS.info(f" Exception {na} ")
               LOGS.info(" Add Your Bot Which U Made Using Bot Father To TAG_LOG And BOTLOG_CHATID Group Of Which U have Given Chatid ")
               pass
                  
