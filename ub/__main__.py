@@ -54,7 +54,6 @@ async def a():
          except Exception as e:
            LOGS.info(f" Exception {e} ")
            try:
-             from ub.javes_main.heroku_var import config as sh1vam
              if sh1vam.LOGSPAMMER == True or str(sh1vam.LOGSPAMMER) == 'true' or str(sh1vam.LOGSPAMMER) == "True":
                if sh1vam.BOTLOG == True or str(sh1vam.BOTLOG) == 'true' or str(sh1vam.BOTLOG) == "True":
                  await tebot.send_message(entity=sh1vam.BOTLOG_CHATID,message=e)
