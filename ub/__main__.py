@@ -64,14 +64,14 @@ async def a():
            pass
          la += 1
          LOGS.info(f" loaded {la}/{f} modules")  
-         try:
+         '''try:
                if Config.LOGSPAMMER == True or str(Config.LOGSPAMMER) == 'true' or str(Config.LOGSPAMMER) == "True":
                  if Config.BOTLOG == True or str(Config.BOTLOG) == 'true' or str(Config.BOTLOG) == "True":
                        await tebot.send_message(entity=Config.BOTLOG_CHATID,message=f" loaded {la}/{f} modules")
          except Exception as ok:
                 LOGS.info(f" Exception {ok} ")
                 LOGS.info(" Add Your Bot Which U Made Using Bot Father To TAG_LOG And BOTLOG_CHATID Group Of Which U have Given Chatid ")
-                pass
+                pass'''#Cause Telethon Flood Await
   #os.system("rm ub/modules/*.py");
   LOGS.info(f"Sucessfully connected with {o}{o2}{o3}{o4} check it by typing !javes in any client's chat, type  !help for more info.")
   try:
