@@ -2,7 +2,7 @@ from ub import * ;  from sys import * ; from telethon import TelegramClient, fun
 from telethon.tl.types import InputMessagesFilterDocument
 from importlib import import_module
 from ub.javes_main.heroku_var import config as sh1vam
-from ub.javes_main.heroku_var import *
+from ub.javes_main.heroku_var import config,Config,Var
 
 #####################################
 #plugin_channel = "@pldhsys"  #this is official plugin channel for javes 
