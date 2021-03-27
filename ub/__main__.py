@@ -64,8 +64,8 @@ async def a():
      if sh1vam.LOGSPAMMER == True or str(sh1vam.LOGSPAMMER) == 'true' or str(sh1vam.LOGSPAMMER) == "True":
        if sh1vam.BOTLOG == True or str(sh1vam.BOTLOG) == 'true' or str(sh1vam.BOTLOG) == "True":
          await tebot.send_message(entity=sh1vam.BOTLOG_CHATID,message=f"Sucessfully connected with {o}{o2}{o3}{o4} check it by typing !javes in any client's chat, type  !help for more info.")
-  except Exception as f:
-      LOGS.info(f" Exception {f} ")
+  except Exception as noi:
+      LOGS.info(f" Exception {noi} ")
       LOGS.info(" Add Your Bot Which U Made Using Bot Father To TAG_LOG And BOTLOG_CHATID Group Of Which U have Given Chatid ")
       pass
   if len(argv) not in (1, 3, 4):
