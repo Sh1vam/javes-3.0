@@ -1,7 +1,6 @@
 from ub import * ;  from sys import * ; from telethon import TelegramClient, functions, types ; from telethon.tl.types import InputMessagesFilterDocument ; from pathlib import Path; from ub.javes_main.commands import * ; import asyncio, os, traceback, sys, traceback, os, importlib, glob ; javes = tgbot = bot.tgbot = client 
 from telethon.tl.types import InputMessagesFilterDocument
 from importlib import import_module
-from ub.javes_main.heroku_var import config as sh1vam
 from ub.javes_main.heroku_var import config,Config,Var
 
 #####################################
@@ -39,9 +38,9 @@ async def a():
   f = len(ar)
   LOGS.info(f" loading {f} modules it may take 1 minute please wait ")
   try:
-     if sh1vam.LOGSPAMMER == True or str(sh1vam.LOGSPAMMER) == 'true' or str(sh1vam.LOGSPAMMER) == "True":
-       if sh1vam.BOTLOG == True or str(sh1vam.BOTLOG) == 'true' or str(sh1vam.BOTLOG) == "True":
-         await tebot.send_message(entity=sh1vam.BOTLOG_CHATID,message=f" loading {f} modules it may take 1 minute please wait,loaded modules {la}")
+     if Config.LOGSPAMMER == True or str(Config.LOGSPAMMER) == 'true' or str(Config.LOGSPAMMER) == "True":
+       if Config.BOTLOG == True or str(Config.BOTLOG) == 'true' or str(Config.BOTLOG) == "True":
+         await tebot.send_message(entity=Config.BOTLOG_CHATID,message=f" loading {f} modules it may take 1 minute please wait")
   except Exception as nil:
       LOGS.info(f" Exception {nil} ")
       LOGS.info(" Add Your Bot Which U Made Using Bot Father To TAG_LOG And BOTLOG_CHATID Group Of Which U have Given Chatid ")
@@ -54,9 +53,9 @@ async def a():
          except Exception as e:
            LOGS.info(f" Exception {e} ")
            try:
-             if sh1vam.LOGSPAMMER == True or str(sh1vam.LOGSPAMMER) == 'true' or str(sh1vam.LOGSPAMMER) == "True":
-               if sh1vam.BOTLOG == True or str(sh1vam.BOTLOG) == 'true' or str(sh1vam.BOTLOG) == "True":
-                 await tebot.send_message(entity=sh1vam.BOTLOG_CHATID,message=e)
+             if Config.LOGSPAMMER == True or str(Config.LOGSPAMMER) == 'true' or str(Config.LOGSPAMMER) == "True":
+               if Config.BOTLOG == True or str(Config.BOTLOG) == 'true' or str(Config.BOTLOG) == "True":
+                 await tebot.send_message(entity=Config.BOTLOG_CHATID,message=e)
            except Exception as na:
               LOGS.info(f" Exception {na} ")
               LOGS.info(" Add Your Bot Which U Made Using Bot Father To TAG_LOG And BOTLOG_CHATID Group Of Which U have Given Chatid ")
@@ -65,13 +64,20 @@ async def a():
            pass
          la += 1
          LOGS.info(f" loaded {la}/{f} modules")  
-
+         try:
+               if Config.LOGSPAMMER == True or str(Config.LOGSPAMMER) == 'true' or str(Config.LOGSPAMMER) == "True":
+                 if Config.BOTLOG == True or str(Config.BOTLOG) == 'true' or str(Config.BOTLOG) == "True":
+                       await tebot.send_message(entity=Config.BOTLOG_CHATID,message=f" loaded {la}/{f} modules")
+         except Exception as ok:
+                LOGS.info(f" Exception {ok} ")
+                LOGS.info(" Add Your Bot Which U Made Using Bot Father To TAG_LOG And BOTLOG_CHATID Group Of Which U have Given Chatid ")
+                pass
   #os.system("rm ub/modules/*.py");
   LOGS.info(f"Sucessfully connected with {o}{o2}{o3}{o4} check it by typing !javes in any client's chat, type  !help for more info.")
   try:
-     if sh1vam.LOGSPAMMER == True or str(sh1vam.LOGSPAMMER) == 'true' or str(sh1vam.LOGSPAMMER) == "True":
-       if sh1vam.BOTLOG == True or str(sh1vam.BOTLOG) == 'true' or str(sh1vam.BOTLOG) == "True":
-         await tebot.send_message(entity=sh1vam.BOTLOG_CHATID,message=f"Sucessfully connected with {o}{o2}{o3}{o4} check it by typing !javes in any client's chat, type  !help for more info.")
+     if Config.LOGSPAMMER == True or str(Config.LOGSPAMMER) == 'true' or str(Config.LOGSPAMMER) == "True":
+       if Config.BOTLOG == True or str(Config.BOTLOG) == 'true' or str(Config.BOTLOG) == "True":
+         await tebot.send_message(entity=Config.BOTLOG_CHATID,message=f"Sucessfully connected with {o}{o2}{o3}{o4} check it by typing !javes in any client's chat, type  !help for more info.")
   except Exception as noi:
       LOGS.info(f" Exception {noi} ")
       LOGS.info(" Add Your Bot Which U Made Using Bot Father To TAG_LOG And BOTLOG_CHATID Group Of Which U have Given Chatid ")
