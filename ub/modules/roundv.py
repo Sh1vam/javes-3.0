@@ -11,7 +11,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from pymediainfo import MediaInfo
 import lottie
-#import cv2
+from ub.javes_main.heroku_var import config,Config,Var
 from telethon.tl.types import DocumentAttributeVideo
 import asyncio
 import functools
