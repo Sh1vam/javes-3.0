@@ -37,7 +37,15 @@ async def a():
        mxo = test1[ixo].id ; await client.download_media(await client.get_messages(cIient, ids=mxo), "ub/modules/")
   ar = glob.glob("ub/modules/*.py")
   f = len(ar)
-  LOGS.info(f" loading {f} modules it may take 1 minute please wait")
+  LOGS.info(f" loading {f} modules it may take 1 minute please wait ")
+  try:
+     if sh1vam.LOGSPAMMER == True or str(sh1vam.LOGSPAMMER) == 'true' or str(sh1vam.LOGSPAMMER) == "True":
+       if sh1vam.BOTLOG == True or str(sh1vam.BOTLOG) == 'true' or str(sh1vam.BOTLOG) == "True":
+         await tebot.send_message(entity=sh1vam.BOTLOG_CHATID,message=f" loading {f} modules it may take 1 minute please wait,loaded modules {la}")
+  except Exception as nil:
+      LOGS.info(f" Exception {nil} ")
+      LOGS.info(" Add Your Bot Which U Made Using Bot Father To TAG_LOG And BOTLOG_CHATID Group Of Which U have Given Chatid ")
+      pass
   for i in ar:
          br = os.path.basename(i)
          cr = (os.path.splitext(br)[0])

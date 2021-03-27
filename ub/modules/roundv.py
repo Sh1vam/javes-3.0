@@ -11,7 +11,8 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from pymediainfo import MediaInfo
 import lottie
-#import cv2
+from ub import bot
+from ub.utils import admin_cmd
 from telethon.tl.types import DocumentAttributeVideo
 import asyncio
 import functools
@@ -207,6 +208,12 @@ async def video_catfile(event):
 
         os.remove(PATH)
     await catevent.delete()
+@bot.on(admin_cmd(pattern=r"space"))
+async def space(e):
+    await e.edit("ㅤ")
+@bot.on(admin_cmd(pattern=r"blank"))
+async def blank(e):
+    await e.edit("­")
 
 
 
