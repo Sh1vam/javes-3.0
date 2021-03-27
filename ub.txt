@@ -15,6 +15,7 @@ scipy
 scikit-learn
 moviepy
 glitch_this
+pytgcalls
 PyGithub
 aiofiles
 aiohttp
@@ -95,3 +96,8 @@ youtube-search-python==1.3.2
 validators
 numpy
 fontTools
+pyrogram
+
+TgCrypto
+
+ffmpeg-python
