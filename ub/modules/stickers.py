@@ -41,7 +41,8 @@ KANGING_STR = [
     "Kanging this sticker ... ",
 ]
 
-fc = os.environ.get("FC_CHANNEL", "@javespl")
+#fc = os.environ.get("FC_CHANNEL", "@javespl")
+fc = os.environ.get("FC_CHANNEL", "@Sh1vam_Fonts")
 @javes05(outgoing=True, pattern="^\!kang")
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
