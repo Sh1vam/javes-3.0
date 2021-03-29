@@ -32,7 +32,7 @@ from ub import bot
 from ub import bot as borg
 import os , shutil
 #DONT EVEN THINK TO KANG
-@borg.on(admin_cmd(pattern="zombie ?(.*)"))
+'''@borg.on(admin_cmd(pattern="zombie ?(.*)"))
 async def hmm(event):
 
     await event.delete()
@@ -76,4 +76,24 @@ async def hmm(event):
 
     os.remove("image.jpg")
     os.remove("s_h_i_v_a_m.jpg")
+    os.remove("zombie.jpg")'''
+@borg.on(admin_cmd(pattern="zombie ?(.*)"))
+async def hmm(event):
+
+    await event.delete()
+    sed = await event.get_reply_message()
+    img = await borg.download_media(sed.media)
+    import cv2   
+    miraculous=cv2.VideoCapture(img)
+    ladybug,catnoar = miraculous.read()
+    cv2.imwrite("zombie.jpg", catnoar)
+    img = "zombie.jpg"
+    r = requests.post('https://zombiesop.herokuapp.com/api/zombie', files={'image': open(f'{img}', 'rb')})
+    data=base64.b64decode(r.text)
+    filename='image.jpg'
+    with open(filename, 'wb') as f:
+        f.write(data)
+    await event.client.send_file(event.chat_id, "image.jpg", force_document=False, reply_to=event.reply_to_msg_id)
+
+    os.remove("image.jpg")
     os.remove("zombie.jpg")
