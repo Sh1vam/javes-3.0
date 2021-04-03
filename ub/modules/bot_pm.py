@@ -8,8 +8,10 @@ async def _(event):
     me = await client.get_me()
     sendr = event.chat_id
     if me.id!=sendr:
-        x=await tebot.forward_messages(me.id,event.message)
-        await x.reply(f'`userid` **=** {sendr} , `profile` **=** [UserProfile](tg://user?id={sendr})\n __To reply to user__ **Use** !reply {sendr};(your message or reply to a message)')
+        from ub.modules.sql_helper.bot_pm_ban_sql import is_botpmbanned
+        if is_botpmbanned(sendr) == False:
+            x=await tebot.forward_messages(me.id,event.message)
+            await x.reply(f'`userid` **=** {sendr} , `profile` **=** [UserProfile](tg://user?id={sendr})\n __To reply to user__ **Use** !reply {sendr};(your message or reply to a message)')
 
 @register(outgoing=True, pattern=r"^!reply")
 async def sh1vam(event):
@@ -30,4 +32,55 @@ async def sh1vam(event):
         await tebot.forward_messages(int(lb),reply)
         await event.edit(f"Your Message sent to [User](tg://user?id={lb})")
         return'''
-
+@register(outgoing=True, pattern=r"^!botban")
+async def shivam(event):
+    me = await client.get_me()
+    try:
+       cn=event.text[8:]
+       try:
+          from ub.modules.sql_helper.bot_pm_ban_sql import botban     ####      bot_pm_ban_sql           botban    
+       except:
+   	     pass 
+       try:
+           if botban(int(cn)) is False:
+                return await tebot.send_message(entity=me.id,message="[User](tg://user?id={cn}) iz already banned")###################
+       except:
+            pass
+       return await tebot.send_message(entity=me.id,message="[User](tg://user?id={cn}) iz now banned") 
+    except :
+       cn=event.text[8:]
+       try:
+           if botban(int(cn)) is False:
+                return await tebot.send_message(entity=me.id,message="[User](tg://user?id={cn}) iz already banned")###################
+       except:
+            pass
+       return await tebot.send_message(entity=me.id,message="[User](tg://user?id={cn}) iz now banned") 
+    else :
+        
+        await tebot.send_message(entity=me.id,message="Unknown [User](tg://user?id={cn}) Check Your Command")
+@register(outgoing=True, pattern=r"^!botunban")
+async def shivam(event):
+    me = await client.get_me()
+    try:
+       cn=event.text[8:]
+       try:
+          from ub.modules.sql_helper.bot_pm_ban_sql import botunban     ####      bot_pm_ban_sql           botunban    
+       except:
+   	     pass 
+       try:
+           if botunban(int(cn)) is False:
+                return await tebot.send_message(entity=me.id,message="[User](tg://user?id={cn}) iz already unbanned")###################
+       except:
+            pass
+       return await tebot.send_message(entity=me.id,message="[User](tg://user?id={cn}) iz now unbanned") 
+    except :
+       cn=event.text[8:]
+       try:
+           if botunban(int(cn)) is False:
+                return await tebot.send_message(entity=me.id,message="[User](tg://user?id={cn}) iz already unbanned")###################
+       except:
+            pass
+       return await tebot.send_message(entity=me.id,message="[User](tg://user?id={cn}) iz now unbanned") 
+    else :
+        
+        await tebot.send_message(entity=me.id,message="Unknown [User](tg://user?id={cn}) Check Your Command")
