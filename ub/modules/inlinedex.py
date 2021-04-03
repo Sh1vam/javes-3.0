@@ -1,4 +1,4 @@
-from pokedex import pokedex as badhiya
+#from pokedex import pokedex as badhiya
 import os
 import shutil
 from re import findall
@@ -21,7 +21,8 @@ async def inline_id_handler(event: events.InlineQuery.Event):
         rw = f"https://some-random-api.ml/pokedex?pokemon={pokemon}"
         w=requests.get(f"https://api.pokemontcg.io/v1/cards?name={pokemon}")
         lol=w.json()
-        weaknesses=lol['cards'][0]['weaknesses'][0]['type']
+        try:    weaknesses=lol['cards'][0]['weaknesses'][0]['type']
+        except:    weaknesses="Api Dont Have Data Of Weaknesses"
         r = requests.get(rw)
         a=r.json()
         name=a['name']
@@ -56,10 +57,10 @@ async def inline_id_handler(event: events.InlineQuery.Event):
         Stats=a['stats']
         species=', '.join(map(str, species))
         abilities=', '.join(map(str, abilities))
-        poli = badhiya.Pokedex()
+        '''poli = badhiya.Pokedex()
         pname = poli.get_pokemon_by_name(pokemon)
         pokemon = pname[0]
-        lst=pokemon.get("sprite")
+        lst=pokemon.get("sprite")'''
 
         cap=f'''
 
@@ -84,7 +85,8 @@ async def inline_id_handler(event: events.InlineQuery.Event):
 **Total**   : `{Stats['total']}`            `(7){move7}`
 **DESCRIPTION** : `{description}`
   '''
-        result = builder.photo(lst,text=cap,buttons=[[Button.switch_inline("Search Again", query="pokedex ", same_peer=True)],], )
+        #result = builder.photo(lst,text=cap,buttons=[[Button.switch_inline("Search Again", query="pokedex ", same_peer=True)],], )
+        result = builder.article(title=f"About {pokemon}",description=weaknesses,text=cap,buttons=[[Button.switch_inline("Search Again", query="pokedex ", same_peer=True)],], )
         await event.answer([result])
     if not event.query.user_id == me.id:
         resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="pokedex ", same_peer=True)],], )
