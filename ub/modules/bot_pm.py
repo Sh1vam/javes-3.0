@@ -9,7 +9,7 @@ async def _(event):
     sendr = event.chat_id
     if me.id!=sendr:
         from ub.modules.sql_helper.bot_pm_ban_sql import is_botpmbanned
-        if sendr not is_botpmbanned(sendr):
+        if sendr not in is_botpmbanned(sendr):
             x=await tebot.forward_messages(me.id,event.message)
             await x.reply(f'`userid` **=** {sendr} , `profile` **=** [UserProfile](tg://user?id={sendr})\n __To reply to user__ **Use** !reply {sendr};(your message or reply to a message)')
 
