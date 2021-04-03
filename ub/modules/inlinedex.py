@@ -93,19 +93,29 @@ async def inline_id_handler(event: events.InlineQuery.Event):
         await event.answer([resultm])
         return
 #made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC
-@tgbot.on(events.InlineQuery(pattern=r"pokecard(.*)"))
+@tgbot.on(events.InlineQuery(pattern=r"pokecard"))
 async def inline_id_handler(event: events.InlineQuery.Event):
     builder = event.builder
     query = event.text
     me = await client.get_me()
     if event.query.user_id == me.id:
-        pokename=event.pattern_match.group(1)
-        rw = f"https://api.pokemontcg.io/v1/cards?name={pokename}"
-        r = requests.get(rw)
-        a=r.json()
-        o=a['cards'][0]['imageUrlHiRes']
-        result = builder.photo(o,buttons=[[Button.switch_inline("Search Again", query="pokecard ", same_peer=True)],], )
-        await event.answer([result])
+        try:
+            pokename,shivam=event.text[10:].split(";")
+            x=int(shivam)
+            rw = f"https://api.pokemontcg.io/v1/cards?name={pokename}"
+            r = requests.get(rw)
+            a=r.json()
+            o=a['cards'][x]['imageUrlHiRes']
+            result = builder.photo(o,buttons=[[Button.switch_inline("Search Again", query="pokecard ", same_peer=True)],], )
+            await event.answer([result])
+        except:
+            pokename=event.text[10:]
+            rw = f"https://api.pokemontcg.io/v1/cards?name={pokename}"
+            r = requests.get(rw)
+            a=r.json()
+            o=a['cards'][0]['imageUrlHiRes']
+            result = builder.photo(o,buttons=[[Button.switch_inline("Search Again", query="pokecard ", same_peer=True)],], )
+            await event.answer([result])
     if not event.query.user_id == me.id:
         resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="pokecard ", same_peer=True)],], )
         await event.answer([resultm])
