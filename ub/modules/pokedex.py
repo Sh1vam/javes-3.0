@@ -1,4 +1,4 @@
-from pokedex import pokedex as badhiya
+#from pokedex import pokedex as badhiya
 import os
 import shutil
 from re import findall
@@ -16,7 +16,8 @@ async def pokedex(event):
     rw = f"https://some-random-api.ml/pokedex?pokemon={pokemon}"
     w=requests.get(f"https://api.pokemontcg.io/v1/cards?name={pokemon}")
     lol=w.json()
-    weaknesses=lol['cards'][0]['weaknesses'][0]['type']
+    try:    weaknesses=lol['cards'][0]['weaknesses'][0]['type']
+    except:    weaknesses="Api Dont Have Data Of Weaknesses"
     r = requests.get(rw)
     a=r.json()
     name=a['name']
@@ -51,10 +52,10 @@ async def pokedex(event):
     Stats=a['stats']
     species=', '.join(map(str, species))
     abilities=', '.join(map(str, abilities))
-    poli = badhiya.Pokedex()
+    '''poli = badhiya.Pokedex()
     pname = poli.get_pokemon_by_name(pokemon)
     pokemon = pname[0]
-    lst=pokemon.get("sprite")
+    lst=pokemon.get("sprite")'''
 
     cap=f'''
 
@@ -79,8 +80,9 @@ async def pokedex(event):
 **Total**   : `{Stats['total']}`            `(7){move7}`
 **DESCRIPTION** : `{description}`
   '''
-    await borg.send_file(event.chat_id, lst, caption=cap)
-    await event.delete()
+    #await borg.send_file(event.chat_id, lst, caption=cap)
+    await event.edit(cap)
+    #await event.delete()
 #made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC
 
 @borg.on(admin_cmd(pattern="pokecard ?(.*)"))
