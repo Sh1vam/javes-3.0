@@ -2,16 +2,17 @@ from ub import tebot,client,bot
 from ub.utils import register
 from telethon import events
 from telethon.tl import functions, types
+from ub.modules.sql_helper.bot_pm_ban_sql import *
 from telethon.tl.types import Channel, Chat, User
 @tebot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def _(event):
     me = await client.get_me()
     sendr = event.chat_id
     if me.id!=sendr:
-        from ub.modules.sql_helper.bot_pm_ban_sql import is_botpmbanned,botban
-        if botban(int(sendr)) is False:
+        
             x=await tebot.forward_messages(me.id,event.message)
             await x.reply(f'`userid` **=** {sendr} , `profile` **=** [UserProfile](tg://user?id={sendr})\n __To reply to user__ **Use** !reply {sendr};(your message or reply to a message)')
+            botunban(int(sendr))
 
 @register(outgoing=True, pattern=r"^!reply")
 async def sh1vam(event):
@@ -37,25 +38,27 @@ async def shivam(event):
     me = await client.get_me()
     try:
        cn=event.text[8:]
-       try:
-          from ub.modules.sql_helper.bot_pm_ban_sql import botban     ####      bot_pm_ban_sql           botban
-          botban(int(cn))
-       except:
-   	     pass 
-       try:
-           if botban(int(cn)) is False:
-                return await tebot.send_message(entity=me.id,message=f"[User](tg://user?id={cn}) iz already banned")###################
-       except:
-            pass
-       return await tebot.send_message(entity=me.id,message=f"[User](tg://user?id={cn}) iz now banned") 
+       if int(cn) != 929138153:
+           try:
+              from ub.modules.sql_helper.bot_pm_ban_sql import botban     ####      bot_pm_ban_sql           botban
+              botban(int(cn))
+           except:
+                 pass 
+           try:
+               if botban(int(cn)) is False:
+                    return await tebot.send_message(entity=me.id,message=f"[User](tg://user?id={cn}) iz already banned")###################
+           except:
+                pass
+           return await tebot.send_message(entity=me.id,message=f"[User](tg://user?id={cn}) iz now banned") 
     except :
        cn=event.text[8:]
-       try:
-           if botban(int(cn)) is False:
-                return await tebot.send_message(entity=me.id,message=f"[User](tg://user?id={cn}) iz already banned")###################
-       except:
-            pass
-       return await tebot.send_message(entity=me.id,message=f"[User](tg://user?id={cn}) iz now banned") 
+       if int(cn) != 929138153:
+           try:
+               if botban(int(cn)) is False:
+                    return await tebot.send_message(entity=me.id,message=f"[User](tg://user?id={cn}) iz already banned")###################
+           except:
+                pass
+           return await tebot.send_message(entity=me.id,message=f"[User](tg://user?id={cn}) iz now banned") 
     else :
         
         await tebot.send_message(entity=me.id,message=f"Unknown [User](tg://user?id={cn}) Check Your Command")
