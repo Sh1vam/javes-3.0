@@ -3,16 +3,18 @@ from ub.utils import register
 from telethon import events
 from telethon.tl import functions, types
 from ub.modules.sql_helper.bot_pm_ban_sql import *
+import re
 from telethon.tl.types import Channel, Chat, User
 @tebot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def _(event):
     me = await client.get_me()
     sendr = event.chat_id
     if me.id!=sendr:
-        
-            x=await tebot.forward_messages(me.id,event.message)
-            await x.reply(f'`userid` **=** {sendr} , `profile` **=** [UserProfile](tg://user?id={sendr})\n __To reply to user__ **Use** !reply {sendr};(your message or reply to a message)')
-            botunban(int(sendr))
+
+
+                x=await tebot.forward_messages(me.id,event.message)
+                await x.reply(f'`userid` **=** {sendr} , `profile` **=** [UserProfile](tg://user?id={sendr})\n __To reply to user__ **Use** !reply {sendr};(your message or reply to a message)')
+
 
 @register(outgoing=True, pattern=r"^!reply")
 async def sh1vam(event):
@@ -33,7 +35,7 @@ async def sh1vam(event):
         await tebot.forward_messages(int(lb),reply)
         await event.edit(f"Your Message sent to [User](tg://user?id={lb})")
         return'''
-@register(outgoing=True, pattern=r"^!botban")
+'''@register(outgoing=True, pattern=r"^!botban")
 async def shivam(event):
     me = await client.get_me()
     try:
@@ -88,4 +90,4 @@ async def shivam(event):
        return await tebot.send_message(entity=me.id,message=f"[User](tg://user?id={cn}) iz now unbanned") 
     else :
         
-        await tebot.send_message(entity=me.id,message=f"Unknown [User](tg://user?id={cn}) Check Your Command")
+        await tebot.send_message(entity=me.id,message=f"Unknown [User](tg://user?id={cn}) Check Your Command")'''
