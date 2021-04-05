@@ -97,3 +97,23 @@ async def hmm(event):
 
     os.remove("image.jpg")
     os.remove("zombie.jpg")
+@borg.on(admin_cmd(pattern="neye ?(.*)"))
+async def hmm(event):
+
+    await event.delete()
+    sed = await event.get_reply_message()
+    img = await borg.download_media(sed.media)
+    import cv2   
+    miraculous=cv2.VideoCapture(img)
+    ladybug,catnoar = miraculous.read()
+    cv2.imwrite("red.jpg", catnoar)
+    img = "red.jpg"
+    r = requests.post('https://zombiesop.herokuapp.com/api/redeye', files={'image': open(f'{img}', 'rb')})
+    data=base64.b64decode(r.text)
+    filename='image.jpg'
+    with open(filename, 'wb') as f:
+        f.write(data)
+    await event.client.send_file(event.chat_id, "image.jpg", force_document=False, reply_to=event.reply_to_msg_id)
+
+    os.remove("image.jpg")
+    os.remove("red.jpg")
