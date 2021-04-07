@@ -8,13 +8,7 @@ async def artist(event):
     l=[]
     artist=event.pattern_match.group(1)
     genius = lyricsgenius.Genius(GENIUS_API_TOKEN)
-    shivam=genius.search_artist(artist)
-    l.append(shivam)
-    limits = 4096
-    ladybug = [l[miracul:miracul+limits] for miracul in range(0, len(l), limits)]
-    for miracul in ladybug:
-            chatnoir = f"{miracul}"
-            await event.client.send_message(event.chat_id, chatnoir)
+    await event.edit(genius.search_artist(f"{artist}"))
 @register(outgoing=True, pattern=r"^!lyrics ?(.*)")
 async def lyrics(event):
     try :
