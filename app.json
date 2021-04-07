@@ -29,7 +29,7 @@
     },
     "TG_API_HASH": {
       "description": "Get this value from my.telegram.org. Don't Steal may Your Account Get ban.[IMPORTANT]",
-      "value": "db8992ae5fbf9b925273937b134f3407"
+      "value": ""
     },
     "TG_STRING_SESSION": {
       "description": "Get this value by running [python3 string_session.py] in Termux or heroku[IMPORTANT]",
@@ -37,7 +37,7 @@
     },
     "HEROKU_APIKEY": {
       "description": "very important for !update command to make javes 3.0 up-to-date , get it from 'https://dashboard.heroku.com/account. see example below ",
-      "value": "fc8e5e3a-6c85-4185-8d17-046b7e5cbb9d"   
+      "value": ""   
     },
     "HEROKU_APPNAME": {
       "description": "enter this app name again here, very important for !update command to make javes 3.0 up-to-date ",
@@ -70,7 +70,7 @@
     },
     "OPEN_WEATHER_MAP_APPID": {
       "description": "need for !weather command, (API key)from https://api.openweathermap.org",
-      "value": "Enter api here if you need ",
+      "value": "Enter api here if you need",
       "required": false   
     },
     "BOTLOG": {
@@ -205,12 +205,12 @@
     },
     "TG_BOT_USER_NAME_BF_HER": {
       "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the username of your bot",
-      "value": "errorsender_bot",
+      "value": "",
       "required": true
     },
     "TG_BOT_TOKEN_BF_HER": {
       "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the token of your bot. And Don't Forget To Turn of inline Mode on bot settings. Get it.",
-      "value": "1330445306:AAGiAGqYEi-tDtZeHP36gi4P3BNvLk-Mc6Q",
+      "value": "",
       "required": true
     },
     "INLINE_MODE": {
@@ -220,7 +220,7 @@
     },
     "BOT_TOKEN": {
       "description": "Enter same value u entered in TG_BOT_TOKEN_BF_HER",
-      "value": "1330445306:AAGiAGqYEi-tDtZeHP36gi4P3BNvLk-Mc6Q",
+      "value": "",
       "required": true
     },
     "WAFU_CHATID": {
