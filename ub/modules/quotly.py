@@ -9,17 +9,26 @@ from PIL import Image, ImageDraw, ImageFont
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 import PIL.ImageOps
-from ub.helpers.functions import convert_tosticker
+#from ub.helpers.functions import convert_tosticker
 from ub.helpers.qhelper import process
 from ub.util import admin_cmd
 from ub import bot
+def convert_tosticker(response, filename=None):
+    filename = filename or os.path.join("./temp/", "temp.webp")
+    image = Image.open(response)
+    if image.mode != "RGB":
+        image.convert("RGB")
+    image.save(filename, "webp")
+    os.remove(response)
+    return filename
+'''
 def convert_tosticker(image):
     img = Image.open(image)
     if img.mode != "RGB":
         img = img.convert("RGB")
     img.save("./temp/temp.webp", "webp")
     os.remove(image)
-    return "./temp/temp.webp"
+    return "./temp/temp.webp"'''
 @bot.on(admin_cmd(pattern="q(?: |$)(.*)", outgoing=True))
 
 async def stickerchat(catquotes):
