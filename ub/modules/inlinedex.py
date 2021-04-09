@@ -85,8 +85,8 @@ async def inline_id_handler(event: events.InlineQuery.Event):
 **Total**   : `{Stats['total']}`            `(7){move7}`
 **DESCRIPTION** : `{description}`
   '''
-        #result = builder.photo(lst,text=cap,buttons=[[Button.switch_inline("Search Again", query="pokedex ", same_peer=True)],], )
-        result = builder.article(title=f"About {pokemon}",description=f"weaknesses:{weaknesses}",text=cap,buttons=[[Button.switch_inline("Search Again", query="pokedex ", same_peer=True)],], )
+        result = builder.photo(f"https://img.pokemondb.net/artwork/large/{pokemon}.jpg",description=f"weaknesses:{weaknesses}",text=cap,buttons=[[Button.switch_inline("Search Again", query="pokedex ", same_peer=True)],], )
+        #result = builder.article(title=f"About {pokemon}",description=f"weaknesses:{weaknesses}",text=cap,buttons=[[Button.switch_inline("Search Again", query="pokedex ", same_peer=True)],], )
         await event.answer([result])
     if not event.query.user_id == me.id:
         resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="pokedex ", same_peer=True)],], )

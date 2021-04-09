@@ -82,8 +82,8 @@ async def pokedex(event):
 **Total**   : `{Stats['total']}`            `(7){move7}`
 **DESCRIPTION** : `{description}`
   '''
-    #await borg.send_file(event.chat_id, lst, caption=cap)
-    await event.edit(cap)
+    await borg.send_file(event.chat_id,   f"https://img.pokemondb.net/artwork/large/{pokemon}.jpg", caption=cap)
+    #await event.edit(cap)
     #await event.delete()
 #made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC#made by @THE_B_LACK_HAT @ Sh1vam #TEAM DC
 
