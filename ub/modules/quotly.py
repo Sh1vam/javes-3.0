@@ -21,8 +21,8 @@ def convert_tosticker(response, filename=None):
     image.save(filename, "webp")
     os.remove(response)
     return filename
-'''
-def convert_tosticker(image):
+
+'''def convert_tosticker(image):
     img = Image.open(image)
     if img.mode != "RGB":
         img = img.convert("RGB")
