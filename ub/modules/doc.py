@@ -23,7 +23,7 @@ if not os.path.isdir("./temp"):
 async def get(event):
     name = event.text[5:]
     if name is None:
-        await event.edit("reply to text message as `.ttf <file name>`")
+        await event.edit("reply to text message as `.dox <file name>`")
         return
     m = await event.get_reply_message()
     if m.text:
@@ -33,4 +33,4 @@ async def get(event):
         await event.client.send_file(event.chat_id, name, force_document=True)
         os.remove(name)
     else:
-        await event.edit("reply to text message as `.ttf <file name>`")
+        await event.edit("reply to text message as `.dox <file name>`")

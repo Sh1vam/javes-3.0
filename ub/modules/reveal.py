@@ -11,17 +11,17 @@ async def _(event):
     a = open(b, "r")
     c = a.read()
     a.close()
-    a = await event.reply("Reading file...")
+    await event.edit("Reading file...")
     if len(c) > 4095:
-        await a.edit("The Total words in this file is more than telegram limits.")
+        await event.edit("The Total words in this file is more than telegram limits. use .paste or .neko to past to dog bin or neko bin")
     else:
-        await event.client.send_message(event.chat_id, f"{c}")
-        await a.delete()
+        await event.edit(f"{c}")
+        #await a.delete()
     os.remove(b)
 
 
-CMD_HELP.update(
+'''CMD_HELP.update(
     {
         "reveal": ".reveal <reply to a file>\nUse - Read contents of file and send as a telegram message."
     }
-)
+)'''
