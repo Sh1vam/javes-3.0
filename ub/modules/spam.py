@@ -13,7 +13,7 @@ FULL_SUDO = os.environ.get("FULL_SUDO", None)
 async def scam(e):
     if not e.is_private:
               chat = await e.get_chat() ; admin = chat.admin_rights ; creator = chat.creator
-              if not admin and not creator and chat.id == -1001288555028:
+              if not admin and not creator and chat.id == -1001239489122:
                      	return
     try:
        await e.delete()
