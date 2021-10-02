@@ -24,7 +24,7 @@ from telethon.tl.functions.messages import EditChatDefaultBannedRightsRequest
 from telethon.errors import (BadRequestError, ChatAdminRequiredError,ImageProcessFailedError, PhotoCropSizeSmallError,UserAdminInvalidError)
 from telethon.tl.functions.messages import UpdatePinnedMessageRequest
 from ub import CMD_HELP
-
+NO_ADMIN = "U r not admin of this grp"
 
 async def get_user_from_event(event):  
     args = event.pattern_match.group(1).split(':', 1)
