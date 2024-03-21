@@ -9,9 +9,9 @@ great feature it has is now it can send plugin by !send command
 also .updt ahd .updt now are command of new updater
 also many new modules 
 it can install many modules from external sources 
-The Best Feature Ith has Is It  can send """ SQL HELPERS """ No Other Bot Has This Feature 
+It  can send """ SQL HELPERS """ 
 Now It Also Has "Helper Sender"
-MANY Friends Helped Me i.e MY DC TEAM
+MANY Friends Helped Me i.e DC TEAM
 
 
 Now The biggest issue of !img command is setteled by !pick querry;no of picks u want
