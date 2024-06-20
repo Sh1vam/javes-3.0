@@ -30,7 +30,7 @@ S3_NAME = os.environ.get("S3_NAME", JAVES_NNAME)
 S2_USER = os.environ.get("S2_USER", DEFAULTUSER)
 S3_USER = os.environ.get("S3_USER", DEFAULTUSER)
 
-v = "0.0.0"
+v = "3.0.0"
 
 if rksu:
  if FULL_SUDO:
